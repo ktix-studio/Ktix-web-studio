@@ -171,3 +171,10 @@ if (stateSelect) {
     10 * 60 * 1000
   );
   }
+const refreshButton = document.getElementById("refreshClimate");
+
+if (refreshButton) {
+  refreshButton.addEventListener("click", () => {
+    location.reload();
+  });
+} 
