@@ -281,4 +281,19 @@
 .refresh-btn:hover {
   opacity: 0.8;
 } 
+@media (max-width: 850px) {
+  nav.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    right: 4%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    gap: 15px;
+    width: 200px;
+  }
+} 
 
