@@ -1,1 +1,256 @@
+/* =========================================
+   CLIMATE TECH PROJECT
+   ========================================= */
 
+#climate {
+  position: relative;
+  overflow: hidden;
+}
+
+#climate::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 10%;
+  right: -250px;
+  background: radial-gradient(
+    circle,
+    rgba(47, 140, 255, 0.08),
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.climate-project {
+  position: relative;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(12, 17, 25, 0.98),
+      rgba(8, 12, 18, 0.98)
+    );
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 38px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+/* Top project information */
+
+.climate-project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.project-status {
+  display: inline-block;
+  color: #10b981;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  margin-bottom: 14px;
+}
+
+.climate-project-header h3 {
+  font-size: clamp(25px, 4vw, 34px);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.climate-project-header p {
+  color: var(--text);
+  max-width: 650px;
+  font-size: 15px;
+}
+
+.climate-project-badge {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: rgba(47, 140, 255, 0.06);
+  color: var(--blue-light);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+
+/* State selector */
+
+.climate-controls {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.climate-controls label {
+  display: block;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#stateSelect {
+  width: 100%;
+  max-width: 420px;
+  padding: 13px 15px;
+  background: #080c12;
+  color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+#stateSelect:hover,
+#stateSelect:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(47, 140, 255, 0.08);
+}
+
+
+/* Climate data cards */
+
+.climate-data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.climate-data-card {
+  background: rgba(255, 255, 255, 0.018);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 25px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.climate-data-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 140, 255, 0.55);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.data-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.climate-data-card strong {
+  color: var(--white);
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.data-note {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+
+/* Technology tags */
+
+.climate-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 5px;
+}
+
+.climate-tech span {
+  color: var(--text);
+  background: rgba(47, 140, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 7px 11px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================
+   CLIMATE TECH RESPONSIVE
+   ========================================= */
+
+@media (max-width: 850px) {
+
+  .climate-data-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .climate-data-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .climate-project {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .climate-project-header {
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 25px;
+  }
+
+  .climate-project-badge {
+    align-self: flex-start;
+  }
+
+  .climate-project-header h3 {
+    font-size: 26px;
+  }
+
+  .climate-project-header p {
+    font-size: 14px;
+  }
+
+  .climate-controls {
+    padding: 16px;
+  }
+
+  #stateSelect {
+    max-width: 100%;
+  }
+
+  .climate-data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .climate-data-card:last-child {
+    grid-column: auto;
+  }
+
+  .climate-data-card {
+    min-height: 140px;
+  }
+
+  }
