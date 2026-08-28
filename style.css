@@ -254,3 +254,31 @@
   }
 
   }
+.live-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.live-status {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.refresh-btn {
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.refresh-btn:hover {
+  opacity: 0.8;
+} 
+
