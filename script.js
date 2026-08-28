@@ -40,6 +40,14 @@ const stateLocations = {
 // ========================================
 
 const stateSelect = document.getElementById("stateSelect");
+const menu = document.querySelector(".menu");
+const nav = document.querySelector("nav");
+
+if (menu) {
+  menu.addEventListener("click", () => {
+    nav.classList.toggle("mobile-open");
+  });
+} 
 const temperatureValue = document.getElementById("temperatureValue");
 const co2Value = document.getElementById("co2Value");
 const renewableValue = document.getElementById("renewableValue");
