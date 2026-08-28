@@ -175,6 +175,7 @@ const refreshButton = document.getElementById("refreshClimate");
 
 if (refreshButton) {
   refreshButton.addEventListener("click", () => {
-    location.reload();
+    const currentState = stateSelect.value;
+    updateClimateData(currentState);
   });
 } 
