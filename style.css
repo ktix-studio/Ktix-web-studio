@@ -24,12 +24,7 @@
 
 .climate-project {
   position: relative;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(12, 17, 25, 0.98),
-      rgba(8, 12, 18, 0.98)
-    );
+  background: #111827; 
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 38px;
