@@ -463,4 +463,33 @@
     text-shadow: none !important;
   }
 } 
+/* =========================================
+   KTIX LOGO VISIBILITY FIX
+   ========================================= */
+
+.logo,
+.logo a,
+.brand,
+.brand a {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+.logo span,
+.logo a span,
+.brand span,
+.brand a span {
+  color: #2f8cff !important;
+  opacity: 1 !important;
+}
+
+/* Make the entire KTIX logo clearly visible */
+header .logo,
+header .logo a,
+header .brand,
+header .brand a {
+  color: #ffffff !important;
+  opacity: 1 !important;
+} 
 
