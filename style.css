@@ -464,32 +464,49 @@
   }
 } 
 /* =========================================
-   KTIX LOGO VISIBILITY FIX
+   KTIX WEB STUDIO HEADER LOGO
    ========================================= */
 
-.logo,
-.logo a,
-.brand,
-.brand a {
+header .logo {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
   color: #ffffff !important;
   opacity: 1 !important;
   text-shadow: none !important;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
-.logo span,
-.logo a span,
-.brand span,
-.brand a span {
-  color: #2f8cff !important;
-  opacity: 1 !important;
-}
-
-/* Make the entire KTIX logo clearly visible */
-header .logo,
-header .logo a,
-header .brand,
-header .brand a {
+header .logo strong {
   color: #ffffff !important;
-  opacity: 1 !important;
+  font-size: 27px;
+  font-weight: 900;
+}
+
+header .logo small {
+  color: #2f8cff !important;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header .logo {
+    font-size: 25px;
+    gap: 7px;
+  }
+
+  header .logo strong {
+    font-size: 25px;
+  }
+
+  header .logo small {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
 } 
 
