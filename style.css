@@ -523,3 +523,74 @@ header .logo small {
 .footer-contact a:hover {
   color: #1769e0 !important;
 } 
+/* =========================================
+   FINAL PORTFOLIO TEXT READABILITY
+   ========================================= */
+
+body {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.service-card p,
+.project-card p,
+.why-card p,
+.step p,
+.section-text {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.service-card h3,
+.project-card h3,
+.why-card strong,
+.step h3 {
+  font-size: 21px !important;
+}
+
+.section-label {
+  font-size: 13px !important;
+}
+
+.data-label {
+  font-size: 13px !important;
+}
+
+.data-note {
+  font-size: 13px !important;
+}
+
+.footer-contact a {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #123a70 !important;
+}
+
+/* Mobile readability */
+@media (max-width: 600px) {
+
+  p,
+  .service-card p,
+  .project-card p,
+  .why-card p,
+  .step p,
+  .section-text {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+  }
+
+  .service-card h3,
+  .project-card h3,
+  .why-card strong,
+  .step h3 {
+    font-size: 24px !important;
+  }
+
+  .footer-contact a {
+    font-size: 19px !important;
+  }
+} 
