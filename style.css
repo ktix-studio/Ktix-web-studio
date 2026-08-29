@@ -423,3 +423,44 @@
     line-height: 1.7 !important;
   }
 } 
+/* =========================================
+   FINAL MOBILE CARD FIX
+   REMOVE DARK OVERLAY
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .service-card,
+  .project-card {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #0f172a !important;
+    border: 1px solid #dbe3ec !important;
+  }
+
+  .service-card::before,
+  .service-card::after,
+  .project-card::before,
+  .project-card::after {
+    background: none !important;
+    background-image: none !important;
+    opacity: 0 !important;
+    display: none !important;
+  }
+
+  .service-card h3,
+  .project-card h3 {
+    color: #0f172a !important;
+  }
+
+  .service-card p,
+  .project-card p {
+    color: #64748b !important;
+  }
+
+  .service-card * ,
+  .project-card * {
+    text-shadow: none !important;
+  }
+} 
+
