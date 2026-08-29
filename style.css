@@ -296,4 +296,60 @@
     width: 200px;
   }
 } 
+/* =========================================
+   CLIMATE TEXT VISIBILITY FIX
+   ========================================= */
+
+.climate-project,
+.climate-project p,
+.climate-project label {
+  color: #e5e7eb;
+}
+
+.climate-project h3,
+.climate-data-card strong {
+  color: #ffffff;
+}
+
+.project-status,
+.live-status {
+  color: #10b981;
+}
+
+.data-label {
+  color: #cbd5e1;
+}
+
+.data-note {
+  color: #94a3b8;
+}
+
+.climate-project-badge {
+  color: #60a5fa;
+}
+
+#stateSelect {
+  color: #ffffff;
+  background: #080c12;
+}
+
+#stateSelect option {
+  color: #ffffff;
+  background: #080c12;
+}
+
+.climate-tech span {
+  color: #dbeafe;
+}
+
+.refresh-btn {
+  background: #111827;
+  color: #ffffff;
+  border-color: #334155;
+}
+
+.refresh-btn:hover {
+  background: #1e293b;
+  opacity: 1;
+} 
 
