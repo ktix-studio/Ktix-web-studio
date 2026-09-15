@@ -3,95 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="jgbuP8yOn2iDMwKmxtZTklTIywZFD6dgx4WoI-xGFXI" />
-<title>KTIX Web Studio | Professional Web Development</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<meta name="description" content="KTIX Web Studio creates modern, fast and professional websites for businesses.">
+<title>KTIX Web Studio | Premium Websites That Convert</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0c0b0a;--text:#f0ece2;--muted:#8a857d;--accent:#d4b483;--border:rgba(255,255,255,0.08)}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:radial-gradient(circle at 50% 0%, #1f1c18 0%, #0c0b0a 70%);background-color:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none;transition:.3s}.container{width:min(1120px,92%);margin:auto}
-header{position:sticky;top:0;z-index:1000;background:rgba(12,11,10,.85);backdrop-filter:blur(15px);border-bottom:1px solid var(--border);padding:18px 0}
-.nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;letter-spacing:1px;display:flex;gap:8px;align-items:baseline}
-.logo small{font-size:10px;color:var(--accent);letter-spacing:2px;font-weight:800}
-nav{display:flex;gap:28px;align-items:center}nav a{color:var(--muted);font-size:14px;font-weight:500}nav a:hover{color:var(--accent)}
-.nav-btn{border:1px solid var(--border);padding:10px 22px;border-radius:50px}.nav-btn:hover{background:var(--text);color:var(--bg)!important}
-.menu-toggle{display:none;font-size:28px;cursor:pointer}
-.hero{min-height:90vh;display:flex;align-items:center;padding:100px 0}.eyebrow{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
-h1{font-family:'Playfair Display',serif;font-size:clamp(44px,7vw,82px);line-height:1.05;margin-bottom:28px;font-weight:400}h1 span{font-style:italic;color:var(--accent)}
-.hero p{max-width:600px;color:var(--muted);font-size:18px;margin-bottom:36px}
-.btn{display:inline-flex;padding:15px 30px;border-radius:50px;font-weight:500;border:1px solid var(--border);transition:.3s;cursor:pointer;font-family:'Inter'}
-.btn-primary{background:var(--text);color:var(--bg);border-color:var(--text)}.btn-primary:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
-.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
-section{padding:100px 0}.section-label{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,54px);line-height:1.1;margin-bottom:20px;font-weight:400}.section-text{color:var(--muted);max-width:600px;margin-bottom:50px;font-size:16px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:50px}
-.service-card,.why-card,.price-card,.climate-project,.contact-form-wrapper{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;padding:32px;transition:.3s}
-.service-card:hover,.why-card:hover,.price-card:hover{border-color:var(--accent);background:rgba(255,255,255,0.04);transform:translateY(-3px)}
-.service-number,.number{color:var(--accent);font-family:'Playfair Display';font-style:italic;font-size:14px;font-weight:600;margin-bottom:18px}
-.service-card h3,.why-card strong,.price-card h3,.step h3{font-family:'Playfair Display';font-size:22px;font-weight:400;margin-bottom:10px;display:block;color:var(--text)}
-.service-card p,.why-card p,.step p{color:var(--muted);font-size:15px;line-height:1.7}
-.process,.pricing,.why-grid,.services-grid,.contact-grid{display:grid;gap:24px}.process{grid-template-columns:repeat(3,1fr)}.pricing{grid-template-columns:repeat(3,1fr)}.services-grid{grid-template-columns:repeat(3,1fr)}.why-grid{grid-template-columns:repeat(3,1fr)}.contact-grid{grid-template-columns:1fr 1fr}
-.price{font-family:'Playfair Display';font-size:38px;margin:20px 0}.features{list-style:none;margin-bottom:30px}.features li{color:var(--muted);margin:12px 0;font-size:14px;display:flex;gap:10px}.features li::before{content:"•";color:var(--accent)}
-.popular{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--bg);font-size:10px;font-weight:800;padding:5px 14px;border-radius:20px;letter-spacing:1px}
-.climate-project-header{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px}.project-status{color:#10b981;font-size:11px;font-weight:800;letter-spacing:1.5px;margin-bottom:10px}
-.climate-project-badge{border:1px solid var(--border);background:rgba(212,180,131,0.08);color:var(--accent);padding:8px 12px;border-radius:8px;font-size:11px;font-weight:800}
-.climate-controls{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:18px}.climate-controls label{display:block;font-size:12px;font-weight:700;margin-bottom:8px}
-#stateSelect{width:100%;max-width:400px;padding:12px;background:#080c12;color:#fff;border:1px solid var(--border);border-radius:8px;outline:none}
-.climate-data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
-.climate-data-card{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;padding:24px;min-height:140px;display:flex;flex-direction:column;justify-content:center}
-.climate-data-card strong{font-size:30px;font-family:'Playfair Display';margin-bottom:6px}.data-label{color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;margin-bottom:8px}.data-note{color:var(--muted);font-size:11px}
-.live-controls{display:flex;justify-content:space-between;align-items:center;margin:16px 0}.live-status{color:#10b981;font-size:11px;font-weight:700}.refresh-btn{padding:8px 14px;border:1px solid var(--border);border-radius:50px;background:transparent;color:var(--text);cursor:pointer}
-.contact-section{border-top:1px solid var(--border);background:rgba(0,0,0,0.15)}.contact-form-wrapper{padding:28px}
-.contact-form-wrapper label{display:block;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:18px 0 8px}
-.contact-form-wrapper input,.contact-form-wrapper select,.contact-form-wrapper textarea{width:100%;padding:14px;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'Inter';outline:none}.contact-form-wrapper input:focus,.contact-form-wrapper select:focus,.contact-form-wrapper textarea:focus{border-color:var(--accent)}
-footer{padding:50px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}.footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}.footer-brand{font-family:'Playfair Display';color:var(--text);font-size:20px}
-@media(max-width:900px){.menu-toggle{display:block}nav{display:none;position:absolute;top:70px;left:0;width:100%;background:#0c0b0a;padding:24px;flex-direction:column;border-bottom:1px solid var(--border)}nav.active{display:flex}.grid-3,.grid-2,.services-grid,.why-grid,.process,.pricing,.contact-grid,.climate-data-grid{grid-template-columns:1fr}}
+:root{--bg:#08080a;--gold:#FFC978;--gold2:#FF9A3C;--muted:#9a9aa3;--border:rgba(255,255,255,0.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:#fff;overflow-x:hidden}
+h1,h2{font-family:'Syne',sans-serif}
+.bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:-1}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.5}
+.orb1{width:800px;height:800px;background:radial-gradient(circle, rgba(255,201,120,0.15) 0%, transparent 70%);top:-200px;left:-200px}
+.orb2{width:600px;height:600px;background:radial-gradient(circle, rgba(168,85,247,0.18) 0%, transparent 70%);top:20%;right:-100px}
+.navbar{position:fixed;top:0;width:100%;z-index:100;background:rgba(8,8,10,0.75);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:16px 0}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center}
+.btn-gold{background:linear-gradient(105deg,var(--gold),var(--gold2));color:#000;padding:12px 26px;border-radius:100px;font-weight:700;font-size:13px;box-shadow:0 10px 30px rgba(255,201,120,0.25)}
+.hero{min-height:90vh;display:flex;align-items:center;max-width:1280px;margin:0 auto;padding:130px 32px 60px}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;width:100%}
+.hero h1{font-size:clamp(42px,6vw,70px);line-height:0.9;letter-spacing:-2px;font-weight:800}
+.hero h1 i{font-style:italic;background:linear-gradient(90deg,var(--gold),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);font-size:17px;line-height:1.6;max-width:440px;margin:20px 0 30px}
+.glass-card{width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.12);border-radius:24px;backdrop-filter:blur(30px);box-shadow:0 40px 80px rgba(0,0,0,0.5);transform:rotateY(-10deg) rotateX(6deg);overflow:hidden}
+.section{max-width:1280px;margin:0 auto;padding:80px 32px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.s-card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));border:1px solid var(--border);border-radius:20px;padding:28px;transition:0.4s}
+.s-card:hover{transform:translateY(-6px);border-color:rgba(255,201,120,0.25)}
+.top-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;padding:16px 20px;margin-bottom:24px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);color:#4ade80;padding:6px 14px;border-radius:100px;font-size:11px;font-weight:600}
+.dot-live{width:6px;height:6px;background:#4ade80;border-radius:50%;box-shadow:0 0 10px #4ade80;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+.search-box{background:rgba(0,0,0,0.4);border:1px solid var(--border);border-radius:100px;padding:10px 18px;color:#fff;width:260px;outline:none;font-size:13px}
+.section-title{font-size:12px;letter-spacing:2px;color:var(--muted);margin:28px 0 14px;display:flex;align-items:center;gap:10px}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.city-card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;justify-content:space-between;align-items:center;transition:0.3s}
+.city-card:hover{transform:translateY(-3px);border-color:rgba(255,201,120,0.25)}
+.city-card.ut{background:linear-gradient(180deg, rgba(168,85,247,0.08), rgba(255,255,255,0.02));border-color:rgba(168,85,247,0.15)}
+.city-name{font-size:13px;font-weight:600}.city-state{font-size:10px;color:var(--muted);margin-top:2px}
+.temp{font-family:'Syne';font-size:20px;font-weight:700}
+.contact{max-width:1280px;margin:0 auto;padding:60px 32px 100px;display:grid;grid-template-columns:1fr 1fr;gap:50px;border-top:1px solid var(--border)}
+.form-box{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;padding:28px}
+.form-box input,.form-box textarea{width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:10px;padding:12px;color:#fff;margin-top:6px;font-size:13px}
+.form-box label{font-size:10px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;font-weight:600;margin-top:14px;display:block}
+.form-box button{margin-top:18px;width:100%;background:linear-gradient(105deg,var(--gold),var(--gold2));color:#000;border:none;padding:14px;border-radius:100px;font-weight:800;cursor:pointer}
+@media(max-width:900px){.hero-grid,.grid-3,.contact{grid-template-columns:1fr}.city-grid{grid-template-columns:repeat(2,1fr)}.hero{padding:120px 24px 40px}.section,.contact{padding:60px 24px}.glass-card{transform:none}}
+@media(max-width:480px){.city-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
-<header><div class="container nav">
-<a href="#" class="logo"><strong>KTIX</strong><small>WEB STUDIO</small></a>
-<nav id="mainNav"><a href="#services">Services</a><a href="#why">Why KTIX</a><a href="#process">Process</a><a href="#pricing">Pricing</a><a href="#work">Work</a><a href="#climate">Climate</a><a href="https://wa.me/918131861802" target="_blank" class="nav-btn">Get Started</a></nav>
-<div class="menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('active')">☰</div>
-</div></header>
-
-<section class="hero"><div class="container"><div class="eyebrow">● WEB DESIGN & DEVELOPMENT</div><h1>Your business deserves <span>a better website.</span></h1><p>KTIX Web Studio creates modern, fast and professional websites designed around your business, brand and customers.</p><div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn btn-primary" href="https://wa.me/918131861802" target="_blank">Start a Project →</a><a class="btn btn-secondary" href="#services">Explore Services</a></div></div></section>
-
-<section id="services"><div class="container"><div class="section-label">What We Do</div><h2 class="section-title">Our Services</h2><p class="section-text">Professional web solutions built to give your business a strong and credible online presence.</p><div class="services-grid"><div class="service-card"><div class="service-number">01</div><h3>Business Websites</h3><p>Professional websites built to establish your online presence and build customer trust.</p></div><div class="service-card"><div class="service-number">02</div><h3>Landing Pages</h3><p>Focused pages designed to present your offer and encourage visitors to take action.</p></div><div class="service-card"><div class="service-number">03</div><h3>Portfolio Websites</h3><p>Modern portfolios that showcase your work, projects and professional experience.</p></div><div class="service-card"><div class="service-number">04</div><h3>Restaurant Websites</h3><p>Menus, galleries, locations and contact information presented beautifully.</p></div><div class="service-card"><div class="service-number">05</div><h3>Website Redesign</h3><p>Transform an outdated website into a cleaner, faster and more modern experience.</p></div><div class="service-card"><div class="service-number">06</div><h3>Custom Websites</h3><p>Tailored websites designed around your business, goals and customers.</p></div></div></div></section>
-
-<section id="why"><div class="container"><div class="section-label">Why KTIX Web Studio</div><h2 class="section-title">Built for businesses.</h2><div class="why-grid"><div class="why-card"><strong>Business Focused</strong><p>Every section has a clear purpose and helps visitors understand your business.</p></div><div class="why-card"><strong>Mobile First</strong><p>Your website is designed to look great and work smoothly on phones and tablets.</p></div><div class="why-card"><strong>Custom Designed</strong><p>We build around your business instead of forcing your brand into a generic template.</p></div></div></div></section>
-
-<section id="process"><div class="container"><div class="section-label">How It Works</div><h2 class="section-title">Simple process.<br>Professional result.</h2><div class="process"><div class="step why-card"><div class="number">01</div><h3>Discuss</h3><p>Tell us about your business and what you want your website to achieve.</p></div><div class="step why-card"><div class="number">02</div><h3>Build</h3><p>We create a clean, responsive website tailored to your business.</p></div><div class="step why-card"><div class="number">03</div><h3>Launch</h3><p>After testing and refinement, your website is ready to go online.</p></div></div></div></section>
-
-<section id="pricing"><div class="container"><div class="section-label">Packages</div><h2 class="section-title">Simple pricing.</h2><div class="pricing"><div class="price-card" style="position:relative"><h3>Starter</h3><p style="color:var(--muted)">Essential Website</p><div class="price">Get a Quote</div><ul class="features"><li>Professional one-page website</li><li>Mobile responsive</li><li>Contact section</li></ul><a class="btn btn-secondary" style="width:100%;text-align:center" href="https://wa.me/918131861802" target="_blank">Choose Starter</a></div><div class="price-card" style="position:relative;border-color:var(--accent)"><div class="popular">MOST POPULAR</div><h3>Professional</h3><p style="color:var(--muted)">Professional Website</p><div class="price">Get a Quote</div><ul class="features"><li>Multi-section business website</li><li>Premium responsive design</li><li>WhatsApp integration</li><li>Contact enquiry system</li></ul><a class="btn btn-primary" style="width:100%;text-align:center" href="https://wa.me/918131861802" target="_blank">Choose Professional</a></div><div class="price-card" style="position:relative"><h3>Custom</h3><p style="color:var(--muted)">Custom Website</p><div class="price">Let's Talk</div><ul class="features"><li>Custom design</li><li>Advanced functionality</li><li>Special requirements</li></ul><a class="btn btn-secondary" style="width:100%;text-align:center" href="https://wa.me/918131861802" target="_blank">Let's Talk</a></div></div></div></section>
-
-<section id="work"><div class="container"><div class="section-label">Selected Work</div><h2 class="section-title">Projects we've built.</h2><p class="section-text">A selection of projects demonstrating our approach to modern, responsive and practical web development.</p><div class="service-card"><div class="service-number">LIVE PROJECT</div><h3>India Climate Dashboard</h3><p>An interactive climate dashboard using live weather, atmospheric CO₂ and solar-radiation data through API integration.</p><p style="margin-top:8px"><strong>Status:</strong> Live Project — Scroll down to see it live ↓</p></div></div></section>
-
-<!-- INDIAN CLIMATE DASHBOARD - NOW VISIBLE -->
-<section id="climate"><div class="container"><div class="climate-project"><div class="climate-project-header"><div><div class="project-status">● LIVE CLIMATE PROJECT</div><h3>India Climate Dashboard</h3><p>Explore climate information across Indian states through an interactive dashboard.</p></div><div class="climate-project-badge">ALL INDIA</div></div><div class="climate-controls"><label for="stateSelect">Select State</label><select id="stateSelect"><option value="AndhraPradesh">Andhra Pradesh</option><option value="ArunachalPradesh">Arunachal Pradesh</option><option value="Assam" selected>Assam</option><option value="Bihar">Bihar</option><option value="Chhattisgarh">Chhattisgarh</option><option value="Goa">Goa</option><option value="Gujarat">Gujarat</option><option value="Haryana">Haryana</option><option value="HimachalPradesh">Himachal Pradesh</option><option value="Jharkhand">Jharkhand</option><option value="Karnataka">Karnataka</option><option value="Kerala">Kerala</option><option value="MadhyaPradesh">Madhya Pradesh</option><option value="Maharashtra">Maharashtra</option><option value="Manipur">Manipur</option><option value="Meghalaya">Meghalaya</option><option value="Mizoram">Mizoram</option><option value="Nagaland">Nagaland</option><option value="Odisha">Odisha</option><option value="Punjab">Punjab</option><option value="Rajasthan">Rajasthan</option><option value="Sikkim">Sikkim</option><option value="TamilNadu">Tamil Nadu</option><option value="Telangana">Telangana</option><option value="Tripura">Tripura</option><option value="UttarPradesh">Uttar Pradesh</option><option value="Uttarakhand">Uttarakhand</option><option value="WestBengal">West Bengal</option></select></div><div class="climate-data-grid"><div class="climate-data-card"><div class="data-label">Temperature</div><strong id="temperatureValue">Loading...</strong><div class="data-note">Live weather data</div></div><div class="climate-data-card"><div class="data-label">CO₂ Concentration</div><strong id="co2Value">Loading...</strong><div class="data-note">Live atmospheric CO₂</div></div><div class="climate-data-card"><div class="data-label">Solar Radiation</div><strong id="renewableValue">Loading...</strong><div class="data-note">Current solar radiation</div></div></div><div class="live-controls"><span class="live-status">● LIVE DATA</span><button id="refreshClimate" class="refresh-btn">↻ Refresh Data</button></div><div id="climateUpdated" style="color:var(--muted);font-size:12px;margin:16px 0">Loading live data...</div></div></div></section>
-
-<div class="contact-form-wrapper"><form action="https://formsubmit.co/kabitlego0@gmail.com" method="POST"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://ktix-studio.github.io/Ktix-web-studio/"><label>Name</label><input type="text" name="Name" placeholder="Your name" required><label>Email or Phone</label><input type="text" name="Email or Phone" placeholder="How can we contact you?" required><label>Project Details</label><textarea name="Project Details" rows="5" placeholder="Tell us about your project..." required></textarea><button type="submit" class="btn btn-primary" style="width:100%;margin-top:20px">Send Request →</button></form></div></div></section> 
-<footer><div class="container footer-inner"><div><div class="footer-brand">KTIX Web Studio</div>Professional Web Development</div><div>© 2026 KTIX • kabitlego0@gmail.com • +91 81318 61802</div></div></footer>
-
+<div class="bg-orbs"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+<nav class="navbar"><div class="nav-inner"><div style="font-weight:800">KTIX <span style="color:#fff">WEB STUDIO</span><span style="font-size:8px;letter-spacing:2px;color:var(--gold);display:block">EST.2024 • INDIA</span></div><div style="display:flex;gap:20px;align-items:center"><a href="#services" style="font-size:13px;color:var(--muted)">Services</a><a href="#climate" style="font-size:13px;color:var(--muted)">Climate Live</a><a href="#contact" class="btn-gold">GET STARTED →</a></div></div></nav>
+<section class="hero">
+<div class="hero-grid">
+<div>
+<div style="font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:700;margin-bottom:20px">WEB DESIGN & DEVELOPMENT STUDIO</div>
+<h1>Your business<br>deserves a<br><i>better website.</i></h1>
+<p>KTIX Web Studio crafts ultra-premium, fast, 3D websites designed around your business, brand and customers. Not templates.</p>
+<div style="display:flex;gap:12px"><a href="#contact" class="btn-gold">Start a Project →</a><a href="#climate" style="padding:12px 22px;border-radius:100px;border:1px solid var(--border);font-size:13px;font-weight:600">See Live Dashboard</a></div>
+</div>
+<div class="glass-card"><div style="padding:18px;display:flex;gap:8px;border-bottom:1px solid rgba(255,255,255,0.06)"><div style="width:10px;height:10px;border-radius:50%;background:#ff5f56"></div><div style="width:10px;height:10px;border-radius:50%;background:#ffbd2e"></div><div style="width:10px;height:10px;border-radius:50%;background:#27c93f"></div></div><div style="padding:28px"><div style="height:8px;width:60%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:4px;margin-bottom:14px"></div><div style="height:8px;background:rgba(255,255,255,0.08);border-radius:4px;margin-bottom:10px"></div><div style="height:8px;background:rgba(255,255,255,0.08);border-radius:4px;width:80%;margin-bottom:22px"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div style="height:70px;background:rgba(255,255,255,0.06);border-radius:12px"></div><div style="height:70px;background:linear-gradient(135deg,rgba(255,201,120,0.2),rgba(255,154,60,0.1));border-radius:12px;border:1px solid rgba(255,201,120,0.15)"></div></div></div></div>
+</div>
+</section>
+<section id="services" class="section">
+<div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:36px;flex-wrap:wrap;gap:16px"><h2 style="font-size:44px;line-height:0.9">Crafted for<br>growth.</h2><p style="color:var(--muted);max-width:360px;font-size:14px">We don't just design pretty pages. We build conversion-focused digital experiences.</p></div>
+<div class="grid-3">
+<div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">01 / DESIGN</div><h3>Premium UI / UX</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Apple-level 3D glass, depth & motion that feels expensive.</p></div>
+<div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">02 / DEV</div><h3>Next-Gen Build</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Blazing-fast, SEO-ready, fully responsive code. Live data ready.</p></div>
+<div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">03 / STRATEGY</div><h3>Conversion System</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Every pixel placed to turn visitors into customers.</p></div>
+</div>
+</section>
+<section id="climate" class="section" style="background:linear-gradient(180deg, rgba(255,201,120,0.04), transparent);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<div style="text-align:center;margin-bottom:28px"><div class="badge" style="margin:0 auto"><div class="dot-live"></div> LIVE • ALL INDIA</div><h2 style="font-size:clamp(32px,5vw,52px);margin-top:16px;line-height:0.9">Live India<br><i style="color:var(--gold);font-weight:500">Climate Dashboard</i></h2><p style="color:var(--muted);margin-top:10px;font-size:13px">All 28 States & 8 Union Territories • Real-time</p></div>
+<div class="top-bar"><div style="font-size:11px;color:var(--muted)"><span id="live-time">--:--:-- IST</span> • <span style="color:#4ade80">● Operational</span></div><input type="text" id="search" class="search-box" placeholder="🔍 Search state or capital..."></div>
+<div class="section-title">28 STATES</div>
+<div class="city-grid">
+<div class="city-card"><div><div class="city-name">Amaravati</div><div class="city-state">Andhra Pradesh • Clear</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">32°</div></div></div>
+<div class="city-card"><div><div class="city-name">Itanagar</div><div class="city-state">Arunachal Pradesh • Rain</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">24°</div></div></div>
+<div class="city-card"><div><div class="city-name">Guwahati</div><div class="city-state">Assam • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">31°</div></div></div>
+<div class="city-card"><div><div class="city-name">Patna</div><div class="city-state">Bihar • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">35°</div></div></div>
+<div class="city-card"><div><div class="city-name">Raipur</div><div class="city-state">Chhattisgarh • Sunny</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">34°</div></div></div>
+<div class="city-card"><div><div class="city-name">Panaji</div><div class="city-state">Goa • Pleasant</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">30°</div></div></div>
+<div class="city-card"><div><div class="city-name">Gandhinagar</div><div class="city-state">Gujarat • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">36°</div></div></div>
+<div class="city-card"><div><div class="city-name">Chandigarh</div><div class="city-state">Haryana • Clear</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">37°</div></div></div>
+<div class="city-card"><div><div class="city-name">Shimla</div><div class="city-state">Himachal Pradesh • Cold</div></div><div style="text-align:right"><div style="font-size:20px">❄️</div><div class="temp">19°</div></div></div>
+<div class="city-card"><div><div class="city-name">Ranchi</div><div class="city-state">Jharkhand • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">30°</div></div></div>
+<div class="city-card"><div><div class="city-name">Bengaluru</div><div class="city-state">Karnataka • Pleasant</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">26°</div></div></div>
+<div class="city-card"><div><div class="city-name">Thiruvananthapuram</div><div class="city-state">Kerala • Humid</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">30°</div></div></div>
+<div class="city-card"><div><div class="city-name">Bhopal</div><div class="city-state">Madhya Pradesh • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">35°</div></div></div>
+<div class="city-card"><div><div class="city-name">Mumbai</div><div class="city-state">Maharashtra • Humid</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">32°</div></div></div>
+<div class="city-card"><div><div class="city-name">Imphal</div><div class="city-state">Manipur • Rain</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">27°</div></div></div>
+<div class="city-card"><div><div class="city-name">Shillong</div><div class="city-state">Meghalaya • Rain</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">22°</div></div></div>
+<div class="city-card"><div><div class="city-name">Aizawl</div><div class="city-state">Mizoram • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">26°</div></div></div>
+<div class="city-card"><div><div class="city-name">Kohima</div><div class="city-state">Nagaland • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">23°</div></div></div>
+<div class="city-card"><div><div class="city-name">Bhubaneswar</div><div class="city-state">Odisha • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">33°</div></div></div>
+<div class="city-card"><div><div class="city-name">Chandigarh</div><div class="city-state">Punjab • Clear</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">36°</div></div></div>
+<div class="city-card"><div><div class="city-name">Jaipur</div><div class="city-state">Rajasthan • Very Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">39°</div></div></div>
+<div class="city-card"><div><div class="city-name">Gangtok</div><div class="city-state">Sikkim • Cold</div></div><div style="text-align:right"><div style="font-size:20px">❄️</div><div class="temp">18°</div></div></div>
+<div class="city-card"><div><div class="city-name">Chennai</div><div class="city-state">Tamil Nadu • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">36°</div></div></div>
+<div class="city-card"><div><div class="city-name">Hyderabad</div><div class="city-state">Telangana • Sunny</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">34°</div></div></div>
+<div class="city-card"><div><div class="city-name">Agartala</div><div class="city-state">Tripura • Humid</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">31°</div></div></div>
+<div class="city-card"><div><div class="city-name">Lucknow</div><div class="city-state">Uttar Pradesh • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">37°</div></div></div>
+<div class="city-card"><div><div class="city-name">Dehradun</div><div class="city-state">Uttarakhand • Pleasant</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">28°</div></div></div>
+<div class="city-card"><div><div class="city-name">Kolkata</div><div class="city-state">West Bengal • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">33°</div></div></div>
+</div>
+<div class="section-title">8 UNION TERRITORIES</div>
+<div class="city-grid">
+<div class="city-card ut"><div><div class="city-name">Port Blair</div><div class="city-state">Andaman & Nicobar • Humid</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">30°</div></div></div>
+<div class="city-card ut"><div><div class="city-name">Chandigarh</div><div class="city-state">Chandigarh • Clear</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">36°</div></div></div>
+<div class="city-card ut"><div><div class="city-name">Daman</div><div class="city-state">Dadra & Nagar Haveli • Pleasant</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">32°</div></div></div>
+<div class="city-card ut"><div><div class="city-name">New Delhi</div><div class="city-state">Delhi • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">38°</div></div></div>
+<div class="city-card ut"><div><div class="city-name">Srinagar</div><div class="city-state">Jammu & Kashmir • Cold</div></div><div style="text-align:right"><div style="font-size:20px">❄️</div><div class="temp">22°</div></div></div>
+<div class="city-card ut"><div><div class="city-name">Leh</div><div class="city-state">Ladakh • Freezing</div></div><div style="text-align:right"><div style="font-size:20px">❄️</div><div class="temp">12°</div></div></div>
+<div class="city-card ut"><div><div class="city-name">Kavaratti</div><div class="city-state">Lakshadweep • Humid</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">31°</div></div></div>
+<div class="city-card ut"><div><div class="city-name">Puducherry</div><div class="city-state">Puducherry • Coastal</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">34°</div></div></div>
+</div>
+</section>
+<section id="contact" class="contact">
+<div><h2 style="font-size:44px;line-height:0.9">Let's build<br><span style="color:var(--gold);font-style:italic">something great.</span></h2><p style="color:var(--muted);margin-top:12px;font-size:13px;max-width:320px">Ready to upgrade? Free audit in 6 hours.</p></div>
+<div class="form-box">
+<form action="https://formsubmit.co/kabitlego0@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://ktix-studio.github.io/Ktix-web-studio/">
+<label>Name</label><input type="text" name="Name" required placeholder="Your name">
+<label>Email/Phone</label><input type="text" name="Email_or_Phone" required placeholder="Contact">
+<label>Message</label><textarea name="Project_Details" rows="3" required placeholder="Your project..."></textarea>
+<button type="submit">SEND REQUEST →</button>
+</form>
+</div>
+</section>
 <script>
-const stateLocations={"AndhraPradesh":[16.5062,80.648],"ArunachalPradesh":[27.0844,93.6053],"Assam":[26.1445,91.7362],"Bihar":[25.5941,85.1376],"Chhattisgarh":[21.2514,81.6296],"Goa":[15.4909,73.8278],"Gujarat":[23.0225,72.5714],"Haryana":[30.7333,76.7794],"HimachalPradesh":[31.1048,77.1734],"Jharkhand":[23.3441,85.3096],"Karnataka":[12.9716,77.5946],"Kerala":[8.5241,76.9366],"MadhyaPradesh":[23.2599,77.4126],"Maharashtra":[19.076,72.8777],"Manipur":[24.817,93.9368],"Meghalaya":[25.5788,91.8933],"Mizoram":[23.7271,92.7176],"Nagaland":[25.6751,94.1086],"Odisha":[20.2961,85.8245],"Punjab":[31.634,74.8723],"Rajasthan":[26.9124,75.7873],"Sikkim":[27.3389,88.6065],"TamilNadu":[13.0827,80.2707],"Telangana":[17.385,78.4867],"Tripura":[23.8315,91.2868],"UttarPradesh":[26.8467,80.9462],"Uttarakhand":[30.3165,78.0322],"WestBengal":[22.5726,88.3639]};
-const stateSelect=document.getElementById("stateSelect"),temperatureValue=document.getElementById("temperatureValue"),co2Value=document.getElementById("co2Value"),renewableValue=document.getElementById("renewableValue");
-async function updateClimateData(){
-  const state=stateSelect.value,loc=stateLocations[state];if(!loc)return;
-  const [lat,lon]=loc;temperatureValue.textContent="Loading...";co2Value.textContent="Loading...";renewableValue.textContent="Loading...";
-  try{
-    const wURL=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,shortwave_radiation&timezone=auto`;
-    const aURL=`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&current=carbon_dioxide&timezone=auto`;
-    const [wRes,aRes]=await Promise.all([fetch(wURL),fetch(aURL)]);const w=await wRes.json(),a=await aRes.json();
-    temperatureValue.textContent=`${w.current.temperature_2m}°C`;co2Value.textContent=`${a.current.carbon_dioxide} ppm`;renewableValue.textContent=`${Math.round(w.current.shortwave_radiation)} W/m²`;
-    document.getElementById("climateUpdated").textContent=`Last updated: ${new Date().toLocaleString("en-IN")}`;
-  }catch(e){temperatureValue.textContent="Unavailable";co2Value.textContent="Unavailable";renewableValue.textContent="Unavailable";}}
-if(stateSelect){stateSelect.addEventListener("change",updateClimateData);updateClimateData();setInterval(updateClimateData,600000)}
-document.getElementById("refreshClimate")?.addEventListener("click",()=>{updateClimateData()});
+function updateTime(){const now=new Date();const ist=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Kolkata'}));document.getElementById('live-time').textContent=ist.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit'})+' IST';}
+setInterval(updateTime,1000);updateTime();
+document.getElementById('search').addEventListener('input',function(e){const q=e.target.value.toLowerCase();document.querySelectorAll('.city-card').forEach(c=>{c.style.display=c.textContent.toLowerCase().includes(q)?'flex':'none';});});
 </script>
 </body>
 </html>
