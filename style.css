@@ -1,596 +1,91 @@
 /* =========================================
-   CLIMATE TECH PROJECT
+   KTIX WEB STUDIO - EMBERLINE PREMIUM - FIXED
    ========================================= */
 
-#climate {
-  position: relative;
-  overflow: hidden;
+:root{
+  --bg:#0c0b0a;
+  --card:#111111;
+  --card-hover:#171717;
+  --text:#f0ece2;
+  --text-main:#f0ece2;
+  --muted:#8a857d;
+  --white:#f0ece2;
+  --accent:#d4b483;
+  --blue:#d4b483;
+  --blue-light:#d4b483;
+  --border:rgba(255,255,255,0.08);
 }
 
-#climate::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  top: 10%;
-  right: -250px;
-  background: radial-gradient(
-    circle,
-    rgba(47, 140, 255, 0.08),
-    transparent 65%
-  );
-  pointer-events: none;
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(circle at 50% 0%, #1f1c18 0%, #0c0b0a 70%);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
+
+/* CLIMATE PROJECT */
+#climate{position:relative;overflow:hidden;padding:120px 0}
+.climate-project{position:relative;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:18px;padding:38px;overflow:hidden;backdrop-filter:blur(10px)}
+.climate-project-header{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;margin-bottom:35px;flex-wrap:wrap}
+.project-status{display:inline-block;color:#10b981;font-size:11px;font-weight:800;letter-spacing:1.8px;margin-bottom:14px}
+.climate-project-header h3{font-family:'Playfair Display',serif;font-size:clamp(25px,4vw,34px);line-height:1.15;margin-bottom:12px;color:var(--text)}
+.climate-project-header p{color:var(--muted);max-width:650px;font-size:15px}
+.climate-project-badge{flex-shrink:0;border:1px solid var(--border);background:rgba(212,180,131,0.08);color:var(--accent);padding:10px 15px;border-radius:10px;font-size:12px;font-weight:800;letter-spacing:1px}
+
+.climate-controls{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px}
+.climate-controls label{display:block;color:var(--text);font-size:13px;font-weight:700;margin-bottom:10px}
+#stateSelect{width:100%;max-width:420px;padding:13px 15px;background:#080c12;color:var(--white);border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;outline:none;cursor:pointer;transition:0.25s}
+#stateSelect:hover,#stateSelect:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(212,180,131,0.1)}
+#stateSelect option{background:#0c0b0a;color:#fff}
+
+.climate-data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:25px}
+.climate-data-card{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:13px;padding:25px;min-height:160px;display:flex;flex-direction:column;justify-content:center;transition:0.3s}
+.climate-data-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.data-label{color:var(--muted);font-size:12px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:10px}
+.climate-data-card strong{color:var(--white);font-size:32px;line-height:1.1;margin-bottom:8px;font-family:'Playfair Display',serif}
+.data-note{color:var(--muted);font-size:12px}
+
+.climate-tech{display:flex;flex-wrap:wrap;gap:9px;padding-top:5px}
+.climate-tech span{color:var(--muted);background:rgba(212,180,131,0.05);border:1px solid var(--border);padding:7px 11px;border-radius:7px;font-size:11px;font-weight:700}
+
+.live-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:20px 0;flex-wrap:wrap}
+.live-status{font-size:12px;font-weight:700;letter-spacing:1px;color:#10b981}
+.refresh-btn{padding:10px 16px;border:1px solid var(--border);border-radius:50px;background:transparent;color:var(--text);cursor:pointer;font:inherit;transition:0.3s}
+.refresh-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+#climateUpdated{color:var(--muted);font-size:12px;margin:18px 0}
+
+/* CARDS - DARK PREMIUM FIX */
+.service-card,.project-card,.why-card,.step,.price-card{
+  background:rgba(255,255,255,0.02) !important;
+  border:1px solid var(--border) !important;
+  border-radius:8px !important;
+  padding:35px !important;
+  box-shadow:none !important;
+  transition:0.3s !important;
 }
+.service-card:hover,.project-card:hover,.why-card:hover,.step:hover{border-color:var(--accent) !important;background:rgba(255,255,255,0.04) !important;transform:translateY(-3px)}
+.service-card h3,.project-card h3,.why-card strong,.step h3{color:var(--text) !important;font-family:'Playfair Display',serif !important;font-size:22px !important}
+.service-card p,.project-card p,.why-card p,.step p,.section-text{color:var(--muted) !important;font-size:15px !important;line-height:1.7 !important}
+.service-card .service-number,.project-card .project-number,.number{color:var(--accent) !important;font-family:'Playfair Display',serif;font-style:italic;font-weight:600}
 
-.climate-project {
-  position: relative;
-  background: #111827; 
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 38px;
-  overflow: hidden;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+/* HEADER LOGO */
+header .logo{display:flex;align-items:baseline;gap:8px;color:var(--text) !important;font-size:27px;font-weight:600;letter-spacing:1px;font-family:'Playfair Display',serif}
+header .logo strong{color:var(--text) !important;font-weight:600}
+header .logo small{color:var(--accent) !important;font-size:10px;font-weight:800;letter-spacing:2px}
+
+/* FOOTER CONTACT */
+.footer-contact a{color:var(--accent) !important;font-size:15px !important;font-weight:500 !important}
+.footer-contact a:hover{color:var(--text) !important}
+
+/* MOBILE */
+@media(max-width:850px){
+  nav.mobile-open,nav.active{display:flex !important;flex-direction:column;position:absolute;top:72px;right:4%;left:4%;background:#111;border:1px solid var(--border);border-radius:12px;padding:18px;gap:15px;z-index:999}
+  .climate-data-grid{grid-template-columns:1fr 1fr}
+  .climate-data-card:last-child{grid-column:1 / -1}
 }
-
-/* Top project information */
-
-.climate-project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
-  margin-bottom: 35px;
+@media(max-width:600px){
+  .climate-project{padding:22px;border-radius:14px}
+  .climate-project-header{flex-direction:column;gap:18px}
+  .climate-data-grid{grid-template-columns:1fr}
+  .climate-data-card:last-child{grid-column:auto}
+  p,.service-card p{font-size:16px !important;line-height:1.7 !important}
 }
-
-.project-status {
-  display: inline-block;
-  color: #10b981;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1.8px;
-  margin-bottom: 14px;
-}
-
-.climate-project-header h3 {
-  font-size: clamp(25px, 4vw, 34px);
-  line-height: 1.15;
-  margin-bottom: 12px;
-}
-
-.climate-project-header p {
-  color: var(--text);
-  max-width: 650px;
-  font-size: 15px;
-}
-
-.climate-project-badge {
-  flex-shrink: 0;
-  border: 1px solid var(--border);
-  background: rgba(47, 140, 255, 0.06);
-  color: var(--blue-light);
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-
-/* State selector */
-
-.climate-controls {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.climate-controls label {
-  display: block;
-  color: var(--text);
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-#stateSelect {
-  width: 100%;
-  max-width: 420px;
-  padding: 13px 15px;
-  background: #080c12;
-  color: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 14px;
-  font-family: inherit;
-  outline: none;
-  cursor: pointer;
-  transition: 0.25s;
-}
-
-#stateSelect:hover,
-#stateSelect:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(47, 140, 255, 0.08);
-}
-
-
-/* Climate data cards */
-
-.climate-data-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-bottom: 25px;
-}
-
-.climate-data-card {
-  background: rgba(255, 255, 255, 0.018);
-  border: 1px solid var(--border);
-  border-radius: 13px;
-  padding: 25px;
-  min-height: 160px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.climate-data-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(47, 140, 255, 0.55);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-
-.data-label {
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.climate-data-card strong {
-  color: var(--white);
-  font-size: 32px;
-  line-height: 1.1;
-  margin-bottom: 8px;
-}
-
-.data-note {
-  color: var(--muted);
-  font-size: 12px;
-}
-
-
-/* Technology tags */
-
-.climate-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  padding-top: 5px;
-}
-
-.climate-tech span {
-  color: var(--text);
-  background: rgba(47, 140, 255, 0.05);
-  border: 1px solid var(--border);
-  padding: 7px 11px;
-  border-radius: 7px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-
-
-/* =========================================
-   CLIMATE TECH RESPONSIVE
-   ========================================= */
-
-@media (max-width: 850px) {
-
-  .climate-data-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .climate-data-card:last-child {
-    grid-column: 1 / -1;
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .climate-project {
-    padding: 22px;
-    border-radius: 14px;
-  }
-
-  .climate-project-header {
-    flex-direction: column;
-    gap: 18px;
-    margin-bottom: 25px;
-  }
-
-  .climate-project-badge {
-    align-self: flex-start;
-  }
-
-  .climate-project-header h3 {
-    font-size: 26px;
-  }
-
-  .climate-project-header p {
-    font-size: 14px;
-  }
-
-  .climate-controls {
-    padding: 16px;
-  }
-
-  #stateSelect {
-    max-width: 100%;
-  }
-
-  .climate-data-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .climate-data-card:last-child {
-    grid-column: auto;
-  }
-
-  .climate-data-card {
-    min-height: 140px;
-  }
-
-  }
-.live-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin: 20px 0;
-}
-
-.live-status {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.refresh-btn {
-  padding: 10px 16px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--card);
-  color: var(--text);
-  cursor: pointer;
-  font: inherit;
-}
-
-.refresh-btn:hover {
-  opacity: 0.8;
-} 
-@media (max-width: 850px) {
-  nav.mobile-open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 72px;
-    right: 4%;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px;
-    gap: 15px;
-    width: 200px;
-  }
-} 
-/* =========================================
-   CLIMATE TEXT VISIBILITY FIX
-   ========================================= */
-
-.climate-project,
-.climate-project p,
-.climate-project label {
-  color: #e5e7eb;
-}
-
-.climate-project h3,
-.climate-data-card strong {
-  color: #ffffff;
-}
-
-.project-status,
-.live-status {
-  color: #10b981;
-}
-
-.data-label {
-  color: #cbd5e1;
-}
-
-.data-note {
-  color: #94a3b8;
-}
-
-.climate-project-badge {
-  color: #60a5fa;
-}
-
-#stateSelect {
-  color: #ffffff;
-  background: #080c12;
-}
-
-#stateSelect option {
-  color: #ffffff;
-  background: #080c12;
-}
-
-.climate-tech span {
-  color: #dbeafe;
-}
-
-.refresh-btn {
-  background: #111827;
-  color: #ffffff;
-  border-color: #334155;
-}
-
-.refresh-btn:hover {
-  background: #1e293b;
-  opacity: 1;
-} 
-/* =========================================
-   MOBILE READABILITY FIX
-   ========================================= */
-
-@media (max-width: 600px) {
-
-  p {
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .service-card p,
-  .project-card p {
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .service-card h3,
-  .project-card h3 {
-    font-size: 25px;
-    line-height: 1.3;
-  }
-
-  .service-card,
-  .project-card {
-    padding: 28px;
-  }
-} 
-/* =========================================
-   FINAL CARD VISIBILITY FIX
-   ========================================= */
-
-.service-card,
-.project-card {
-  background: #ffffff !important;
-  border: 1px solid #d9e1ea !important;
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08) !important;
-}
-
-.service-card h3,
-.project-card h3 {
-  color: #0f172a !important;
-}
-
-.service-card p,
-.project-card p {
-  color: #64748b !important;
-}
-
-.service-card .service-number,
-.project-card .project-number {
-  color: #2f8cff !important;
-}
-
-/* =========================================
-   MOBILE CARD READABILITY
-   ========================================= */
-
-@media (max-width: 600px) {
-  .service-card,
-  .project-card {
-    padding: 28px !important;
-  }
-
-  .service-card h3,
-  .project-card h3 {
-    font-size: 25px !important;
-    line-height: 1.3 !important;
-  }
-
-  .service-card p,
-  .project-card p {
-    font-size: 17px !important;
-    line-height: 1.7 !important;
-  }
-} 
-/* =========================================
-   FINAL MOBILE CARD FIX
-   REMOVE DARK OVERLAY
-   ========================================= */
-
-@media (max-width: 600px) {
-
-  .service-card,
-  .project-card {
-    background: #ffffff !important;
-    background-image: none !important;
-    color: #0f172a !important;
-    border: 1px solid #dbe3ec !important;
-  }
-
-  .service-card::before,
-  .service-card::after,
-  .project-card::before,
-  .project-card::after {
-    background: none !important;
-    background-image: none !important;
-    opacity: 0 !important;
-    display: none !important;
-  }
-
-  .service-card h3,
-  .project-card h3 {
-    color: #0f172a !important;
-  }
-
-  .service-card p,
-  .project-card p {
-    color: #64748b !important;
-  }
-
-  .service-card * ,
-  .project-card * {
-    text-shadow: none !important;
-  }
-} 
-/* =========================================
-   KTIX WEB STUDIO HEADER LOGO
-   ========================================= */
-
-header .logo {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  color: #ffffff !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
-  font-size: 27px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-header .logo strong {
-  color: #ffffff !important;
-  font-size: 27px;
-  font-weight: 900;
-}
-
-header .logo small {
-  color: #2f8cff !important;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  white-space: nowrap;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  header .logo {
-    font-size: 25px;
-    gap: 7px;
-  }
-
-  header .logo strong {
-    font-size: 25px;
-  }
-
-  header .logo small {
-    font-size: 9px;
-    letter-spacing: 1.2px;
-  }
-} 
-/* =========================================
-   CONTACT DETAILS VISIBILITY
-   ========================================= */
-
-.footer-contact a {
-  color: #123a70 !important;
-  font-size: 18px !important;
-  font-weight: 600 !important;
-  line-height: 1.7;
-}
-
-.footer-contact a:hover {
-  color: #1769e0 !important;
-} 
-/* =========================================
-   FINAL PORTFOLIO TEXT READABILITY
-   ========================================= */
-
-body {
-  font-size: 16px;
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.service-card p,
-.project-card p,
-.why-card p,
-.step p,
-.section-text {
-  font-size: 16px !important;
-  line-height: 1.7 !important;
-}
-
-.service-card h3,
-.project-card h3,
-.why-card strong,
-.step h3 {
-  font-size: 21px !important;
-}
-
-.section-label {
-  font-size: 13px !important;
-}
-
-.data-label {
-  font-size: 13px !important;
-}
-
-.data-note {
-  font-size: 13px !important;
-}
-
-.footer-contact a {
-  font-size: 18px !important;
-  font-weight: 700 !important;
-  color: #123a70 !important;
-}
-
-/* Mobile readability */
-@media (max-width: 600px) {
-
-  p,
-  .service-card p,
-  .project-card p,
-  .why-card p,
-  .step p,
-  .section-text {
-    font-size: 17px !important;
-    line-height: 1.7 !important;
-  }
-
-  .service-card h3,
-  .project-card h3,
-  .why-card strong,
-  .step h3 {
-    font-size: 24px !important;
-  }
-
-  .footer-contact a {
-    font-size: 19px !important;
-  }
-} 
