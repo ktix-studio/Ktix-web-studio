@@ -116,3 +116,4 @@ header .logo small{color:var(--accent) !important;font-size:10px;font-weight:800
     line-height:1.1!important;
   }
 }  
+@media(max-width:768px){ header :is(a,span,div):not(:first-child):not(:last-child){display:none!important} }
