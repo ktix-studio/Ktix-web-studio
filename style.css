@@ -89,3 +89,29 @@ header .logo small{color:var(--accent) !important;font-size:10px;font-weight:800
   .climate-data-card:last-child{grid-column:auto}
   p,.service-card p{font-size:16px !important;line-height:1.7 !important}
 }
+@media(max-width:768px){
+  /* Header fix */
+  header, nav, .navbar, .nav{
+    display:flex!important;
+    justify-content:space-between!important;
+    align-items:center!important;
+    padding:12px 16px!important;
+  }
+  /* Hide Services Climate Live on phone - they go in menu */
+  nav a, .nav-links a, header a:not(.cta):not(.btn){
+    display:none!important;
+  }
+  /* Logo smaller */
+  .logo, .brand{font-size:18px!important;line-height:1.1!important}
+  
+  /* Hero text not broken */
+  h1{font-size:42px!important;line-height:0.95!important;letter-spacing:-1px!important}
+  h1 span{display:block}
+  
+  /* Buttons stack nicely */
+  .hero-btns, .cta-row{display:flex!important;flex-direction:column!important;gap:12px!important}
+  .hero-btns a, .cta-row a{width:100%!important;text-align:center!important;justify-content:center!important}
+  
+  /* Glass card not cut */
+  .glass-card{margin:20px 12px 0 12px!important}
+} 
