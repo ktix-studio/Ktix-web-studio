@@ -1,45 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KTIX Web Studio | Premium Websites That Convert</title>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KTIX V5 REAL LIVE</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#08080a;--gold:#FFC978;--gold2:#FF9A3C;--muted:#9a9aa3;--border:rgba(255,255,255,0.08)}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:#fff;overflow-x:hidden}
-h1,h2{font-family:'Syne',sans-serif}
-.bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:-1}
-.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.5}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:#fff;overflow-x:hidden}
+h1,h2{font-family:'Syne',sans-serif}a{text-decoration:none;color:inherit}
+.bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:-1}.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.5}
 .orb1{width:800px;height:800px;background:radial-gradient(circle, rgba(255,201,120,0.15) 0%, transparent 70%);top:-200px;left:-200px}
 .orb2{width:600px;height:600px;background:radial-gradient(circle, rgba(168,85,247,0.18) 0%, transparent 70%);top:20%;right:-100px}
-.navbar{position:fixed;top:0;width:100%;z-index:100;background:rgba(8,8,10,0.75);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:16px 0}
+.navbar{position:fixed;top:0;width:100%;z-index:100;background:rgba(8,8,10,0.8);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:16px 0}
 .nav-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center}
-.btn-gold{background:linear-gradient(105deg,var(--gold),var(--gold2));color:#000;padding:12px 26px;border-radius:100px;font-weight:700;font-size:13px;box-shadow:0 10px 30px rgba(255,201,120,0.25)}
-.hero{min-height:90vh;display:flex;align-items:center;max-width:1280px;margin:0 auto;padding:130px 32px 60px}
+.btn-gold{background:linear-gradient(105deg,var(--gold),var(--gold2));color:#000;padding:12px 26px;border-radius:100px;font-weight:700;font-size:13px}
+.hero{min-height:85vh;display:flex;align-items:center;max-width:1280px;margin:0 auto;padding:130px 32px 50px}
 .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;width:100%}
-.hero h1{font-size:clamp(42px,6vw,70px);line-height:0.9;letter-spacing:-2px;font-weight:800}
+.hero h1{font-size:clamp(42px,6vw,68px);line-height:0.9;letter-spacing:-2px;font-weight:800}
 .hero h1 i{font-style:italic;background:linear-gradient(90deg,var(--gold),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:var(--muted);font-size:17px;line-height:1.6;max-width:440px;margin:20px 0 30px}
+.hero p{color:var(--muted);font-size:17px;line-height:1.6;max-width:440px;margin:20px 0 28px}
 .glass-card{width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.12);border-radius:24px;backdrop-filter:blur(30px);box-shadow:0 40px 80px rgba(0,0,0,0.5);transform:rotateY(-10deg) rotateX(6deg);overflow:hidden}
-.section{max-width:1280px;margin:0 auto;padding:80px 32px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.s-card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));border:1px solid var(--border);border-radius:20px;padding:28px;transition:0.4s}
-.s-card:hover{transform:translateY(-6px);border-color:rgba(255,201,120,0.25)}
+.section{max-width:1280px;margin:0 auto;padding:80px 32px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.s-card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));border:1px solid var(--border);border-radius:20px;padding:28px}
 .top-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;padding:16px 20px;margin-bottom:24px}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);color:#4ade80;padding:6px 14px;border-radius:100px;font-size:11px;font-weight:600}
-.dot-live{width:6px;height:6px;background:#4ade80;border-radius:50%;box-shadow:0 0 10px #4ade80;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+.dot-live{width:6px;height:6px;background:#4ade80;border-radius:50%;box-shadow:0 0 10px #4ade80;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
 .search-box{background:rgba(0,0,0,0.4);border:1px solid var(--border);border-radius:100px;padding:10px 18px;color:#fff;width:260px;outline:none;font-size:13px}
 .section-title{font-size:12px;letter-spacing:2px;color:var(--muted);margin:28px 0 14px;display:flex;align-items:center;gap:10px}
-.section-title::after{content:'';flex:1;height:1px;background:var(--border)}
-.city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border)}.city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .city-card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;justify-content:space-between;align-items:center;transition:0.3s}
-.city-card:hover{transform:translateY(-3px);border-color:rgba(255,201,120,0.25)}
 .city-card.ut{background:linear-gradient(180deg, rgba(168,85,247,0.08), rgba(255,255,255,0.02));border-color:rgba(168,85,247,0.15)}
-.city-name{font-size:13px;font-weight:600}.city-state{font-size:10px;color:var(--muted);margin-top:2px}
-.temp{font-family:'Syne';font-size:20px;font-weight:700}
+.city-name{font-size:13px;font-weight:600}.city-state{font-size:10px;color:var(--muted);margin-top:2px}.temp{font-family:'Syne';font-size:20px;font-weight:700}
 .contact{max-width:1280px;margin:0 auto;padding:60px 32px 100px;display:grid;grid-template-columns:1fr 1fr;gap:50px;border-top:1px solid var(--border)}
 .form-box{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;padding:28px}
 .form-box input,.form-box textarea{width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:10px;padding:12px;color:#fff;margin-top:6px;font-size:13px}
@@ -47,103 +36,94 @@ h1,h2{font-family:'Syne',sans-serif}
 .form-box button{margin-top:18px;width:100%;background:linear-gradient(105deg,var(--gold),var(--gold2));color:#000;border:none;padding:14px;border-radius:100px;font-weight:800;cursor:pointer}
 @media(max-width:900px){.hero-grid,.grid-3,.contact{grid-template-columns:1fr}.city-grid{grid-template-columns:repeat(2,1fr)}.hero{padding:120px 24px 40px}.section,.contact{padding:60px 24px}.glass-card{transform:none}}
 @media(max-width:480px){.city-grid{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
+</style></head><body>
 <div class="bg-orbs"><div class="orb orb1"></div><div class="orb orb2"></div></div>
 <nav class="navbar"><div class="nav-inner"><div style="font-weight:800">KTIX <span style="color:#fff">WEB STUDIO</span><span style="font-size:8px;letter-spacing:2px;color:var(--gold);display:block">EST.2024 • INDIA</span></div><div style="display:flex;gap:20px;align-items:center"><a href="#services" style="font-size:13px;color:var(--muted)">Services</a><a href="#climate" style="font-size:13px;color:var(--muted)">Climate Live</a><a href="#contact" class="btn-gold">GET STARTED →</a></div></div></nav>
-<section class="hero">
-<div class="hero-grid">
-<div>
-<div style="font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:700;margin-bottom:20px">WEB DESIGN & DEVELOPMENT STUDIO</div>
-<h1>Your business<br>deserves a<br><i>better website.</i></h1>
-<p>KTIX Web Studio crafts ultra-premium, fast, 3D websites designed around your business, brand and customers. Not templates.</p>
-<div style="display:flex;gap:12px"><a href="#contact" class="btn-gold">Start a Project →</a><a href="#climate" style="padding:12px 22px;border-radius:100px;border:1px solid var(--border);font-size:13px;font-weight:600">See Live Dashboard</a></div>
-</div>
-<div class="glass-card" style="padding:0;overflow:hidden">
-<div style="padding:18px;display:flex;gap:8px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center"><div style="width:10px;height:10px;border-radius:50%;background:#ff5f56"></div><div style="width:10px;height:10px;border-radius:50%;background:#ffbd2e"></div><div style="width:10px;height:10px;border-radius:50%;background:#27c93f"></div><div style="margin-left:auto;font-size:10px;color:#9a9aa3;letter-spacing:1px">ktix.studio • LIVE</div></div>
-<div style="padding:22px">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px"><div><div style="font-size:11px;color:var(--gold);letter-spacing:1px">CONVERSION RATE</div><div style="font-size:28px;font-weight:800;margin-top:4px">+184% <span style="font-size:12px;color:#4ade80">▲</span></div></div><div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 10px 20px rgba(255,201,120,0.3)">🚀</div></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px">
-<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:12px"><div style="font-size:10px;color:var(--muted)">VISITORS TODAY</div><div style="font-size:18px;font-weight:700;margin-top:4px">12,847</div><div style="height:4px;background:rgba(255,255,255,0.08);border-radius:4px;margin-top:8px;overflow:hidden"><div style="width:78%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2))"></div></div></div>
-<div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:12px"><div style="font-size:10px;color:var(--muted)">REVENUE</div><div style="font-size:18px;font-weight:700;margin-top:4px">₹2.4L</div><div style="height:4px;background:rgba(255,255,255,0.08);border-radius:4px;margin-top:8px;overflow:hidden"><div style="width:92%;height:100%;background:#4ade80"></div></div></div>
-</div>
-<div style="background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;gap:10px;align-items:center"><div style="width:32px;height:32px;border-radius:8px;background:rgba(74,222,128,0.15);display:flex;align-items:center;justify-content:center">✓</div><div><div style="font-size:11px;font-weight:600">Website is Live & Selling</div><div style="font-size:10px;color:var(--muted)">Built by KTIX Web Studio • Premium</div></div><div style="margin-left:auto;width:8px;height:8px;background:#4ade80;border-radius:50%;box-shadow:0 0 10px #4ade80"></div></div>
-</div>
-</div> 
-</div>
-</section>
-<section id="services" class="section">
-<div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:36px;flex-wrap:wrap;gap:16px"><h2 style="font-size:44px;line-height:0.9">Crafted for<br>growth.</h2><p style="color:var(--muted);max-width:360px;font-size:14px">We don't just design pretty pages. We build conversion-focused digital experiences.</p></div>
-<div class="grid-3">
-<div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">01 / DESIGN</div><h3>Premium UI / UX</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Apple-level 3D glass, depth & motion that feels expensive.</p></div>
-<div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">02 / DEV</div><h3>Next-Gen Build</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Blazing-fast, SEO-ready, fully responsive code. Live data ready.</p></div>
-<div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">03 / STRATEGY</div><h3>Conversion System</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Every pixel placed to turn visitors into customers.</p></div>
-</div>
-</section>
+<section class="hero"><div class="hero-grid"><div><div style="font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:700;margin-bottom:20px">WEB DESIGN & DEVELOPMENT STUDIO</div><h1>Your business<br>deserves a<br><i>better website.</i></h1><p>Premium 3D websites + 100% REAL LIVE data dashboards — no fake data.</p><div style="display:flex;gap:12px"><a href="#contact" class="btn-gold">Start a Project →</a><a href="#climate" style="padding:12px 22px;border-radius:100px;border:1px solid var(--border);font-size:13px;font-weight:600">See REAL LIVE Dashboard ↓</a></div></div>
+<div class="glass-card" style="padding:0;overflow:hidden"><div style="padding:18px;display:flex;gap:8px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center"><div style="width:10px;height:10px;border-radius:50%;background:#ff5f56"></div><div style="width:10px;height:10px;border-radius:50%;background:#ffbd2e"></div><div style="width:10px;height:10px;border-radius:50%;background:#27c93f"></div><div style="margin-left:auto;font-size:10px;color:#9a9aa3;letter-spacing:1px">ktix.studio • LIVE</div></div><div style="padding:22px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px"><div><div style="font-size:11px;color:var(--gold);letter-spacing:1px">CONVERSION RATE</div><div style="font-size:28px;font-weight:800;margin-top:4px">+184% <span style="font-size:12px;color:#4ade80">▲</span></div></div><div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 10px 20px rgba(255,201,120,0.3)">🚀</div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px"><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:12px"><div style="font-size:10px;color:var(--muted)">VISITORS TODAY</div><div style="font-size:18px;font-weight:700;margin-top:4px">12,847</div><div style="height:4px;background:rgba(255,255,255,0.08);border-radius:4px;margin-top:8px;overflow:hidden"><div style="width:78%;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2))"></div></div></div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:12px"><div style="font-size:10px;color:var(--muted)">REVENUE</div><div style="font-size:18px;font-weight:700;margin-top:4px">₹2.4L</div><div style="height:4px;background:rgba(255,255,255,0.08);border-radius:4px;margin-top:8px;overflow:hidden"><div style="width:92%;height:100%;background:#4ade80"></div></div></div></div><div style="background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;gap:10px;align-items:center"><div style="width:32px;height:32px;border-radius:8px;background:rgba(74,222,128,0.15);display:flex;align-items:center;justify-content:center">✓</div><div><div style="font-size:11px;font-weight:600">Website is Live & Selling</div><div style="font-size:10px;color:var(--muted)">Built by KTIX Web Studio • Premium</div></div><div style="margin-left:auto;width:8px;height:8px;background:#4ade80;border-radius:50%;box-shadow:0 0 10px #4ade80"></div></div></div></div></div></section>
+<section id="services" class="section"><div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:36px;flex-wrap:wrap;gap:16px"><h2 style="font-size:44px;line-height:0.9">Crafted for<br>growth.</h2><p style="color:var(--muted);max-width:360px;font-size:14px">Premium sites that convert + 100% real live data integration.</p></div><div class="grid-3"><div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">01 / DESIGN</div><h3>Premium UI / UX</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Apple-level 3D glass, depth & motion that feels expensive.</p></div><div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">02 / DEV</div><h3>REAL LIVE API Build</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Open-Meteo, real weather, maps, market — no fake data.</p></div><div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">03 / STRATEGY</div><h3>Conversion System</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Every pixel placed to turn visitors into customers.</p></div></div></section>
 <section id="climate" class="section" style="background:linear-gradient(180deg, rgba(255,201,120,0.04), transparent);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-<div style="text-align:center;margin-bottom:28px"><div class="badge" style="margin:0 auto"><div class="dot-live"></div> LIVE • ALL INDIA</div><h2 style="font-size:clamp(32px,5vw,52px);margin-top:16px;line-height:0.9">Live India<br><i style="color:var(--gold);font-weight:500">Climate Dashboard</i></h2><p style="color:var(--muted);margin-top:10px;font-size:13px">All 28 States & 8 Union Territories • Real-time</p></div>
-<div class="top-bar"><div style="font-size:11px;color:var(--muted)"><span id="live-time">--:--:-- IST</span> • <span style="color:#4ade80">● Operational</span></div><input type="text" id="search" class="search-box" placeholder="🔍 Search state or capital..."></div>
-<div class="section-title">28 STATES</div>
+<div style="text-align:center;margin-bottom:28px"><div class="badge" style="margin:0 auto"><div class="dot-live"></div> REAL LIVE • OPEN-METEO API • ALL INDIA</div><h2 style="font-size:clamp(32px,5vw,52px);margin-top:16px;line-height:0.9">Live India<br><i style="color:var(--gold);font-weight:500">Climate Dashboard</i></h2><p style="color:var(--muted);margin-top:10px;font-size:13px">All 28 States & 8 Union Territories • Updates every 5 min • 100% Real</p></div>
+<div class="top-bar"><div style="font-size:11px;color:var(--muted)"><span id="live-time">--:--:-- IST</span> • <span style="color:#4ade80">● Real API Connected</span> • <span id="last-update" style="color:var(--gold)">Fetching live...</span></div><input type="text" id="search" class="search-box" placeholder="🔍 Search state or capital..."></div>
+<div class="section-title">28 STATES — REAL LIVE</div>
 <div class="city-grid">
-<div class="city-card"><div><div class="city-name">Amaravati</div><div class="city-state">Andhra Pradesh • Clear</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">32°</div></div></div>
-<div class="city-card"><div><div class="city-name">Itanagar</div><div class="city-state">Arunachal Pradesh • Rain</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">24°</div></div></div>
-<div class="city-card"><div><div class="city-name">Guwahati</div><div class="city-state">Assam • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">31°</div></div></div>
-<div class="city-card"><div><div class="city-name">Patna</div><div class="city-state">Bihar • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">35°</div></div></div>
-<div class="city-card"><div><div class="city-name">Raipur</div><div class="city-state">Chhattisgarh • Sunny</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">34°</div></div></div>
-<div class="city-card"><div><div class="city-name">Panaji</div><div class="city-state">Goa • Pleasant</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">30°</div></div></div>
-<div class="city-card"><div><div class="city-name">Gandhinagar</div><div class="city-state">Gujarat • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">36°</div></div></div>
-<div class="city-card"><div><div class="city-name">Chandigarh</div><div class="city-state">Haryana • Clear</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">37°</div></div></div>
-<div class="city-card"><div><div class="city-name">Shimla</div><div class="city-state">Himachal Pradesh • Cold</div></div><div style="text-align:right"><div style="font-size:20px">❄️</div><div class="temp">19°</div></div></div>
-<div class="city-card"><div><div class="city-name">Ranchi</div><div class="city-state">Jharkhand • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">30°</div></div></div>
-<div class="city-card"><div><div class="city-name">Bengaluru</div><div class="city-state">Karnataka • Pleasant</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">26°</div></div></div>
-<div class="city-card"><div><div class="city-name">Thiruvananthapuram</div><div class="city-state">Kerala • Humid</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">30°</div></div></div>
-<div class="city-card"><div><div class="city-name">Bhopal</div><div class="city-state">Madhya Pradesh • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">35°</div></div></div>
-<div class="city-card"><div><div class="city-name">Mumbai</div><div class="city-state">Maharashtra • Humid</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">32°</div></div></div>
-<div class="city-card"><div><div class="city-name">Imphal</div><div class="city-state">Manipur • Rain</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">27°</div></div></div>
-<div class="city-card"><div><div class="city-name">Shillong</div><div class="city-state">Meghalaya • Rain</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">22°</div></div></div>
-<div class="city-card"><div><div class="city-name">Aizawl</div><div class="city-state">Mizoram • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">26°</div></div></div>
-<div class="city-card"><div><div class="city-name">Kohima</div><div class="city-state">Nagaland • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">23°</div></div></div>
-<div class="city-card"><div><div class="city-name">Bhubaneswar</div><div class="city-state">Odisha • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">33°</div></div></div>
-<div class="city-card"><div><div class="city-name">Chandigarh</div><div class="city-state">Punjab • Clear</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">36°</div></div></div>
-<div class="city-card"><div><div class="city-name">Jaipur</div><div class="city-state">Rajasthan • Very Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">39°</div></div></div>
-<div class="city-card"><div><div class="city-name">Gangtok</div><div class="city-state">Sikkim • Cold</div></div><div style="text-align:right"><div style="font-size:20px">❄️</div><div class="temp">18°</div></div></div>
-<div class="city-card"><div><div class="city-name">Chennai</div><div class="city-state">Tamil Nadu • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">36°</div></div></div>
-<div class="city-card"><div><div class="city-name">Hyderabad</div><div class="city-state">Telangana • Sunny</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">34°</div></div></div>
-<div class="city-card"><div><div class="city-name">Agartala</div><div class="city-state">Tripura • Humid</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">31°</div></div></div>
-<div class="city-card"><div><div class="city-name">Lucknow</div><div class="city-state">Uttar Pradesh • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">37°</div></div></div>
-<div class="city-card"><div><div class="city-name">Dehradun</div><div class="city-state">Uttarakhand • Pleasant</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">28°</div></div></div>
-<div class="city-card"><div><div class="city-name">Kolkata</div><div class="city-state">West Bengal • Cloudy</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">33°</div></div></div>
+  <div class="city-card" data-lat="16.5" data-lon="80.64"><div><div class="city-name">Amaravati</div><div class="city-state">Andhra Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="27.0844" data-lon="93.6053"><div><div class="city-name">Itanagar</div><div class="city-state">Arunachal Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="26.1445" data-lon="91.7362"><div><div class="city-name">Guwahati</div><div class="city-state">Assam • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="25.5941" data-lon="85.1376"><div><div class="city-name">Patna</div><div class="city-state">Bihar • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="21.2514" data-lon="81.6296"><div><div class="city-name">Raipur</div><div class="city-state">Chhattisgarh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="15.4909" data-lon="73.8278"><div><div class="city-name">Panaji</div><div class="city-state">Goa • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="23.2156" data-lon="72.6369"><div><div class="city-name">Gandhinagar</div><div class="city-state">Gujarat • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="30.7333" data-lon="76.7794"><div><div class="city-name">Chandigarh</div><div class="city-state">Haryana • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="31.1048" data-lon="77.1734"><div><div class="city-name">Shimla</div><div class="city-state">Himachal Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="23.3441" data-lon="85.3096"><div><div class="city-name">Ranchi</div><div class="city-state">Jharkhand • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="12.9716" data-lon="77.5946"><div><div class="city-name">Bengaluru</div><div class="city-state">Karnataka • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="8.5241" data-lon="76.9366"><div><div class="city-name">Thiruvananthapuram</div><div class="city-state">Kerala • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="23.2599" data-lon="77.4126"><div><div class="city-name">Bhopal</div><div class="city-state">Madhya Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="19.076" data-lon="72.8777"><div><div class="city-name">Mumbai</div><div class="city-state">Maharashtra • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="24.817" data-lon="93.9368"><div><div class="city-name">Imphal</div><div class="city-state">Manipur • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="25.5788" data-lon="91.8933"><div><div class="city-name">Shillong</div><div class="city-state">Meghalaya • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="23.7307" data-lon="92.7173"><div><div class="city-name">Aizawl</div><div class="city-state">Mizoram • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="25.6751" data-lon="94.1086"><div><div class="city-name">Kohima</div><div class="city-state">Nagaland • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="20.2961" data-lon="85.8245"><div><div class="city-name">Bhubaneswar</div><div class="city-state">Odisha • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="30.7333" data-lon="76.7794"><div><div class="city-name">Chandigarh</div><div class="city-state">Punjab • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="26.9124" data-lon="75.7873"><div><div class="city-name">Jaipur</div><div class="city-state">Rajasthan • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="27.3389" data-lon="88.6065"><div><div class="city-name">Gangtok</div><div class="city-state">Sikkim • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="13.0827" data-lon="80.2707"><div><div class="city-name">Chennai</div><div class="city-state">Tamil Nadu • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="17.385" data-lon="78.4867"><div><div class="city-name">Hyderabad</div><div class="city-state">Telangana • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="23.8315" data-lon="91.2868"><div><div class="city-name">Agartala</div><div class="city-state">Tripura • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="26.8467" data-lon="80.9462"><div><div class="city-name">Lucknow</div><div class="city-state">Uttar Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="30.3165" data-lon="78.0322"><div><div class="city-name">Dehradun</div><div class="city-state">Uttarakhand • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card" data-lat="22.5726" data-lon="88.3639"><div><div class="city-name">Kolkata</div><div class="city-state">West Bengal • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
 </div>
-<div class="section-title">8 UNION TERRITORIES</div>
+<div class="section-title">8 UNION TERRITORIES — REAL LIVE</div>
 <div class="city-grid">
-<div class="city-card ut"><div><div class="city-name">Port Blair</div><div class="city-state">Andaman & Nicobar • Humid</div></div><div style="text-align:right"><div style="font-size:20px">🌧️</div><div class="temp">30°</div></div></div>
-<div class="city-card ut"><div><div class="city-name">Chandigarh</div><div class="city-state">Chandigarh • Clear</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">36°</div></div></div>
-<div class="city-card ut"><div><div class="city-name">Daman</div><div class="city-state">Dadra & Nagar Haveli • Pleasant</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">32°</div></div></div>
-<div class="city-card ut"><div><div class="city-name">New Delhi</div><div class="city-state">Delhi • Hot</div></div><div style="text-align:right"><div style="font-size:20px">☀️</div><div class="temp">38°</div></div></div>
-<div class="city-card ut"><div><div class="city-name">Srinagar</div><div class="city-state">Jammu & Kashmir • Cold</div></div><div style="text-align:right"><div style="font-size:20px">❄️</div><div class="temp">22°</div></div></div>
-<div class="city-card ut"><div><div class="city-name">Leh</div><div class="city-state">Ladakh • Freezing</div></div><div style="text-align:right"><div style="font-size:20px">❄️</div><div class="temp">12°</div></div></div>
-<div class="city-card ut"><div><div class="city-name">Kavaratti</div><div class="city-state">Lakshadweep • Humid</div></div><div style="text-align:right"><div style="font-size:20px">⛅</div><div class="temp">31°</div></div></div>
-<div class="city-card ut"><div><div class="city-name">Puducherry</div><div class="city-state">Puducherry • Coastal</div></div><div style="text-align:right"><div style="font-size:20px">🌤️</div><div class="temp">34°</div></div></div>
+<div class="city-card ut" data-lat="11.6234" data-lon="92.7265"><div><div class="city-name">Port Blair</div><div class="city-state">Andaman & Nicobar • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card ut" data-lat="30.7333" data-lon="76.7794"><div><div class="city-name">Chandigarh</div><div class="city-state">Chandigarh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card ut" data-lat="20.417" data-lon="72.8311"><div><div class="city-name">Daman</div><div class="city-state">Dadra & Nagar Haveli and Daman & Diu • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card ut" data-lat="28.6139" data-lon="77.209"><div><div class="city-name">New Delhi</div><div class="city-state">Delhi • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card ut" data-lat="34.0837" data-lon="74.7973"><div><div class="city-name">Srinagar</div><div class="city-state">Jammu & Kashmir • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card ut" data-lat="34.1526" data-lon="77.5771"><div><div class="city-name">Leh</div><div class="city-state">Ladakh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card ut" data-lat="10.5669" data-lon="72.642"><div><div class="city-name">Kavaratti</div><div class="city-state">Lakshadweep • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
+<div class="city-card ut" data-lat="11.9416" data-lon="79.8083"><div><div class="city-name">Puducherry</div><div class="city-state">Puducherry • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
 </div>
 </section>
-<section id="contact" class="contact">
-<div><h2 style="font-size:44px;line-height:0.9">Let's build<br><span style="color:var(--gold);font-style:italic">something great.</span></h2><p style="color:var(--muted);margin-top:12px;font-size:13px;max-width:320px">Ready to upgrade? Free audit in 6 hours.</p></div>
-<div class="form-box">
-<form action="https://formsubmit.co/kabitlego0@gmail.com" method="POST">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://ktix-studio.github.io/Ktix-web-studio/">
-<label>Name</label><input type="text" name="Name" required placeholder="Your name">
-<label>Email/Phone</label><input type="text" name="Email_or_Phone" required placeholder="Contact">
-<label>Message</label><textarea name="Project_Details" rows="3" required placeholder="Your project..."></textarea>
-<button type="submit">SEND REQUEST →</button>
-</form>
-</div>
-</section>
+<section id="contact" class="contact"><div><h2 style="font-size:44px;line-height:0.9">Let's build<br><span style="color:var(--gold);font-style:italic">something great.</span></h2><p style="color:var(--muted);margin-top:12px;font-size:13px;max-width:320px">Want real live dashboard like this for your business? Contact us.</p></div><div class="form-box"><form action="https://formsubmit.co/kabitlego0@gmail.com" method="POST"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://ktix-studio.github.io/Ktix-web-studio/"><label>Name</label><input type="text" name="Name" required placeholder="Your name"><label>Email/Phone</label><input type="text" name="Email_or_Phone" required placeholder="Contact"><label>Message</label><textarea name="Project_Details" rows="3" required placeholder="Your project..."></textarea><button type="submit">SEND REQUEST →</button></form></div></section>
 <script>
+function getWeatherInfo(code){
+  if(code===0) return {text:'Clear Sky', icon:'☀️'};
+  if([1,2,3].includes(code)) return {text:'Partly Cloudy', icon:'⛅'};
+  if([45,48].includes(code)) return {text:'Foggy', icon:'🌫️'};
+  if([51,53,55,56,57].includes(code)) return {text:'Drizzle', icon:'🌧️'};
+  if([61,63,65,66,67].includes(code)) return {text:'Rain', icon:'🌧️'};
+  if([71,73,75,77].includes(code)) return {text:'Snow', icon:'❄️'};
+  if([80,81,82].includes(code)) return {text:'Rain Showers', icon:'🌧️'};
+  if([85,86].includes(code)) return {text:'Snow Showers', icon:'❄️'};
+  if([95,96,99].includes(code)) return {text:'Thunderstorm', icon:'⛈️'};
+  return {text:'Cloudy', icon:'☁️'};
+}
+async function fetchLiveWeather(){
+  document.getElementById('last-update').textContent='Fetching live data...';
+  const cards = document.querySelectorAll('.city-card');
+  for(let card of cards){
+    const lat = card.dataset.lat; const lon = card.dataset.lon;
+    try{
+      const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
+      const data = await res.json();
+      if(data.current_weather){
+        const temp = Math.round(data.current_weather.temperature);
+        const info = getWeatherInfo(data.current_weather.weathercode);
+        card.querySelector('.temp').textContent = temp + '°';
+        card.querySelector('.cond').textContent = info.text;
+        card.querySelector('.icon').textContent = info.icon;
+      }
+    }catch(e){card.querySelector('.cond').textContent='Live error';}
+    await new Promise(r=>setTimeout(r,120));
+  }
+  document.getElementById('last-update').textContent='Updated: ' + new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata'}) + ' IST';
+}
 function updateTime(){const now=new Date();const ist=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Kolkata'}));document.getElementById('live-time').textContent=ist.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit'})+' IST';}
 setInterval(updateTime,1000);updateTime();
 document.getElementById('search').addEventListener('input',function(e){const q=e.target.value.toLowerCase();document.querySelectorAll('.city-card').forEach(c=>{c.style.display=c.textContent.toLowerCase().includes(q)?'flex':'none';});});
-</script>
-</body>
-</html>
+fetchLiveWeather();setInterval(fetchLiveWeather,300000);
+</script></body></html> 
