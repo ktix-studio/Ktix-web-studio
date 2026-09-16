@@ -89,6 +89,7 @@ header .logo small{color:var(--accent) !important;font-size:10px;font-weight:800
   .climate-data-card:last-child{grid-column:auto}
   p,.service-card p{font-size:16px !important;line-height:1.7 !important}
 }
+/* --- MOBILE FLIX - KTIX V5 ---  */
 @media(max-width:768px){
   /* Header fix */
   header, nav, .navbar, .nav{
