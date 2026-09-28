@@ -1,7 +1,3 @@
---- src/components/FeaturesGrid.tsx (原始)
-
-
-+++ src/components/FeaturesGrid.tsx (修改后)
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
