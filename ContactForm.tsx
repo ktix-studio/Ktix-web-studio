@@ -1,7 +1,3 @@
---- src/components/ContactForm.tsx (原始)
-
-
-+++ src/components/ContactForm.tsx (修改后)
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
