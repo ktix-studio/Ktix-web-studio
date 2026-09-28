@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-luxe-gold: #c9a96e;
+  --color-luxe-gold-light: #e8d5a3;
+  --color-luxe-dark: #0a0a0a;
+  --color-luxe-darker: #050505;
+  --color-luxe-gray: #1a1a1a;
+  --color-luxe-gray-light: #2a2a2a;
+  --color-luxe-text: #e0e0e0;
+  --color-luxe-text-muted: #888888;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(201, 169, 110, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(201, 169, 110, 0.6); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.glass-card {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 169, 110, 0.1);
+}
+
+.glass-card:hover {
+  border-color: rgba(201, 169, 110, 0.3);
+  background: rgba(26, 26, 26, 0.8);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #c9a96e, #e8d5a3, #c9a96e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-padding {
+  padding: 6rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 8rem 3rem;
+  }
+}
+
+canvas {
+  touch-action: none;
+}
