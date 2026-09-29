@@ -9,8 +9,8 @@
 <style>
 body{font-family:'Inter',sans-serif;background:#050507;color:white}
 .glass{background:rgba(255,255,255,0.06);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08)}
-.card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,0.2)}
-.card{transition:all 0.4s ease}
+.card{transition:all 0.5s cubic-bezier(0.23,1,0.32,1);transform-style:preserve-3d;border:1px solid rgba(212,175,55,0.15);box-shadow:0 10px 30px rgba(0,0,0,0.5),0 0 0 1px rgba(212,175,55,0.1) inset;border-radius:20px;background:rgba(255,255,255,0.06);backdrop-filter:blur(20px)}
+.card:hover{transform:translateY(-12px) rotateX(5deg) rotateY(-5deg) scale(1.02);border-color:#D4AF37;box-shadow:0 30px 60px rgba(0,0,0,0.8),0 0 40px rgba(212,175,55,0.25)}
 </style>
 </head>
 <body>
