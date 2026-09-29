@@ -1,139 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop — Demo Concepts | KTIX Studio</title>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop — KTIX Studio</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
-body{font-family:'Inter',sans-serif;background:#050507;color:white}
-.glass{background:rgba(255,255,255,0.06);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08)}
-.card{transition:all 0.5s cubic-bezier(0.23,1,0.32,1);transform-style:preserve-3d;border:1px solid rgba(212,175,55,0.15);box-shadow:0 10px 30px rgba(0,0,0,0.5),0 0 0 1px rgba(212,175,55,0.1) inset;border-radius:20px;background:rgba(255,255,255,0.06);backdrop-filter:blur(20px)}
-.card:hover{transform:translateY(-12px) rotateX(5deg) rotateY(-5deg) scale(1.02);border-color:#D4AF37;box-shadow:0 30px 60px rgba(0,0,0,0.8),0 0 40px rgba(212,175,55,0.25)}
-</style>
-</head>
+body{margin:0;background:#060608;color:#fff;font-family:Inter,sans-serif;overflow-x:hidden}
+.bg-3d{position:fixed;inset:0;z-index:-1;
+background:
+radial-gradient(600px 400px at 85% 15%, rgba(212,175,55,0.25), transparent 60%),
+radial-gradient(800px 600px at 10% 80%, rgba(212,175,55,0.12), transparent 70%),
+radial-gradient(500px 300px at 50% 0%, rgba(255,255,255,0.08), transparent),
+linear-gradient(#060608,#0a0a0c);
+}
+.bg-3d::before{content:'';position:absolute;inset:0;background:radial-gradient(1px 1px at 20% 30%, #D4AF37, transparent), radial-gradient(1px 1px at 80% 20%, #fff, transparent), radial-gradient(1px 1px at 40% 80%, #D4AF37, transparent);opacity:0.4}
+.card{backdrop-filter:blur(24px);background:linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));border:1px solid rgba(212,175,55,0.25);border-radius:22px;transition:all 0.7s cubic-bezier(0.23,1,0.32,1);transform-style:preserve-3d;box-shadow:0 20px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1)}
+.card:hover{transform:translateY(-18px) rotateX(8deg) rotateY(-6deg) scale(1.04);border-color:#D4AF37;box-shadow:0 40px 80px rgba(0,0,0,0.9), 0 0 50px rgba(212,175,55,0.25), inset 0 1px 0 rgba(255,255,255,0.2)}
+.card img{border-radius:18px;transform:translateZ(30px);transition:0.7s}
+.card:hover img{transform:translateZ(60px) scale(1.08)}
+.title-3d{font-size:4.5rem;font-weight:900;line-height:0.9;text-shadow:0 10px 30px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.3);background:linear-gradient(180deg,#fff 20%, #D4AF37 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 10px 20px rgba(212,175,55,0.3))}
+</style></head>
 <body>
+<div class="bg-3d"></div>
+<nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto"><div class="font-black tracking-widest">KTIX STUDIO</div><div class="flex gap-6 items-center text-sm"><a href="index.html" class="opacity-60">Home</a><a class="border-b border-yellow-500">Shop</a><a href="index.html#contact" class="bg-white text-black px-6 py-2.5 rounded-full font-bold">GET STARTED</a></div></nav>
 
-<!-- NAV -->
-<nav class="flex justify-between items-center px-6 md:px-12 py-6">
-<div class="text-xl font-black tracking-widest">KTIX STUDIO</div>
-<div class="flex gap-6 text-sm items-center">
-<a href="index.html" class="opacity-60 hover:opacity-100">Home</a>
-<a href="shop.html" class="opacity-100 border-b">Shop</a>
-<a href="index.html#contact" class="bg-white text-black px-4 py-2 rounded-full font-bold">GET STARTED</a>
-</div>
-</nav>
-
-<!-- HERO -->
-<div class="text-center px-6 py-16">
-<div class="inline-flex glass px-4 py-2 rounded-full text-xs tracking-widest mb-6">STARTING AT JUST ₹3,999 • MADE IN INDIA • DEMO CONCEPTS</div>
-<h1 class="text-5xl md:text-7xl font-black leading-[0.9]">Template<br><span class="text-white/40">Shop</span></h1>
-<p class="mt-6 text-white/60 max-w-2xl mx-auto">Demo concepts only — Not real clients. Preview any design. When you order, we build your REAL version with your brand, photos & content in 48 hours.</p>
+<div class="text-center mt-10 px-4">
+<div class="inline-block text-[10px] tracking-[0.3em] border border-white/10 rounded-full px-4 py-2 bg-white/5">STARTING AT JUST ₹3,999 • MADE IN INDIA • DEMO CONCEPTS</div>
+<h1 class="title-3d mt-8">Template<br><span style="-webkit-text-fill-color:rgba(255,255,255,0.6)">Shop</span></h1>
+<p class="opacity-60 text-sm mt-6 max-w-xl mx-auto">Demo concepts only — Not real clients. Preview any design. When you order, we build your REAL version with your brand, photos & content in 48 hours.</p>
 </div>
 
-<!-- GRID -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 md:px-12 pb-24">
-
-<!-- 1 Restaurant - 6999 -->
-<div class="card glass rounded-[24px] p-3">
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" class="rounded-[16px] h-56 w-full object-cover">
-<div class="p-4">
-<div class="flex justify-between items-center">
-<h3 class="font-bold">Restaurant Demo</h3>
-<span class="text-xs bg-white text-black px-3 py-1 rounded-full font-bold">₹6,999</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 max-w-6xl mx-auto mt-16 pb-20">
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" class="w-full h-64 object-cover"><div class="flex justify-between mt-4 px-2 pb-2"><b class="text-sm">Restaurant Demo</b><span class="bg-white text-black text-xs px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
+<div class="card p-3" style="transform:translateY(-10px)"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600" class="w-full h-64 object-cover"><div class="flex justify-between mt-4 px-2 pb-2"><b class="text-sm">Gym Demo</b><span class="bg-white text-black text-xs px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600" class="w-full h-64 object-cover"><div class="flex justify-between mt-4 px-2 pb-2"><b class="text-sm">Salon Demo</b><span class="bg-white text-black text-xs px-3 py-1 rounded-full font-bold">₹5,999</span></div></div>
 </div>
-<p class="text-xs text-white/50 mt-1">Tasty Haven — Demo Concept • Menu + Booking</p>
-<div class="flex gap-2 mt-4">
-<a href="#" class="flex-1 text-center bg-white/10 py-2 rounded-full text-sm">Preview</a>
-<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20KTIX%20I%20want%20Restaurant%20Demo%20Rs6999" class="flex-1 text-center bg-white text-black py-2 rounded-full text-sm font-bold">Get This</a>
-</div>
-</div>
-</div>
-
-<!-- 2 Gym - 6999 -->
-<div class="card glass rounded-[24px] p-3">
-<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600" class="rounded-[16px] h-56 w-full object-cover">
-<div class="p-4">
-<div class="flex justify-between">
-<h3 class="font-bold">Gym Demo</h3>
-<span class="text-xs bg-white text-black px-3 py-1 rounded-full font-bold">₹6,999</span>
-</div>
-<p class="text-xs text-white/50 mt-1">FitZone — Demo Concept • Plans + Join Now</p>
-<div class="flex gap-2 mt-4">
-<a href="#" class="flex-1 text-center bg-white/10 py-2 rounded-full text-sm">Preview</a>
-<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20KTIX%20I%20want%20Gym%20Demo%20Rs6999" class="flex-1 text-center bg-white text-black py-2 rounded-full text-sm font-bold">Get This</a>
-</div>
-</div>
-</div>
-
-<!-- 3 Salon - 5999 -->
-<div class="card glass rounded-[24px] p-3">
-<img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600" class="rounded-[16px] h-56 w-full object-cover">
-<div class="p-4">
-<div class="flex justify-between">
-<h3 class="font-bold">Salon Demo</h3>
-<span class="text-xs bg-white text-black px-3 py-1 rounded-full font-bold">₹5,999</span>
-</div>
-<p class="text-xs text-white/50 mt-1">Glow Studio — Demo Concept • Services + Booking</p>
-<div class="flex gap-2 mt-4">
-<a href="#" class="flex-1 text-center bg-white/10 py-2 rounded-full text-sm">Preview</a>
-<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20KTIX%20I%20want%20Salon%20Demo%20Rs5999" class="flex-1 text-center bg-white text-black py-2 rounded-full text-sm font-bold">Get This</a>
-</div>
-</div>
-</div>
-
-<!-- 4 Business - 7999 -->
-<div class="card glass rounded-[24px] p-3">
-<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" class="rounded-[16px] h-56 w-full object-cover">
-<div class="p-4">
-<div class="flex justify-between">
-<h3 class="font-bold">Business Demo</h3>
-<span class="text-xs bg-white text-black px-3 py-1 rounded-full font-bold">₹7,999</span>
-</div>
-<p class="text-xs text-white/50 mt-1">Corporate — Demo Concept • For Startups</p>
-<div class="flex gap-2 mt-4">
-<a href="#" class="flex-1 text-center bg-white/10 py-2 rounded-full text-sm">Preview</a>
-<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20KTIX%20I%20want%20Business%20Demo%20Rs7999" class="flex-1 text-center bg-white text-black py-2 rounded-full text-sm font-bold">Get This</a>
-</div>
-</div>
-</div>
-
-<!-- 5 E-commerce - 9999 MAX -->
-<div class="card glass rounded-[24px] p-3">
-<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600" class="rounded-[16px] h-56 w-full object-cover">
-<div class="p-4">
-<div class="flex justify-between">
-<h3 class="font-bold">E-commerce Demo</h3>
-<span class="text-xs bg-yellow-400 text-black px-3 py-1 rounded-full font-bold">₹9,999</span>
-</div>
-<p class="text-xs text-white/50 mt-1">ShopKart — Demo Concept • Products + UPI Payment</p>
-<div class="flex gap-2 mt-4">
-<a href="#" class="flex-1 text-center bg-white/10 py-2 rounded-full text-sm">Preview</a>
-<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20KTIX%20I%20want%20Ecommerce%20Demo%20Rs9999" class="flex-1 text-center bg-white text-black py-2 rounded-full text-sm font-bold">Get This</a>
-</div>
-</div>
-</div>
-
-<!-- 6 Portfolio - 3999 -->
-<div class="card glass rounded-[24px] p-3">
-<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" class="rounded-[16px] h-56 w-full object-cover">
-<div class="p-4">
-<div class="flex justify-between">
-<h3 class="font-bold">Portfolio Demo</h3>
-<span class="text-xs bg-white/20 px-3 py-1 rounded-full font-bold">₹3,999</span>
-</div>
-<p class="text-xs text-white/50 mt-1">Creator — Demo Concept • For Students & Artists</p>
-<div class="flex gap-2 mt-4">
-<a href="#" class="flex-1 text-center bg-white/10 py-2 rounded-full text-sm">Preview</a>
-<a href="https://wa.me/91XXXXXXXXXX?text=Hi%20KTIX%20I%20want%20Portfolio%20Demo%20Rs3999" class="flex-1 text-center bg-white text-black py-2 rounded-full text-sm font-bold">Get This</a>
-</div>
-</div>
-</div>
-
-</div>
-
-<div class="text-center pb-12 text-white/30 text-xs">All prices are starting price. Final price after discussing your needs. • 48hr delivery • 1 Year Support</div>
-
-</body>
-</html>
+</body></html>
