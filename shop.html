@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Shop — KTIX Studio</title>
+<title>Shop — KTIX Web Studio</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 body{margin:0;background:#060608;color:#fff;font-family:Inter,sans-serif;overflow-x:hidden}
-.bg-3d{position:fixed;inset:0;z-index:-1;
-background:
-radial-gradient(600px 400px at 85% 15%, rgba(212,175,55,0.25), transparent 60%),
-radial-gradient(800px 600px at 10% 80%, rgba(212,175,55,0.12), transparent 70%),
-radial-gradient(500px 300px at 50% 0%, rgba(255,255,255,0.08), transparent),
-linear-gradient(#060608,#0a0a0c);
-}
-.bg-3d::before{content:'';position:absolute;inset:0;background:radial-gradient(1px 1px at 20% 30%, #D4AF37, transparent), radial-gradient(1px 1px at 80% 20%, #fff, transparent), radial-gradient(1px 1px at 40% 80%, #D4AF37, transparent);opacity:0.4}
-.card{backdrop-filter:blur(24px);background:linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));border:1px solid rgba(212,175,55,0.25);border-radius:22px;transition:all 0.7s cubic-bezier(0.23,1,0.32,1);transform-style:preserve-3d;box-shadow:0 20px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1)}
-.card:hover{transform:translateY(-18px) rotateX(8deg) rotateY(-6deg) scale(1.04);border-color:#D4AF37;box-shadow:0 40px 80px rgba(0,0,0,0.9), 0 0 50px rgba(212,175,55,0.25), inset 0 1px 0 rgba(255,255,255,0.2)}
-.card img{border-radius:18px;transform:translateZ(30px);transition:0.7s}
-.card:hover img{transform:translateZ(60px) scale(1.08)}
-.title-3d{font-size:4.5rem;font-weight:900;line-height:0.9;text-shadow:0 10px 30px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.3);background:linear-gradient(180deg,#fff 20%, #D4AF37 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 10px 20px rgba(212,175,55,0.3))}
+.bg-3d{position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 400px at 85% 15%, rgba(212,175,55,0.22), transparent 60%),radial-gradient(800px 600px at 10% 80%, rgba(212,175,55,0.10), transparent 70%),linear-gradient(#060608,#0a0a0c)}
+.card{backdrop-filter:blur(24px);background:linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));border:1px solid rgba(212,175,55,0.22);border-radius:22px;transition:all 0.7s cubic-bezier(0.23,1,0.32,1);transform-style:preserve-3d;box-shadow:0 20px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1)}
+.card:hover{transform:translateY(-14px) rotateX(6deg) rotateY(-5deg) scale(1.03);border-color:#D4AF37;box-shadow:0 40px 80px rgba(0,0,0,0.9), 0 0 50px rgba(212,175,55,0.22)}
+.card img{border-radius:18px;height:190px;object-fit:cover;width:100%;transform:translateZ(20px);transition:0.7s}
+.card:hover img{transform:translateZ(40px) scale(1.06)}
+.title-3d{font-size:4rem;font-weight:900;line-height:0.9;background:linear-gradient(180deg,#fff 30%, #D4AF37 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 </style></head>
 <body>
 <div class="bg-3d"></div>
 <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto"><div class="font-black tracking-widest">KTIX STUDIO</div><div class="flex gap-6 items-center text-sm"><a href="index.html" class="opacity-60">Home</a><a class="border-b border-yellow-500">Shop</a><a href="index.html#contact" class="bg-white text-black px-6 py-2.5 rounded-full font-bold">GET STARTED</a></div></nav>
 
-<div class="text-center mt-10 px-4">
-<div class="inline-block text-[10px] tracking-[0.3em] border border-white/10 rounded-full px-4 py-2 bg-white/5">STARTING AT JUST ₹3,999 • MADE IN INDIA • DEMO CONCEPTS</div>
-<h1 class="title-3d mt-8">Template<br><span style="-webkit-text-fill-color:rgba(255,255,255,0.6)">Shop</span></h1>
-<p class="opacity-60 text-sm mt-6 max-w-xl mx-auto">Demo concepts only — Not real clients. Preview any design. When you order, we build your REAL version with your brand, photos & content in 48 hours.</p>
+<div class="text-center mt-6 px-4">
+<div class="inline-block text-[10px] tracking-[0.3em] border border-white/10 rounded-full px-4 py-2 bg-white/5">15 PREMIUM DEMOS • MADE IN INDIA • STARTING ₹3,999</div>
+<h1 class="title-3d mt-5">Template Shop</h1>
+<p class="opacity-60 text-sm mt-3 max-w-xl mx-auto">15 different industries — demo only. We build YOUR real version in 48 hours.</p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 max-w-6xl mx-auto mt-16 pb-20">
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" class="w-full h-64 object-cover"><div class="flex justify-between mt-4 px-2 pb-2"><b class="text-sm">Restaurant Demo</b><span class="bg-white text-black text-xs px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
-<div class="card p-3" style="transform:translateY(-10px)"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600" class="w-full h-64 object-cover"><div class="flex justify-between mt-4 px-2 pb-2"><b class="text-sm">Gym Demo</b><span class="bg-white text-black text-xs px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600" class="w-full h-64 object-cover"><div class="flex justify-between mt-4 px-2 pb-2"><b class="text-sm">Salon Demo</b><span class="bg-white text-black text-xs px-3 py-1 rounded-full font-bold">₹5,999</span></div></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 max-w-7xl mx-auto mt-12 pb-20">
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Restaurant</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Gym & Fitness</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Salon & Spa</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹5,999</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Eco / Environment NGO 🌿</b><span class="bg-[#D4AF37] text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,999</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Cafe & Coffee</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,499</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Fashion Store</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,499</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Real Estate</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹8,999</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Clinic / Medical</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,499</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Education</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Travel & Tourism ✈️</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,999</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">E-commerce Shop</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹9,999</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1499951360447-b19be2fe80f5?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Portfolio / Agency</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹5,999</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Bakery & Sweets</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,499</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Interior Design</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹8,499</span></div></div>
+
+<div class="card p-3"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Event / Wedding</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,499</span></div></div>
+
 </div>
 </body></html>
