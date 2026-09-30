@@ -22,7 +22,7 @@ git clone https://github.com/ktix-studio/Ktix-web-studio.git
 Then open index.html
 
 ## Founder
-Kabit - Founder, KTIX Web Studio 
+Kabit Lego - Founder, KTIX Web Studio 
 "We don't compete on price. We compete on premium."
 
 © 2026 KTIX Web Studio
