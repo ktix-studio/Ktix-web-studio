@@ -3,7 +3,7 @@
 
 We craft high-converting websites for brands that want to look expensive and sell more.
 
-Live: https://ktix-studio.github.io/Ktix-web-studio/
+Live: https://ktix-web-studio.vercel.app/
 
 ## What We Build
 **01 / DESIGN** - Premium UI/UX, Apple-inspired glassmorphism
