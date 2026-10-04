@@ -1,77 +1,355 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Shop — KTIX Web Studio</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-body{margin:0;background:#060608;color:#fff;font-family:Inter,sans-serif;overflow-x:hidden}
-.bg-3d{position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 400px at 85% 15%, rgba(212,175,55,0.22), transparent 60%),radial-gradient(800px 600px at 10% 80%, rgba(212,175,55,0.10), transparent 70%),linear-gradient(#060608,#0a0a0c)}
-.card{backdrop-filter:blur(24px);background:linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));border:1px solid rgba(212,175,55,0.22);border-radius:22px;transition:all 0.7s cubic-bezier(0.23,1,0.32,1);transform-style:preserve-3d;box-shadow:0 20px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1)}
-.card:hover{transform:translateY(-14px) rotateX(6deg) rotateY(-5deg) scale(1.03);border-color:#D4AF37;box-shadow:0 40px 80px rgba(0,0,0,0.9), 0 0 50px rgba(212,175,55,0.22)}
-.card img{border-radius:18px;height:190px;object-fit:cover;width:100%;transform:translateZ(20px);transition:0.7s}
-.card:hover img{transform:translateZ(40px) scale(1.06)}
-.title-3d{font-size:4rem;font-weight:900;line-height:0.9;background:linear-gradient(180deg,#fff 30%, #D4AF37 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-</style></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>KTIX Vault — Curated Website Concepts | KTIX Web Studio</title>
+  <meta name="description" content="Explore the KTIX Vault: curated website concepts for real businesses, built as your own custom-coded website in 48 hours.">
+  <meta property="og:title" content="KTIX Vault — Curated Website Concepts">
+  <meta property="og:description" content="A considered starting point for your next website. Choose a concept; we build your real version in 48 hours.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="KTIX Vault — KTIX Web Studio">
+  <meta name="twitter:description" content="Curated website concepts for real businesses, built in 48 hours.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Cpath d='M16 14h8v17l15-17h10L33 30l17 20H40L28 35l-4 4v11h-8z' fill='%23fbbf24'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root{--bg:#0a0a0a;--panel:#141414;--panel2:#101010;--white:#fff;--muted:#a1a1aa;--gold:#fbbf24;--line:rgba(255,255,255,.105);--line-gold:rgba(251,191,36,.32);--max:1220px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 77% 6%,rgba(251,191,36,.055),transparent 27%),radial-gradient(ellipse at 3% 46%,rgba(255,255,255,.025),transparent 29%)}
+    a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+    .container{width:min(var(--max),calc(100% - 64px));margin-inline:auto}
+    .skip-link{position:absolute;left:12px;top:-50px;padding:10px;background:var(--gold);color:#111;z-index:99}.skip-link:focus{top:12px}
+    .site-header{position:fixed;inset:0 0 auto;z-index:20;height:78px;background:rgba(10,10,10,.76);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.065)}
+    .nav-wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+    .wordmark{display:inline-flex;align-items:center;gap:11px;font-size:12px;letter-spacing:.16em;font-weight:700;white-space:nowrap}
+    .mark{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line-gold);border-radius:9px;color:var(--gold);font-size:14px;letter-spacing:-.06em}
+    .nav-links{display:flex;align-items:center;gap:38px;color:#c8c8cb;font-size:12px}
+    .nav-links a{transition:color .2s}.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold)}
+    .nav-links .mobile-cta{display:none}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:48px;padding:0 21px;border:1px solid transparent;border-radius:5px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;transition:transform .2s,border-color .2s,background .2s,color .2s;cursor:pointer}
+    .button:hover{transform:translateY(-2px)}.button-gold{background:var(--gold);color:#111}.button-gold:hover{background:#ffd45b}
+    .button-outline{border-color:rgba(255,255,255,.28);color:var(--white);background:rgba(255,255,255,.015)}.button-outline:hover{border-color:var(--gold);color:var(--gold)}
+    .nav-cta{min-height:40px;padding:0 16px;font-size:10px}
+    .menu-toggle{display:none;width:42px;height:42px;background:transparent;color:var(--white);border:1px solid var(--line);border-radius:5px;cursor:pointer}
+    .hero{position:relative;padding:171px 0 76px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.065)}
+    .hero:after{content:"";position:absolute;right:-13%;top:4%;width:min(62vw,790px);aspect-ratio:1;border:1px solid rgba(251,191,36,.075);border-radius:50%;pointer-events:none;mask-image:linear-gradient(135deg,#000,transparent 70%)}
+    .hero-inner{position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:11px;color:#d2d2d5;font-size:10px;line-height:1.4;letter-spacing:.18em;font-weight:600}
+    .eyebrow:before{content:"";width:22px;height:1px;background:var(--gold)}
+    .hero h1{margin:28px 0 17px;font-size:clamp(64px,10vw,126px);line-height:.91;letter-spacing:-.095em;font-weight:600}
+    .hero h1 span{color:var(--gold)}
+    .hero-copy{max-width:560px;margin:0;color:var(--muted);font-size:15px;line-height:1.8;letter-spacing:-.015em}
+    .hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:52px}
+    .vault-stamp{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1px solid rgba(251,191,36,.25);background:rgba(251,191,36,.045);border-radius:3px;color:#e7e7e8;font-size:10px;letter-spacing:.12em;font-weight:600}
+    .vault-stamp i{color:var(--gold)}
+    .hero-meta{color:#77777d;font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+    .section{padding:82px 0 116px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}
+    .section-kicker{display:block;margin-bottom:13px;color:var(--gold);font-size:9px;letter-spacing:.2em;font-weight:700}
+    .section-title{margin:0;font-size:clamp(32px,4.6vw,52px);line-height:1.06;letter-spacing:-.065em;font-weight:550}
+    .section-lead{max-width:340px;margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+    .catalog-meta{display:flex;justify-content:space-between;align-items:center;padding:14px 0 17px;border-bottom:1px solid var(--line);color:#85858b;font-size:10px;letter-spacing:.11em;text-transform:uppercase}
+    .catalog-meta strong{color:#d1d1d4;font-weight:500}
+    .template-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-top:17px}
+    .template-card{position:relative;min-width:0;padding:0 16px 16px;border:1px solid rgba(255,255,255,.09);border-radius:6px;background:linear-gradient(150deg,#151515,#101010);overflow:hidden;transition:transform .25s,border-color .25s,background .25s}
+    .template-card:hover{transform:translateY(-4px);border-color:var(--line-gold);background:#151412}
+    .card-art{position:relative;height:116px;margin:0 -16px 16px;padding:17px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.075);background:radial-gradient(ellipse at 83% 12%,rgba(251,191,36,.1),transparent 48%),linear-gradient(130deg,#191919,#101010)}
+    .card-art:after{content:"";position:absolute;width:118px;height:118px;right:-40px;bottom:-77px;border:1px solid rgba(251,191,36,.2);border-radius:50%;box-shadow:0 0 0 18px rgba(251,191,36,.025),0 0 0 36px rgba(251,191,36,.018)}
+    .art-index{position:absolute;left:17px;top:16px;color:rgba(255,255,255,.39);font-size:9px;letter-spacing:.16em}
+    .art-glyph{position:absolute;left:17px;bottom:17px;display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(251,191,36,.36);border-radius:5px;color:var(--gold);font-size:15px;background:rgba(10,10,10,.36)}
+    .art-lines{position:absolute;right:17px;bottom:20px;display:grid;gap:5px;width:43%;opacity:.58}
+    .art-lines i{display:block;height:2px;background:linear-gradient(90deg,var(--gold),rgba(251,191,36,.07));border-radius:3px}
+    .art-lines i:nth-child(2){width:72%}.art-lines i:nth-child(3){width:48%}
+    .popular{position:absolute;top:13px;right:13px;z-index:2;padding:6px 8px;border:1px solid rgba(251,191,36,.36);border-radius:2px;background:rgba(10,10,10,.82);color:var(--gold);font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .card-topline{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:11px}
+    .card-number{color:#77777d;font-size:9px;letter-spacing:.14em}
+    .card-category{display:flex;align-items:center;gap:6px;color:#9b9ba0;font-size:8px;letter-spacing:.1em;text-transform:uppercase}
+    .card-category:before{content:"";width:5px;height:5px;background:var(--gold);border-radius:50%;opacity:.75}
+    .template-card h3{min-height:42px;margin:0 0 12px;font-size:14px;line-height:1.4;letter-spacing:-.035em;font-weight:550}
+    .card-bottom{display:flex;align-items:center;justify-content:space-between;gap:9px;padding-top:13px;border-top:1px solid rgba(255,255,255,.075)}
+    .price{color:var(--gold);font-size:15px;font-weight:600;letter-spacing:-.04em;white-space:nowrap}
+    .view-demo{display:inline-flex;align-items:center;gap:7px;padding:9px 10px;border:1px solid rgba(255,255,255,.18);border-radius:3px;background:transparent;color:#e3e3e5;font-size:9px;font-weight:600;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+    .view-demo:hover{border-color:var(--gold);color:var(--gold);background:rgba(251,191,36,.04)}
+    .view-demo i{font-size:8px}
+    .included{padding:76px 0 89px;border-block:1px solid rgba(255,255,255,.07);background:linear-gradient(180deg,rgba(255,255,255,.012),transparent)}
+    .included-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px;align-items:center}
+    .included-copy h2{margin:0 0 15px;font-size:clamp(34px,4vw,48px);letter-spacing:-.065em;line-height:1.04;font-weight:550}
+    .included-copy p{max-width:360px;margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+    .included-list{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;border-top:1px solid var(--line)}
+    .included-item{display:flex;align-items:center;gap:12px;min-height:57px;border-bottom:1px solid var(--line);color:#dedee0;font-size:12px}
+    .included-item i{color:var(--gold);font-size:12px}
+    .footer{padding:22px 0 25px;border-top:1px solid rgba(255,255,255,.08)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;color:#77777d;font-size:10px}
+    .footer-mark{color:#d4d4d7;letter-spacing:.14em;font-size:9px;font-weight:600}
+    dialog{width:min(680px,calc(100% - 32px));max-height:min(88dvh,780px);padding:0;border:1px solid rgba(251,191,36,.27);border-radius:8px;background:#111;color:var(--white);box-shadow:0 28px 100px rgba(0,0,0,.78);overflow:auto}
+    dialog::backdrop{background:rgba(0,0,0,.79);backdrop-filter:blur(6px)}
+    .dialog-inner{padding:24px}
+    .dialog-top{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-bottom:17px;border-bottom:1px solid var(--line)}
+    .dialog-eyebrow{color:var(--gold);font-size:9px;letter-spacing:.17em;font-weight:700}
+    .dialog-close{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--line);border-radius:4px;background:#171717;color:#d4d4d7;cursor:pointer}
+    .dialog-close:hover{border-color:var(--gold);color:var(--gold)}
+    .concept-preview{position:relative;min-height:280px;margin-top:20px;padding:22px;border:1px solid rgba(255,255,255,.09);border-radius:5px;background:radial-gradient(ellipse at 90% 6%,rgba(251,191,36,.12),transparent 40%),linear-gradient(140deg,#191919,#0d0d0d);overflow:hidden}
+    .concept-preview:after{content:"";position:absolute;right:-85px;bottom:-150px;width:280px;height:280px;border:1px solid rgba(251,191,36,.2);border-radius:50%;box-shadow:0 0 0 26px rgba(251,191,36,.025),0 0 0 54px rgba(251,191,36,.018);pointer-events:none}
+    .concept-nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:13px;border-bottom:1px solid rgba(255,255,255,.12);color:#d8d8da;font-size:9px;letter-spacing:.14em}
+    .concept-nav span:last-child{color:#99999f;font-size:8px}
+    .concept-content{position:relative;z-index:1;max-width:440px;padding:39px 0 18px}
+    .concept-label{color:#88888e;font-size:8px;letter-spacing:.2em;text-transform:uppercase}
+    .concept-content h2{margin:13px 0 10px;font-size:clamp(27px,5vw,43px);line-height:1;letter-spacing:-.065em;font-weight:550}
+    .concept-content h2 span{color:var(--gold)}
+    .concept-content p{max-width:390px;margin:0;color:#aaaab0;font-size:11px;line-height:1.8}
+    .concept-rule{width:100%;height:1px;margin:25px 0 18px;background:linear-gradient(90deg,var(--gold),transparent)}
+    .concept-bottom{display:flex;align-items:center;justify-content:space-between;gap:15px}
+    .concept-price{color:#bbb;font-size:9px;letter-spacing:.08em}.concept-price strong{display:block;margin-top:6px;color:var(--gold);font-size:18px;letter-spacing:-.04em}
+    .concept-cta{display:inline-flex;align-items:center;gap:8px;padding:10px 13px;background:var(--gold);color:#111;border-radius:3px;font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .demo-note{display:flex;align-items:flex-start;gap:10px;margin:16px 0 19px;color:#929298;font-size:10px;line-height:1.7}
+    .demo-note i{margin-top:2px;color:var(--gold)}
+    .dialog-actions{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .dialog-actions .button{min-height:43px;font-size:9px}
+    .dialog-secondary{border:0;background:transparent;color:#a1a1aa;font-size:10px;cursor:pointer}
+    .dialog-secondary:hover{color:#fff}
+    @media(max-width:1000px){.template-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.included-wrap{gap:40px}}
+    @media(max-width:720px){
+      .container{width:min(100% - 38px,var(--max))}
+      .site-header{height:68px}.wordmark{font-size:10px}.mark{width:28px;height:28px}
+      .menu-toggle{display:grid;place-items:center}.nav-cta{display:none}
+      .nav-links{position:absolute;top:67px;left:0;right:0;display:none;align-items:stretch;gap:0;padding:8px 19px 17px;background:rgba(10,10,10,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
+      .nav-links.open{display:flex;flex-direction:column}.nav-links a{padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.06)}.nav-links a:last-child{border:0}
+      .nav-links .mobile-cta{display:block;margin-top:9px;padding:13px 15px;background:var(--gold);color:#111;text-align:center;font-size:10px;font-weight:700;letter-spacing:.08em}
+      .hero{padding:137px 0 52px}.hero h1{font-size:clamp(58px,14vw,84px)}.hero-copy{font-size:14px}
+      .hero-bottom{align-items:flex-start;flex-direction:column;gap:17px;margin-top:33px}
+      .section{padding:68px 0 78px}.section-head{align-items:flex-start;flex-direction:column;gap:13px}
+      .template-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px}
+      .template-card{padding:0 12px 12px}.card-art{height:100px;margin:0 -12px 13px;padding:13px}.art-index,.art-glyph{left:13px}.art-glyph{bottom:13px}.art-lines{right:13px}
+      .card-topline{align-items:flex-start;flex-direction:column;gap:6px;margin-bottom:8px}.template-card h3{font-size:12px;min-height:36px;margin-bottom:10px}
+      .price{font-size:13px}.view-demo{padding:8px 7px;font-size:8px;gap:5px}.card-bottom{gap:5px}
+      .included{padding:64px 0}.included-wrap{grid-template-columns:1fr;gap:25px}.included-list{gap:0 14px}.included-item{font-size:10px;min-height:52px;gap:8px}
+      .footer-inner{align-items:flex-start;flex-direction:column;gap:11px}
+      .dialog-inner{padding:17px}.concept-preview{padding:17px;min-height:260px}
+    }
+    @media(max-width:380px){.container{width:calc(100% - 28px)}.template-grid{grid-template-columns:1fr}.card-art{height:108px}.card-topline{flex-direction:row;align-items:center}.template-card h3{min-height:unset}.included-list{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+    /* Larger, heavier supporting typography while preserving the shared brand palette. */
+    .wordmark{font-size:13px}
+    .nav-links{font-size:14px;font-weight:600}
+    .nav-links .mobile-cta{font-size:12px;font-weight:700}
+    .nav-cta{font-size:12px;font-weight:700}
+    .button{font-size:13px;font-weight:700}
+    .eyebrow{font-size:12px;font-weight:700}
+    .hero h1{font-size:clamp(68px,11vw,136px);font-weight:650}
+    .hero-copy{font-size:19px;font-weight:500}
+    .vault-stamp{font-size:12px;font-weight:700}
+    .hero-meta{font-size:12px;font-weight:600}
+    .section-kicker{font-size:11px}
+    .section-title{font-size:clamp(38px,4.8vw,58px);font-weight:650}
+    .section-lead{font-size:15px;font-weight:500}
+    .catalog-meta{font-size:12px;font-weight:500}
+    .catalog-meta strong{font-weight:700}
+    .art-index{font-size:10px}
+    .card-number{font-size:11px;font-weight:600}
+    .card-category{font-size:10px;font-weight:600}
+    .popular{font-size:10px}
+    .template-card h3{min-height:46px;font-size:16px;font-weight:650}
+    .price{font-size:17px;font-weight:700}
+    .view-demo{font-size:11px;font-weight:700}
+    .included-copy h2{font-size:clamp(38px,4.2vw,52px);font-weight:650}
+    .included-copy p{font-size:15px;font-weight:500}
+    .included-item{font-size:15px;font-weight:500}
+    .footer-inner{font-size:12px;font-weight:500}
+    .footer-mark{font-size:11px;font-weight:700}
+    .dialog-eyebrow{font-size:11px;font-weight:700}
+    .concept-nav{font-size:11px;font-weight:600}
+    .concept-nav span:last-child{font-size:10px}
+    .concept-label{font-size:10px;font-weight:600}
+    .concept-content h2{font-size:clamp(30px,5vw,46px);font-weight:650}
+    .concept-content p{font-size:14px;font-weight:500}
+    .concept-price{font-size:11px;font-weight:600}
+    .concept-price strong{font-size:20px;font-weight:700}
+    .concept-cta{font-size:10px;font-weight:700}
+    .demo-note{font-size:13px;font-weight:500}
+    .dialog-actions .button{font-size:12px}
+    .dialog-secondary{font-size:12px;font-weight:600}
+    @media(max-width:720px){
+      .wordmark{font-size:12px}
+      .hero h1{font-size:clamp(62px,16vw,92px)}
+      .hero-copy{font-size:17px}
+      .template-card h3{min-height:44px;font-size:14px}
+      .popular{top:44px;right:12px;padding:5px 6px;font-size:9px}
+    }
+    .card-art{background:#141414}
+    .card-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.78) saturate(.86);pointer-events:none}
+    .card-art:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,5,5,.76),rgba(5,5,5,.38) 60%,rgba(5,5,5,.58)),linear-gradient(0deg,rgba(5,5,5,.65),rgba(5,5,5,.08) 80%);pointer-events:none}
+    .card-art:after{display:none}
+    .art-index,.art-glyph{z-index:2}
+    .art-index{color:rgba(255,255,255,.94)}
+    .art-glyph{background:rgba(10,10,10,.78)}
+    .art-lines{display:none}
+  </style>
+</head>
 <body>
-<div class="bg-3d"></div>
-<nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto"><div class="font-black tracking-widest">KTIX WEB STUDIO</div><div class="flex gap-6 items-center text-sm"><a href="index.html" class="opacity-60">Home</a><a class="border-b border-yellow-500">Shop</a><a href="index.html#contact" class="bg-white text-black px-6 py-2.5 rounded-full font-bold">GET STARTED</a></div></nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="wordmark" href="index.html" aria-label="KTIX Web Studio home"><span class="mark" aria-hidden="true">K</span><span>KTIX WEB STUDIO</span></a>
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+        <a href="index.html#services">Services</a><a href="index.html#about">About</a><a href="shop.html" aria-current="page">Shop</a><a href="index.html#contact" class="mobile-cta">GET STARTED →</a>
+      </nav>
+      <a class="button button-gold nav-cta" href="index.html#contact">GET STARTED <span aria-hidden="true">→</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="container hero-inner">
+        <div class="eyebrow">CURATED VAULT • STARTING ₹2,999</div>
+        <h1 id="page-title">KTIX <span>Vault</span></h1>
+        <p class="hero-copy">Curated for real businesses — demo only. We build YOUR real version in 48 hours.</p>
+        <div class="hero-bottom">
+          <div class="vault-stamp"><i class="fa-solid fa-shapes" aria-hidden="true"></i><span>20 STARTING POINTS. ONE CUSTOM BUILD.</span></div>
+          <div class="hero-meta">A considered starting point for what comes next</div>
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="section-kicker">THE CURATED VAULT / 01—20</span><h2 class="section-title" id="catalog-title">Find your starting point.</h2></div>
+          <p class="section-lead">Every concept is a direction, not a finished product. Choose the one that feels like your business — then we make it yours.</p>
+        </div>
+        <div class="catalog-meta"><span><strong>20</strong> industry concepts</span><span>Custom-coded for your business</span></div>
+        <div class="template-grid" id="template-grid" aria-label="Website concept templates"></div>
+      </div>
+    </section>
+    <section class="included" aria-labelledby="included-title">
+      <div class="container included-wrap">
+        <div class="included-copy"><span class="section-kicker">THE BUILD, MADE CLEAR</span><h2 id="included-title">What’s Included</h2><p>A focused package with the essentials to bring your concept to life as a real, custom website for your business.</p></div>
+        <ul class="included-list">
+          <li class="included-item"><i class="fa-solid fa-check" aria-hidden="true"></i><span>5 Custom Pages</span></li>
+          <li class="included-item"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Mobile Responsive</span></li>
+          <li class="included-item"><i class="fa-solid fa-check" aria-hidden="true"></i><span>WhatsApp Integration</span></li>
+          <li class="included-item"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Contact Form</span></li>
+          <li class="included-item"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Google Maps</span></li>
+          <li class="included-item"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Social Media Links</span></li>
+          <li class="included-item"><i class="fa-solid fa-check" aria-hidden="true"></i><span>48-Hour Delivery</span></li>
+          <li class="included-item"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Free Revisions</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© 2024 KTIX Web Studio. All Rights Reserved. | Call: +91 8131861802</span><span class="footer-mark">KTIX WEB STUDIO</span></div></footer>
 
-<div class="text-center mt-6 px-4">
-<div class="inline-block text-[10px] tracking-[0.3em] border border-white/10 rounded-full px-4 py-2 bg-white/5">CURATED VAULT • STARTING ₹3,999</div>
-<h1 class="title-3d mt-5">KTIX Vault</h1>
-<p class="opacity-60 text-sm mt-3 max-w-xl mx-auto">Curated for real businesses — demo only. We build YOUR real version in 48 hours.</p>
-</div>
+  <dialog id="demo-dialog" aria-labelledby="dialog-title" aria-describedby="demo-note">
+    <div class="dialog-inner">
+      <div class="dialog-top"><span class="dialog-eyebrow">KTIX VAULT / CONCEPT PREVIEW</span><button class="dialog-close" type="button" aria-label="Close concept preview"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+      <div class="concept-preview">
+        <div class="concept-nav"><span id="concept-brand">KTIX / STUDIO</span><span>INDEPENDENT BUSINESS / INDIA</span></div>
+        <div class="concept-content"><div class="concept-label">A CONCEPT FOR YOUR NEXT CHAPTER</div><h2 id="dialog-title">Business, <span>beautifully presented.</span></h2><p id="concept-description">A considered online home designed around the people you serve, with room for your story to lead.</p><div class="concept-rule"></div><div class="concept-bottom"><div class="concept-price">CONCEPT STARTS AT<strong id="dialog-price">₹5,999</strong></div><span class="concept-cta">DISCOVER MORE <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span></div></div>
+      </div>
+      <p class="demo-note" id="demo-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><span>This is a visual concept preview, not a live or completed business website. Your version will be custom-built for your brand.</span></p>
+      <div class="dialog-actions"><button class="dialog-secondary" type="button" data-close-dialog>Back to the vault</button><a class="button button-gold" href="demo.html">Build my version <span aria-hidden="true">→</span></a></div>
+    </div>
+  </dialog>
+  <script>
+    (() => {
+      "use strict";
+      const templates = [
+        ["Restaurant & Cafe","₹5,999","fa-utensils","FOOD & HOSPITALITY","A welcoming digital table for your menu, your atmosphere and the moments guests come back for.",false,"https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Gym & Fitness","₹6,999","fa-dumbbell","FITNESS","A high-energy home for your classes, coaching and the community moving with you.",false,"https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Salon & Spa","₹5,999","fa-scissors","BEAUTY & CARE","An elegant introduction to your services, specialists and the small details that make a visit feel special.",false,"https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["School & Academy","₹4,999","fa-graduation-cap","EDUCATION","A clear, confident place for your programs, admissions and the learning community you are building.",false,"https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Real Estate Agency","₹7,999","fa-house","PROPERTY","A refined property experience that gives your listings, local expertise and client relationships room to shine.",true,"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["E-commerce Store","₹9,999","fa-bag-shopping","RETAIL","A distinctive storefront concept shaped around your products, your point of view and a simpler way to shop.",true,"https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Medical Clinic / Dentist","₹6,999","fa-stethoscope","HEALTHCARE","A reassuring patient-first experience for your care, practitioners, location and appointment enquiries.",false,"https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Law Firm / Lawyer","₹7,999","fa-scale-balanced","LEGAL","A composed online presence for your practice areas, approach and the people who trust you with their next step.",false,"https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Hotel & Resort","₹8,999","fa-hotel","STAYS & HOSPITALITY","An inviting destination preview for your rooms, amenities and the experience waiting beyond the booking.",false,"https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Photography Studio","₹5,999","fa-camera","CREATIVE","A gallery-led canvas for your signature work, perspective and the stories you are ready to capture.",false,"https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Travel & Tour Agency","₹6,999","fa-compass","TRAVEL","A thoughtful launchpad for your itineraries, local knowledge and journeys worth taking.",false,"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["NGO / Charity","₹3,999","fa-hand-holding-heart","SOCIAL IMPACT","A human, purposeful platform for your mission, the people behind it and ways to make a difference.",false,"https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Construction & Architecture","₹7,999","fa-building","BUILT ENVIRONMENT","A structured portfolio for your projects, process and the places you shape from the ground up.",false,"https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Automobile / Car Dealership","₹8,999","fa-car","AUTOMOTIVE","A confident showroom concept for your inventory, expertise and the drive toward the right vehicle.",false,"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Wedding & Event Planner","₹6,999","fa-champagne-glasses","EVENTS","A polished showcase for your celebrations, planning process and the moments you make memorable.",false,"https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Personal Portfolio","₹2,999","fa-user-tie","PERSONAL BRAND","A sharp personal home for your work, experience and the next opportunity you want to find.",false,"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Tech Startup / SaaS","₹9,999","fa-microchip","TECHNOLOGY","A product-minded story for your solution, its value and the people ready to build with you.",false,"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Grocery / Supermarket","₹7,999","fa-basket-shopping","LOCAL RETAIL","A useful neighborhood storefront concept for your fresh picks, everyday essentials and local convenience.",false,"https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Yoga & Wellness","₹5,999","fa-spa","WELLNESS","A calm, grounded introduction to your practice, sessions and the space you create for wellbeing.",false,"https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"],
+        ["Coaching & Consultancy","₹6,999","fa-lightbulb","EXPERTISE","A clear platform for your perspective, services and the meaningful change you help clients make.",false,"https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&crop=entropy&w=900&h=480&q=82"]
+      ];
+      const grid = document.getElementById("template-grid");
+      const dialog = document.getElementById("demo-dialog");
+      const nav = document.getElementById("primary-navigation");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const closeButton = dialog.querySelector(".dialog-close");
+      const title = document.getElementById("dialog-title");
+      const price = document.getElementById("dialog-price");
+      const description = document.getElementById("concept-description");
+      const brand = document.getElementById("concept-brand");
+      let lastTrigger = null;
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 max-w-7xl mx-auto mt-12 pb-20">
+      grid.innerHTML = templates.map((item, index) => {
+        const [name, amount, icon, category, copy, popular, image] = item;
+        return `<article class="template-card">
+          ${popular ? '<span class="popular">Most Popular</span>' : ""}
+          <div class="card-art" aria-hidden="true"><img class="card-photo" src="${image}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="art-index">KTIX / ${String(index + 1).padStart(2, "0")}</span><span class="art-glyph"><i class="fa-solid ${icon}"></i></span></div>
+          <div class="card-topline"><span class="card-number">CONCEPT ${String(index + 1).padStart(2, "0")}</span><span class="card-category">${category}</span></div>
+          <h3>${name}</h3>
+          <div class="card-bottom"><span class="price">${amount}</span><button class="view-demo" type="button" data-template="${index}" aria-label="View ${name} concept demo">View Demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button></div>
+        </article>`;
+      }).join("");
 
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Restaurant</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Gym & Fitness</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Salon & Spa</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹5,999</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Eco / Environment NGO 🌿</b><span class="bg-[#D4AF37] text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,999</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Cafe & Coffee</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,499</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Fashion Store</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,499</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Real Estate</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹8,999</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Clinic / Medical</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,499</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Education</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,999</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Travel & Tourism ✈️</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,999</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">E-commerce Shop</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹9,999</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600"><div class="flex justify-between items-center mt-3 px-2"><span class="font-semibold">Portfolio / Agency</span><span class="bg-white text-black px-3 py-1 rounded-full text-xs font-bold">₹5,999</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Bakery & Sweets</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹6,499</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Interior Design</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹8,499</span></div></div>
-
-<div class="card p-3"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600"><div class="flex justify-between mt-3 px-2 pb-1"><b class="text-sm">Event / Wedding</b><span class="bg-white text-black text-[11px] px-3 py-1 rounded-full font-bold">₹7,499</span></div></div>
-
-</div>
-  <!-- KTIX SHOP FOOTER - OWN STYLE -->
-<section style="max-width:1300px;margin:80px auto 0;padding:50px 30px 30px;border-top:1px solid rgba(255,255,255,0.08);text-align:center;">
-  <h2 style="font-size:28px;color:#fff;font-weight:700;margin-bottom:10px;">
-    Templates Made Simple. Ready to Launch.
-  </h2>
-  <p style="color:#999;max-width:700px;margin:0 auto 40px;font-size:14.5px;line-height:1.8;">
-    Each template is designed to be clean, fast, and easy to use. 
-    Fully responsive, optimized for all devices, and ready with everything you need to start your business online.
-    One-time purchase, lifetime use, with setup support from KTIX Web Studio.
-  </p>
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-bottom:40px;color:#aaa;font-size:13px;">
-    <span>✓ Fast & Lightweight</span>
-    <span>✓ Works on Mobile & Desktop</span>
-    <span>✓ Easy to Customize</span>
-    <span>✓ Lifetime Access</span>
-  </div>
-  <p style="color:#555;font-size:11px;letter-spacing:1px;">
-    © 2026 KTIX WEB STUDIO • ALL RIGHTS RESERVED
-  </p>
-</section>
-</body></html>
+      grid.addEventListener("click", (event) => {
+        const trigger = event.target.closest("[data-template]");
+        if (!trigger) return;
+        const item = templates[Number(trigger.dataset.template)];
+        if (!item) return;
+        lastTrigger = trigger;
+        title.innerHTML = `${item[0]}<span> — a concept.</span>`;
+        price.textContent = item[1];
+        description.textContent = item[4];
+        brand.textContent = `KTIX / ${item[0].toUpperCase()}`;
+        dialog.showModal();
+        closeButton.focus();
+      });
+      const closeDialog = () => dialog.close();
+      closeButton.addEventListener("click", closeDialog);
+      dialog.querySelector("[data-close-dialog]").addEventListener("click", closeDialog);
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) closeDialog();
+      });
+      dialog.addEventListener("close", () => {
+        if (lastTrigger) lastTrigger.focus();
+      });
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
+        menuToggle.innerHTML = `<i class="fa-solid ${isOpen ? "fa-bars" : "fa-xmark"}" aria-hidden="true"></i>`;
+        nav.classList.toggle("open", !isOpen);
+      });
+      nav.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          nav.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+          menuToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        }
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && nav.classList.contains("open")) {
+          nav.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+          menuToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
