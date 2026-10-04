@@ -1,178 +1,611 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta name="google-site-verification" content="BR7YEznnscIgTJOA76NHwm9uCbvasgTDsKfCvJbwKJI" /><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KTIX Web Studio </title>
-  <meta property="og:image" content="https://ktix-studio.github.io/Ktix-web-studio/logo.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:title" content="KTIX Web Studio - Premium Websites"> 
-<meta property="og:description" content="I make premium websites for businesses that want to look premium.">
-  <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://ktix-studio.github.io/Ktix-web-studio/logo.png"> 
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#08080a;--gold:#FFC978;--gold2:#FF9A3C;--muted:#9a9aa3;--border:rgba(255,255,255,0.08)}
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--bg);color:#fff;overflow-x:hidden}
-h1,h2{font-family:'Syne',sans-serif}a{text-decoration:none;color:inherit}
-.bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:-1}.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.5}
-.orb1{width:800px;height:800px;background:radial-gradient(circle, rgba(255,201,120,0.15) 0%, transparent 70%);top:-200px;left:-200px}
-.orb2{width:600px;height:600px;background:radial-gradient(circle, rgba(168,85,247,0.18) 0%, transparent 70%);top:20%;right:-100px}
-.navbar{position:fixed;top:0;width:100%;z-index:100;background:rgba(8,8,10,0.8);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:16px 0}
-.nav-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center}
-.btn-gold{background:linear-gradient(105deg,var(--gold),var(--gold2));color:#000;padding:12px 26px;border-radius:100px;font-weight:700;font-size:13px}
-.hero{min-height:85vh;display:flex;align-items:center;max-width:1280px;margin:0 auto;padding:130px 32px 50px}
-.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:center;width:100%}
-.hero h1{font-size:clamp(42px,6vw,68px);line-height:0.9;letter-spacing:-2px;font-weight:800}
-.hero h1 i{font-style:italic;background:linear-gradient(90deg,var(--gold),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:var(--muted);font-size:17px;line-height:1.6;max-width:440px;margin:20px 0 28px}
-.glass-card{width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.12);border-radius:24px;backdrop-filter:blur(30px);box-shadow:0 40px 80px rgba(0,0,0,0.5);transform:rotateY(-10deg) rotateX(6deg);overflow:hidden}
-.section{max-width:1280px;margin:0 auto;padding:80px 32px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.s-card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));border:1px solid var(--border);border-radius:20px;padding:28px}
-.top-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;padding:16px 20px;margin-bottom:24px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);color:#4ade80;padding:6px 14px;border-radius:100px;font-size:11px;font-weight:600}
-.dot-live{width:6px;height:6px;background:#4ade80;border-radius:50%;box-shadow:0 0 10px #4ade80;animation:pulse 2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
-.search-box{background:rgba(0,0,0,0.4);border:1px solid var(--border);border-radius:100px;padding:10px 18px;color:#fff;width:260px;outline:none;font-size:13px}
-.section-title{font-size:12px;letter-spacing:2px;color:var(--muted);margin:28px 0 14px;display:flex;align-items:center;gap:10px}
-.section-title::after{content:'';flex:1;height:1px;background:var(--border)}.city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.city-card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;justify-content:space-between;align-items:center;transition:0.3s}
-.city-card.ut{background:linear-gradient(180deg, rgba(168,85,247,0.08), rgba(255,255,255,0.02));border-color:rgba(168,85,247,0.15)}
-.city-name{font-size:13px;font-weight:600}.city-state{font-size:10px;color:var(--muted);margin-top:2px}.temp{font-family:'Syne';font-size:20px;font-weight:700}
-.contact{max-width:1280px;margin:0 auto;padding:60px 32px 100px;display:grid;grid-template-columns:1fr 1fr;gap:50px;border-top:1px solid var(--border)}
-.form-box{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:20px;padding:28px}
-.form-box input,.form-box textarea{width:100%;background:rgba(0,0,0,0.3);border:1px solid var(--border);border-radius:10px;padding:12px;color:#fff;margin-top:6px;font-size:13px}
-.form-box label{font-size:10px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;font-weight:600;margin-top:14px;display:block}
-.form-box button{margin-top:18px;width:100%;background:linear-gradient(105deg,var(--gold),var(--gold2));color:#000;border:none;padding:14px;border-radius:100px;font-weight:800;cursor:pointer}
-@media(max-width:900px){.hero-grid,.grid-3,.contact{grid-template-columns:1fr}.city-grid{grid-template-columns:repeat(2,1fr)}.hero{padding:120px 24px 40px}.section,.contact{padding:60px 24px}.glass-card{transform:none}}
-@media(max-width:480px){.city-grid{grid-template-columns:1fr}}
-@media(max-width:768px){.hide-mob{display:none!important}}
-</style></head><body>
-<div class="bg-orbs"><div class="orb orb1"></div><div class="orb orb2"></div></div><nav class="navbar"><div class="nav-inner" style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;gap:8px;flex-wrap:nowrap"><div style="display:flex;align-items:center;gap:8px;font-weight:900;font-size:15px;letter-spacing:1px;flex-shrink:1;min-width:0"><img src="logo.png" style="height:32px;width:32px;min-width:32px;border-radius:8px;border:1.5px solid #D4AF37"><div style="line-height:1.1">KTIX <span style="color:#fff">WEB<br>STUDIO</span><span style="font-size:6px;letter-spacing:1.5px;color:var(--gold);font-weight:700;display:block;margin-top:1px">EST. 2024 • INDIA</span></div></div><div style="display:flex;gap:6px;align-items:center;flex-shrink:0"><a href="#services" class="hide-mob" style="font-size:13px;color:var(--muted);font-weight:600;text-decoration:none">Services</a><a href="#about" class="hide-mob" style="font-size:13px;color:var(--muted);font-weight:600;text-decoration:none">About</a><a href="shop.html" class="btn-gold" style="padding:7px 12px;font-size:12px;white-space:nowrap">SHOP</a><a href="#contact" class="btn-gold hide-mob" style="padding:8px 14px;font-size:13px">GET STARTED →</a></div></div></nav>
-<section class="hero"><div class="hero-grid"><div><div style="font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:700;margin-bottom:20px">WEB DESIGN & DEVELOPMENT STUDIO</div><h1>Your business<br>deserves a<br><i>better website.</i></h1><p>We craft high-converting websites for brands that want to look expensive and sell more.</p><div style="display:flex;gap:12px"><a href="#contact" class="btn-gold">Start a Project →</a><a href="#climate" style="padding:12px 22px;border-radius:100px;border:1px solid var(--border);font-size:13px;font-weight:600">See REAL LIVE Dashboard ↓</a></div></div>
-<div class="glass-card" style="padding:0;overflow:hidden;border-radius:28px;">
-  <!-- Top bar same as before -->
-  <div style="padding:18px;display:flex;gap:8px;border-bottom:1px solid rgba(255,255,255,0.06);align-items:center">
-    <div style="width:10px;height:10px;border-radius:50%;background:#ff5f56"></div>
-    <div style="width:10px;height:10px;border-radius:50%;background:#ffbd2e"></div>
-    <div style="width:10px;height:10px;border-radius:50%;background:#27c93f"></div>
-    <div style="margin-left:auto;font-size:10px;color:#9a9aa3;letter-spacing:1px">ktix.studio • LIVE TEAM</div>
-  </div>
-  
-  <!-- TEAM IMAGE - RESPONSIVE -->
-  <div style="position:relative;width:100%;aspect-ratio:4/3;max-height:420px;background:#111;">
-    <img src="team.jpg" alt="KTIX Studio Team" style="width:100%;height:100%;object-fit:cover;display:block;">
-    <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent, rgba(0,0,0,0.9));padding:20px;">
-      <div style="font-size:11px;color:#c5a880;letter-spacing:1.5px;font-weight:600">KTIX WEB STUDIO</div>
-      <div style="font-size:16px;color:#fff;font-weight:700;margin-top:4px">Building high-converting websites 🚀</div>
-      <div style="font-size:11px;color:#9a9aa3;margin-top:4px">Premium • Fast • Converting</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>KTIX Web Studio — Websites built to look expensive</title>
+  <meta name="description" content="KTIX Web Studio builds premium, high-converting custom websites for startups and brands. No builders. No shortcuts.">
+  <meta property="og:title" content="KTIX Web Studio — Websites built to look expensive">
+  <meta property="og:description" content="Premium, high-converting custom websites for startups and brands. No builders. No shortcuts.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="KTIX Web Studio">
+  <meta name="twitter:description" content="Premium, high-converting custom websites for startups and brands.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Cpath d='M16 14h8v17l15-17h10L33 30l17 20H40L28 35l-4 4v11h-8z' fill='%23fbbf24'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root{--bg:#0a0a0a;--panel:#141414;--panel2:#101010;--white:#fff;--muted:#a1a1aa;--gold:#fbbf24;--line:rgba(255,255,255,.105);--line-gold:rgba(251,191,36,.32);--max:1220px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:94px}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 77% 6%,rgba(251,191,36,.055),transparent 27%),radial-gradient(ellipse at 3% 46%,rgba(255,255,255,.025),transparent 29%)}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea{font:inherit}
+    button,a{-webkit-tap-highlight-color:transparent}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+    .container{width:min(var(--max),calc(100% - 64px));margin-inline:auto}
+    .site-header{position:fixed;inset:0 0 auto;z-index:20;height:78px;background:rgba(10,10,10,.76);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.065)}
+    .nav-wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+    .wordmark{display:inline-flex;align-items:center;gap:11px;font-size:12px;letter-spacing:.16em;font-weight:700;white-space:nowrap}
+    .mark{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line-gold);border-radius:9px;color:var(--gold);font-size:14px;letter-spacing:-.06em}
+    .nav-links{display:flex;align-items:center;gap:38px;color:#c8c8cb;font-size:12px}
+    .nav-links a{transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .mobile-cta{display:none}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:48px;padding:0 21px;border:1px solid transparent;border-radius:5px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;transition:transform .2s,border-color .2s,background .2s,color .2s}
+    .button:hover{transform:translateY(-2px)}
+    .button-gold{background:var(--gold);color:#111}
+    .button-gold:hover{background:#ffd45b}
+    .button-outline{border-color:rgba(255,255,255,.28);color:var(--white);background:rgba(255,255,255,.015)}
+    .button-outline:hover{border-color:var(--gold);color:var(--gold)}
+    .nav-cta{min-height:40px;padding:0 16px;font-size:10px}
+    .menu-toggle{display:none;width:42px;height:42px;background:transparent;color:var(--white);border:1px solid var(--line);border-radius:5px;cursor:pointer}
+    .hero{position:relative;min-height:760px;padding:168px 0 100px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero:after{content:"";position:absolute;right:-12%;top:13%;width:56vw;height:56vw;max-width:840px;max-height:840px;border:1px solid rgba(251,191,36,.07);border-radius:50%;pointer-events:none;mask-image:linear-gradient(135deg,#000,transparent 68%)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.12fr .88fr;gap:58px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:11px;color:#d2d2d5;font-size:10px;line-height:1.4;letter-spacing:.18em;font-weight:600}
+    .eyebrow:before{content:"";width:22px;height:1px;background:var(--gold)}
+    .hero h1{max-width:740px;margin:29px 0 22px;font-size:clamp(54px,7.1vw,96px);line-height:.99;letter-spacing:-.082em;font-weight:600}
+    .hero h1 span{color:var(--gold)}
+    .hero-copy{max-width:520px;color:var(--muted);font-size:16px;line-height:1.8;letter-spacing:-.015em}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .hero-note{display:flex;align-items:center;gap:10px;margin-top:34px;color:#77777d;font-size:10px;letter-spacing:.13em;text-transform:uppercase}
+    .note-dot,.live-dot{display:inline-block;width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px rgba(251,191,36,.5)}
+    .preview-wrap{position:relative;padding:22px 0 0 18px}
+    .preview-wrap:before{content:"";position:absolute;inset:0 18px 24px 0;border:1px solid rgba(251,191,36,.19);border-radius:10px}
+    .preview-card{position:relative;min-height:390px;padding:22px;border:1px solid rgba(255,255,255,.13);border-radius:10px;background:linear-gradient(145deg,rgba(30,30,30,.96),rgba(15,15,15,.92));box-shadow:0 35px 100px rgba(0,0,0,.44);overflow:hidden}
+    .preview-card:after{content:"";position:absolute;width:330px;height:330px;right:-150px;bottom:-200px;border:1px solid rgba(251,191,36,.15);border-radius:50%;box-shadow:0 0 0 30px rgba(251,191,36,.018),0 0 0 60px rgba(251,191,36,.015)}
+    .preview-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:19px;border-bottom:1px solid var(--line)}
+    .preview-label{display:flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.11em;color:#d6d6d8;font-weight:600}
+    .live-chip{display:inline-flex;align-items:center;gap:7px;padding:7px 9px;border:1px solid rgba(255,255,255,.11);border-radius:3px;color:#a8a8ac;font-size:8px;letter-spacing:.14em}
+    .live-chip .live-dot{width:5px;height:5px}
+    .preview-content{position:relative;z-index:1;padding:34px 4px 10px}
+    .preview-kicker{font-size:9px;letter-spacing:.18em;color:#77777d}
+    .preview-title{margin:12px 0 7px;font-size:35px;letter-spacing:-.065em;font-weight:500}
+    .preview-sub{font-size:11px;color:var(--muted)}
+    .preview-rule{width:100%;height:1px;margin:29px 0 23px;background:linear-gradient(90deg,var(--gold),rgba(251,191,36,0))}
+    .preview-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .preview-stat{padding:16px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:5px}
+    .preview-stat small{display:block;color:#828287;font-size:8px;letter-spacing:.16em}
+    .preview-stat strong{display:block;margin-top:11px;font-size:19px;font-weight:500}
+    .preview-stat strong span{color:var(--gold)}
+    .preview-footer{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;margin-top:22px;color:#77777d;font-size:9px;letter-spacing:.1em}
+    .preview-bars{display:flex;align-items:end;gap:4px;height:28px}
+    .preview-bars i{display:block;width:4px;background:var(--gold);opacity:.65;border-radius:3px 3px 0 0}
+    .section{padding:118px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:43px}
+    .section-kicker{display:block;margin-bottom:13px;color:var(--gold);font-size:9px;letter-spacing:.2em;font-weight:700}
+    .section-title{margin:0;font-size:clamp(35px,5vw,58px);line-height:1.06;letter-spacing:-.065em;font-weight:550}
+    .section-lead{max-width:360px;margin:0;color:var(--muted);font-size:13px;line-height:1.8}
+    .services{border-bottom:1px solid rgba(255,255,255,.06)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service-card{position:relative;min-height:255px;padding:27px 26px;border:1px solid rgba(255,255,255,.09);border-radius:7px;background:linear-gradient(145deg,#141414,#101010);transition:border-color .25s,transform .25s,background .25s;overflow:hidden}
+    .service-card:hover{border-color:var(--line-gold);transform:translateY(-4px);background:#151412}
+    .service-card:after{content:"";position:absolute;right:-45px;bottom:-92px;width:170px;height:170px;border:1px solid rgba(251,191,36,.1);border-radius:50%;transition:transform .35s}
+    .service-card:hover:after{transform:scale(1.14)}
+    .service-index{color:var(--gold);font-size:10px;letter-spacing:.16em;font-weight:600}
+    .service-card h3{margin:39px 0 11px;font-size:18px;letter-spacing:-.04em}
+    .service-card p{max-width:270px;margin:0;color:var(--muted);font-size:12px;line-height:1.75}
+    .climate{background:linear-gradient(180deg,rgba(255,255,255,.012),transparent 23%,transparent 82%,rgba(255,255,255,.012));border-block:1px solid rgba(255,255,255,.06)}
+    .dashboard-head{align-items:center;margin-bottom:37px}
+    .dashboard-meta{display:flex;align-items:center;gap:9px;margin-top:12px;color:var(--muted);font-size:11px}
+    .status-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.1);padding:9px 12px;border-radius:4px;color:#b7b7bb;font-size:10px;white-space:nowrap}
+    .status-badge[data-state="error"] .live-dot{background:var(--gold);box-shadow:none}
+    .status-badge[data-state="loading"] .live-dot{animation:pulse 1.3s infinite}
+    @keyframes pulse{50%{opacity:.35}}
+    .dashboard-control{display:flex;align-items:center;gap:13px}
+    .refresh{display:inline-flex;align-items:center;gap:9px;padding:10px 13px;color:#d5d5d8;background:transparent;border:1px solid rgba(255,255,255,.16);border-radius:4px;font-size:10px;cursor:pointer;transition:border-color .2s,color .2s}
+    .refresh:hover{border-color:var(--gold);color:var(--gold)}
+    .refresh:disabled{opacity:.55;cursor:wait}
+    .grid-label{display:flex;align-items:center;gap:14px;margin:36px 0 13px;color:#d0d0d3;font-size:10px;font-weight:600;letter-spacing:.16em}
+    .grid-label:after{content:"";height:1px;flex:1;background:var(--line)}
+    .dashboard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+    .weather-card{position:relative;min-height:108px;padding:15px 15px 13px;background:#121212;border:1px solid rgba(255,255,255,.075);border-radius:5px;transition:border-color .2s,background .2s}
+    .weather-card:hover{border-color:rgba(251,191,36,.3);background:#151515}
+    .weather-name{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;font-weight:600}
+    .weather-city{display:block;margin-top:5px;color:#828287;font-size:10px}
+    .weather-temp{position:absolute;right:14px;bottom:11px;color:var(--gold);font-size:16px;font-weight:600;letter-spacing:-.04em}
+    .weather-temp.loading{font-size:9px;color:#77777d;letter-spacing:.04em;font-weight:500}
+    .weather-card.is-error .weather-temp{color:#a1a1aa;font-size:9px;letter-spacing:0}
+    .dashboard-message{min-height:18px;margin:13px 0 0;color:#95959a;font-size:11px}
+    .about{position:relative}
+    .about-grid{display:grid;grid-template-columns:1fr .86fr;gap:100px;align-items:center}
+    .about-copy .section-title{margin-bottom:25px}
+    .about-copy p{max-width:600px;color:#b0b0b5;font-size:15px;line-height:1.95}
+    .about-copy p strong{color:var(--white);font-weight:500}
+    .stats{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+    .stat{min-height:178px;padding:28px 23px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.018)}
+    .stat+ .stat{border-left:1px solid var(--line)}
+    .stat-number{color:var(--gold);font-size:51px;line-height:1;letter-spacing:-.08em;font-weight:500}
+    .stat-label{color:#b6b6ba;font-size:9px;letter-spacing:.12em;font-weight:600}
+    .advantage{padding-top:100px;border-top:1px solid rgba(255,255,255,.06)}
+    .advantage .section-head{margin-bottom:34px}
+    .advantage-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:7px;overflow:hidden}
+    .advantage-item{min-height:175px;padding:27px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.015)}
+    .advantage-item+.advantage-item{border-left:1px solid var(--line)}
+    .advantage-item i{color:var(--gold);font-size:23px}
+    .advantage-item h3{margin:20px 0 0;font-size:14px;font-weight:500;letter-spacing:-.025em}
+    .contact{padding:120px 0 100px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.018));border-top:1px solid rgba(255,255,255,.07)}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1fr;gap:100px}
+    .contact-title{max-width:470px;margin:0 0 44px;font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.075em;font-weight:550}
+    .contact-title span{color:var(--gold)}
+    .contact-details{display:grid;gap:21px}
+    .contact-detail{display:grid;grid-template-columns:25px 1fr;gap:12px;align-items:start}
+    .contact-detail i{margin-top:2px;color:var(--gold);font-size:13px}
+    .contact-detail small{display:block;margin-bottom:5px;color:#77777d;font-size:9px;letter-spacing:.15em;text-transform:uppercase}
+    .contact-detail a,.contact-detail span{font-size:13px;color:#d7d7da}
+    .contact-form{padding:28px;border:1px solid rgba(255,255,255,.1);background:rgba(20,20,20,.65);border-radius:7px}
+    .form-intro{margin:0 0 25px;color:#a1a1aa;font-size:12px}
+    .field{margin-bottom:16px}
+    .field label{display:block;margin-bottom:8px;color:#d4d4d7;font-size:10px;font-weight:600;letter-spacing:.04em}
+    .field input,.field textarea{width:100%;padding:13px 14px;color:var(--white);background:#0d0d0d;border:1px solid rgba(255,255,255,.12);border-radius:4px;font-size:12px;transition:border-color .2s}
+    .field textarea{min-height:114px;resize:vertical}
+    .field input::placeholder,.field textarea::placeholder{color:#68686e}
+    .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+    .field [aria-invalid="true"]{border-color:var(--gold)}
+    .field-error{display:none;margin-top:6px;color:var(--muted);font-size:10px}
+    .field-error.visible{display:block}
+    .form-status{min-height:18px;margin:13px 0 0;color:#c8c8cc;font-size:11px;line-height:1.6}
+    .form-status.success{color:var(--gold)}
+    .form-status.error{color:var(--muted)}
+    .footer{padding:22px 0 25px;border-top:1px solid rgba(255,255,255,.08)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;color:#77777d;font-size:10px}
+    .footer-mark{color:#d4d4d7;letter-spacing:.14em;font-size:9px;font-weight:600}
+    .whatsapp{position:fixed;z-index:25;right:25px;bottom:24px;width:54px;height:54px;display:grid;place-items:center;border-radius:50%;background:#20c766;color:#fff;font-size:26px;box-shadow:0 8px 30px rgba(0,0,0,.45);transition:transform .2s,box-shadow .2s}
+    .whatsapp:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.55)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.is-visible{opacity:1;transform:translateY(0)}
+    .skip-link{position:absolute;left:12px;top:-50px;padding:10px;background:var(--gold);color:#111;z-index:99}
+    .skip-link:focus{top:12px}
+    @media(max-width:950px){
+      .hero-grid{gap:35px;grid-template-columns:1fr .83fr}
+      .hero h1{font-size:clamp(56px,8vw,78px)}
+      .dashboard-grid{grid-template-columns:repeat(3,1fr)}
+      .about-grid,.contact-grid{gap:55px}
+    }
+    @media(max-width:720px){
+      .container{width:min(100% - 38px,var(--max))}
+      .site-header{height:68px}
+      .wordmark{font-size:10px}
+      .mark{width:28px;height:28px}
+      .menu-toggle{display:grid;place-items:center}
+      .nav-cta{display:none}
+      .nav-links{position:absolute;top:67px;left:0;right:0;display:none;align-items:stretch;gap:0;padding:8px 19px 17px;background:rgba(10,10,10,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}
+      .nav-links.open{display:flex;flex-direction:column}
+      .nav-links a{padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.06)}
+      .nav-links a:last-child{border:0}
+      .nav-links .mobile-cta{display:block;margin-top:9px;padding:13px 15px;background:var(--gold);color:#111;text-align:center;font-size:10px;font-weight:700;letter-spacing:.08em}
+      .hero{min-height:unset;padding:137px 0 70px}
+      .hero-grid{grid-template-columns:1fr;gap:46px}
+      .hero h1{max-width:620px;margin-top:25px;font-size:clamp(53px,12vw,79px)}
+      .hero-copy{font-size:14px}
+      .preview-wrap{max-width:520px;margin-inline:auto;width:100%;padding-left:12px}
+      .preview-card{min-height:338px}
+      .section{padding:83px 0}
+      .section-head{align-items:flex-start;flex-direction:column;gap:15px;margin-bottom:30px}
+      .section-lead{max-width:500px}
+      .service-grid{grid-template-columns:1fr;gap:10px}
+      .service-card{min-height:210px}
+      .service-card h3{margin-top:27px}
+      .dashboard-head{align-items:flex-start}
+      .dashboard-control{width:100%;justify-content:space-between}
+      .dashboard-grid{grid-template-columns:repeat(2,1fr);gap:7px}
+      .weather-card{min-height:100px;padding:13px 11px}
+      .weather-temp{right:11px;font-size:15px}
+      .about-grid{grid-template-columns:1fr;gap:32px}
+      .stat{min-height:142px;padding:22px 16px}
+      .stat-number{font-size:43px}
+      .advantage{padding-top:72px}
+      .advantage-grid{grid-template-columns:1fr}
+      .advantage-item{min-height:125px;padding:20px}
+      .advantage-item+.advantage-item{border-left:0;border-top:1px solid var(--line)}
+      .advantage-item h3{margin-top:13px}
+      .contact{padding:83px 0 65px}
+      .contact-grid{grid-template-columns:1fr;gap:38px}
+      .contact-title{margin-bottom:30px}
+      .contact-form{padding:21px}
+      .footer-inner{align-items:flex-start;flex-direction:column;gap:11px}
+      .whatsapp{right:17px;bottom:17px;width:50px;height:50px}
+    }
+    @media(max-width:390px){
+      .container{width:calc(100% - 30px)}
+      .hero h1{font-size:51px}
+      .button{padding:0 15px;font-size:10px}
+      .dashboard-grid{grid-template-columns:1fr 1fr}
+      .weather-name{font-size:10px}
+      .status-badge{font-size:9px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+      .reveal{opacity:1;transform:none}
+    }
+
+    /* Larger, heavier supporting type. The homepage hero headline is intentionally untouched. */
+    .wordmark{font-size:13px}
+    .nav-links{font-size:14px;font-weight:600}
+    .nav-links .mobile-cta{font-size:12px;font-weight:700}
+    .nav-cta{font-size:12px;font-weight:700}
+    .button{font-size:13px;font-weight:700}
+    .eyebrow{font-size:12px;font-weight:700}
+    .hero-copy{font-size:19px;font-weight:500}
+    .hero-note{font-size:11px;font-weight:600}
+    .section-kicker{font-size:11px}
+    .section-title{font-size:clamp(40px,5vw,62px);font-weight:650}
+    .section-lead{font-size:15px;font-weight:500}
+    .service-card h3{font-size:20px;font-weight:650}
+    .service-card p{font-size:15px;font-weight:500}
+    .dashboard-meta{font-size:13px;font-weight:500}
+    .status-badge{font-size:12px;font-weight:600}
+    .grid-label{font-size:12px;font-weight:700}
+    .weather-name{font-size:13px;font-weight:700}
+    .weather-city{font-size:12px;font-weight:500}
+    .weather-temp{font-size:18px;font-weight:700}
+    .weather-temp.loading,.weather-card.is-error .weather-temp{font-size:11px;font-weight:600}
+    .dashboard-message{font-size:13px;font-weight:500}
+    .about-copy p{font-size:17px;font-weight:500}
+    .stat-number{font-size:58px;font-weight:600}
+    .stat-label{font-size:11px;font-weight:700}
+    .advantage-item h3{font-size:16px;font-weight:600}
+    .contact-title{font-size:clamp(46px,6vw,76px);font-weight:650}
+    .contact-detail small{font-size:11px;font-weight:700}
+    .contact-detail a,.contact-detail span{font-size:15px;font-weight:500}
+    .form-intro{font-size:14px;font-weight:500}
+    .field label{font-size:12px;font-weight:700}
+    .field input,.field textarea{font-size:15px;font-weight:500}
+    .field-error{font-size:12px}
+    .form-status{font-size:13px;font-weight:500}
+    .refresh{font-size:12px;font-weight:600}
+    .footer-inner{font-size:12px;font-weight:500}
+    .footer-mark{font-size:11px;font-weight:700}
+    @media(max-width:720px){
+      .wordmark{font-size:12px}
+      .hero-copy{font-size:17px}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="wordmark" href="#top" aria-label="KTIX Web Studio home"><span class="mark" aria-hidden="true">K</span><span>KTIX WEB STUDIO</span></a>
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#about">About</a><a href="shop.html">Shop</a><a href="#contact" class="mobile-cta">GET STARTED →</a>
+      </nav>
+      <a class="button button-gold nav-cta" href="#contact">GET STARTED <span aria-hidden="true">→</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
     </div>
-  </div>
-</div>
-</div></section>
-<section id="services" class="section"><div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:20px"><div class="section-title">What We Build</div><div style="font-size:11px;color:var(--muted)">Premium — Fast — Converting</div></div>
-<div class="grid-3">
-<div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">01 / DESIGN</div><h3>Premium UI / UX Design</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Apple-inspired, 3D glassmorphism and motion that makes your brand feel expensive.</p></div>
-<div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">02 / DEVELOPMENT</div><h3>High-Performance Websites</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Lightning-fast, scalable, and built to handle real business — from live data to payments.</p></div>
-<div class="s-card"><div style="font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:10px">03 / STRATEGY</div><h3>Conversion Focused</h3><p style="color:var(--muted);font-size:13px;margin-top:8px;line-height:1.6">Every pixel strategically placed to turn visitors into paying customers.</p></div>
-</div></div>
-  <section id="about" class="section" style="background:linear-gradient(180deg, rgba(255,201,120,0.04), transparent);">
-  <div style="text-align:center;margin-bottom:28px">
-    <div class="badge" style="margin:0 auto"><div class="dot"></div> ABOUT KTIX</div>
-  </div>
-  <div class="top-bar"><div style="font-size:11px;color:var(--muted)">01 — WHO WE ARE</div><span>EST. 2024</span></div>
-  <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start;margin-top:20px">
-    <div>
-      <div style="font-size:42px;font-weight:800;line-height:0.95;color:#fff">We build<br><span style="color:var(--gold)">expensive</span><br>looking websites.</div>
-    </div>
-    <div>
-      <div style="font-size:13px;color:#9a9aa3;line-height:1.7">KTIX Web Studio builds premium, high-converting websites for startups and brands who are tired of cheap, slow, template sites.<br><br>Every site is custom coded, loads in under 1 second, and is built to convert visitors into paying clients. No builders. No shortcuts. Just clean, fast, luxury design.</div>
-      <div style="display:flex;gap:32px;margin-top:24px;border-top:1px solid rgba(255,255,255,0.08);padding-top:20px">
-        <div><div style="font-size:22px;font-weight:700;color:#fff">15+</div><div style="font-size:10px;color:var(--muted);letter-spacing:1px">PROJECTS SHIPPED</div></div>
-        <div><div style="font-size:22px;font-weight:700;color:#fff">100%</div><div style="font-size:10px;color:var(--muted);letter-spacing:1px">CUSTOM CODE</div></div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="eyebrow">WEB DESIGN &amp; DEVELOPMENT STUDIO</div>
+          <h1>Your business deserves a <span>better</span> website.</h1>
+          <p class="hero-copy">We craft high-converting websites for brands that want to look expensive and sell more.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#contact">Start a Project <span aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="#climate">See Live Dashboard <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note"><span class="note-dot" aria-hidden="true"></span> Independent web studio · India</div>
+        </div>
+        <div class="preview-wrap" aria-label="KTIX Studio live team preview">
+          <div class="preview-card">
+            <div class="preview-top">
+              <div class="preview-label"><span class="mark" aria-hidden="true">K</span> ktix.studio <span style="color:#77777d">• LIVE TEAM</span></div>
+              <div class="live-chip"><span class="live-dot" aria-hidden="true"></span> AVAILABLE</div>
+            </div>
+            <div class="preview-content">
+              <div class="preview-kicker">DIGITAL PRESENCE / 2024—25</div>
+              <div class="preview-title">Made to move<br>your business.</div>
+              <div class="preview-sub">Independent studio. Focused by design.</div>
+              <div class="preview-rule"></div>
+              <div class="preview-stats">
+                <div class="preview-stat"><small>BUILT FOR</small><strong>Ambitious <span>brands</span></strong></div>
+                <div class="preview-stat"><small>BUILT WITH</small><strong>Custom <span>code</span></strong></div>
+              </div>
+            </div>
+            <div class="preview-footer"><span>DESIGN THAT EARNS ITS PLACE</span><span class="preview-bars" aria-hidden="true"><i style="height:9px"></i><i style="height:15px"></i><i style="height:11px"></i><i style="height:22px"></i><i style="height:17px"></i><i style="height:27px"></i><i style="height:20px"></i></span></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-  <section id="climate" class="section" style="background:linear-gradient(180deg, rgba(255,201,120,0.04), transparent);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-<div style="text-align:center;margin-bottom:28px"><div class="badge" style="margin:0 auto"><div class="dot-live"></div> REAL LIVE • OPEN-METEO API • ALL INDIA</div><h2 style="font-size:clamp(32px,5vw,52px);margin-top:16px;line-height:0.9">Live India<br><i style="color:var(--gold);font-weight:500">Climate Dashboard</i></h2><p style="color:var(--muted);margin-top:10px;font-size:13px">All 28 States & 8 Union Territories • Updates every 5 min • 100% Real</p></div>
-<div class="top-bar"><div style="font-size:11px;color:var(--muted)"><span id="live-time">--:--:-- IST</span> • <span style="color:#4ade80">● Real API Connected</span> • <span id="last-update" style="color:var(--gold)">Fetching live...</span></div><input type="text" id="search" class="search-box" placeholder="🔍 Search state or capital..."></div>
-<div class="section-title">28 STATES — REAL LIVE</div>
-<div class="city-grid">
-  <div class="city-card" data-lat="16.5" data-lon="80.64"><div><div class="city-name">Amaravati</div><div class="city-state">Andhra Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="27.0844" data-lon="93.6053"><div><div class="city-name">Itanagar</div><div class="city-state">Arunachal Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="26.1445" data-lon="91.7362"><div><div class="city-name">Guwahati</div><div class="city-state">Assam • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="25.5941" data-lon="85.1376"><div><div class="city-name">Patna</div><div class="city-state">Bihar • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="21.2514" data-lon="81.6296"><div><div class="city-name">Raipur</div><div class="city-state">Chhattisgarh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="15.4909" data-lon="73.8278"><div><div class="city-name">Panaji</div><div class="city-state">Goa • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="23.2156" data-lon="72.6369"><div><div class="city-name">Gandhinagar</div><div class="city-state">Gujarat • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="30.7333" data-lon="76.7794"><div><div class="city-name">Chandigarh</div><div class="city-state">Haryana • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="31.1048" data-lon="77.1734"><div><div class="city-name">Shimla</div><div class="city-state">Himachal Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="23.3441" data-lon="85.3096"><div><div class="city-name">Ranchi</div><div class="city-state">Jharkhand • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="12.9716" data-lon="77.5946"><div><div class="city-name">Bengaluru</div><div class="city-state">Karnataka • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="8.5241" data-lon="76.9366"><div><div class="city-name">Thiruvananthapuram</div><div class="city-state">Kerala • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="23.2599" data-lon="77.4126"><div><div class="city-name">Bhopal</div><div class="city-state">Madhya Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="19.076" data-lon="72.8777"><div><div class="city-name">Mumbai</div><div class="city-state">Maharashtra • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="24.817" data-lon="93.9368"><div><div class="city-name">Imphal</div><div class="city-state">Manipur • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="25.5788" data-lon="91.8933"><div><div class="city-name">Shillong</div><div class="city-state">Meghalaya • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="23.7307" data-lon="92.7173"><div><div class="city-name">Aizawl</div><div class="city-state">Mizoram • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="25.6751" data-lon="94.1086"><div><div class="city-name">Kohima</div><div class="city-state">Nagaland • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="20.2961" data-lon="85.8245"><div><div class="city-name">Bhubaneswar</div><div class="city-state">Odisha • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="30.7333" data-lon="76.7794"><div><div class="city-name">Chandigarh</div><div class="city-state">Punjab • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="26.9124" data-lon="75.7873"><div><div class="city-name">Jaipur</div><div class="city-state">Rajasthan • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="27.3389" data-lon="88.6065"><div><div class="city-name">Gangtok</div><div class="city-state">Sikkim • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="13.0827" data-lon="80.2707"><div><div class="city-name">Chennai</div><div class="city-state">Tamil Nadu • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="17.385" data-lon="78.4867"><div><div class="city-name">Hyderabad</div><div class="city-state">Telangana • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="23.8315" data-lon="91.2868"><div><div class="city-name">Agartala</div><div class="city-state">Tripura • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="26.8467" data-lon="80.9462"><div><div class="city-name">Lucknow</div><div class="city-state">Uttar Pradesh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="30.3165" data-lon="78.0322"><div><div class="city-name">Dehradun</div><div class="city-state">Uttarakhand • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card" data-lat="22.5726" data-lon="88.3639"><div><div class="city-name">Kolkata</div><div class="city-state">West Bengal • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-</div>
-<div class="section-title">8 UNION TERRITORIES — REAL LIVE</div>
-<div class="city-grid">
-<div class="city-card ut" data-lat="11.6234" data-lon="92.7265"><div><div class="city-name">Port Blair</div><div class="city-state">Andaman & Nicobar • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card ut" data-lat="30.7333" data-lon="76.7794"><div><div class="city-name">Chandigarh</div><div class="city-state">Chandigarh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card ut" data-lat="20.417" data-lon="72.8311"><div><div class="city-name">Daman</div><div class="city-state">Dadra & Nagar Haveli and Daman & Diu • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card ut" data-lat="28.6139" data-lon="77.209"><div><div class="city-name">New Delhi</div><div class="city-state">Delhi • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card ut" data-lat="34.0837" data-lon="74.7973"><div><div class="city-name">Srinagar</div><div class="city-state">Jammu & Kashmir • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card ut" data-lat="34.1526" data-lon="77.5771"><div><div class="city-name">Leh</div><div class="city-state">Ladakh • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card ut" data-lat="10.5669" data-lon="72.642"><div><div class="city-name">Kavaratti</div><div class="city-state">Lakshadweep • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-<div class="city-card ut" data-lat="11.9416" data-lon="79.8083"><div><div class="city-name">Puducherry</div><div class="city-state">Puducherry • <span class="cond">Loading...</span></div></div><div style="text-align:right"><div class="icon" style="font-size:20px">⏳</div><div class="temp">--°</div></div></div>
-</div>
-</section>
-<section id="contact" class="contact"><div><h2 style="font-size:44px;line-height:0.9">Let's build<br><span style="color:var(--gold);font-style:italic">something great.</span></h2><p style="color:var(--muted);margin-top:12px;font-size:13px;max-width:320px"></p></div><div class="form-box"><form action="https://formsubmit.co/kabitlego0@gmail.com" method="POST"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_next" value="https://ktix-studio.github.io/Ktix-web-studio/"><label>Name</label><input type="text" name="Name" required placeholder="Your name"><label>Email/Phone</label><input type="text" name="Email_or_Phone" required placeholder="Contact"><label>Message</label><textarea name="Project_Details" rows="3" required placeholder="Your project..."></textarea><button type="submit">SEND REQUEST →</button></form></div></section>
-<script>
-function getWeatherInfo(code){
-  if(code===0) return {text:'Clear Sky', icon:'☀️'};
-  if([1,2,3].includes(code)) return {text:'Partly Cloudy', icon:'⛅'};
-  if([45,48].includes(code)) return {text:'Foggy', icon:'🌫️'};
-  if([51,53,55,56,57].includes(code)) return {text:'Drizzle', icon:'🌧️'};
-  if([61,63,65,66,67].includes(code)) return {text:'Rain', icon:'🌧️'};
-  if([71,73,75,77].includes(code)) return {text:'Snow', icon:'❄️'};
-  if([80,81,82].includes(code)) return {text:'Rain Showers', icon:'🌧️'};
-  if([85,86].includes(code)) return {text:'Snow Showers', icon:'❄️'};
-  if([95,96,99].includes(code)) return {text:'Thunderstorm', icon:'⛈️'};
-  return {text:'Cloudy', icon:'☁️'};
-}
-async function fetchLiveWeather(){
-  document.getElementById('last-update').textContent='Fetching live data...';
-  const cards = document.querySelectorAll('.city-card');
-  for(let card of cards){
-    const lat = card.dataset.lat; const lon = card.dataset.lon;
-    try{
-      const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
-      const data = await res.json();
-      if(data.current_weather){
-        const temp = Math.round(data.current_weather.temperature);
-        const info = getWeatherInfo(data.current_weather.weathercode);
-        card.querySelector('.temp').textContent = temp + '°';
-        card.querySelector('.cond').textContent = info.text;
-        card.querySelector('.icon').textContent = info.icon;
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><span class="section-kicker">WHAT WE DO</span><h2 class="section-title">What We Build</h2></div>
+          <p class="section-lead">A considered digital presence, engineered around what your business needs to do next.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><div class="service-index">01 / DESIGN</div><h3>Premium UI/UX.</h3><p>Apple-inspired, glassmorphism.</p></article>
+          <article class="service-card reveal"><div class="service-index">02 / DEVELOPMENT</div><h3>High-performance.</h3><p>High-performance, lightning-fast custom code.</p></article>
+          <article class="service-card reveal"><div class="service-index">03 / STRATEGY</div><h3>Built to convert.</h3><p>Conversion-focused to turn visitors into clients.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section climate" id="climate">
+      <div class="container">
+        <div class="section-head dashboard-head reveal">
+          <div>
+            <span class="section-kicker">A LIVE BUILD / OPEN DATA</span>
+            <h2 class="section-title">Live India Climate Dashboard</h2>
+            <div class="dashboard-meta">Real Live <span aria-hidden="true">•</span> Open-Meteo API <span aria-hidden="true">•</span> All India</div>
+          </div>
+          <div class="dashboard-control">
+            <div id="weather-status" class="status-badge" data-state="loading" role="status" aria-live="polite"><span class="live-dot" aria-hidden="true"></span><span id="status-text">Loading live weather…</span></div>
+            <button class="refresh" id="refresh-weather" type="button" aria-label="Refresh live weather"><i class="fa-solid fa-rotate" aria-hidden="true"></i><span>Refresh</span></button>
+          </div>
+        </div>
+        <h3 class="grid-label">28 STATES</h3>
+        <div id="states-grid" class="dashboard-grid" aria-label="Live weather in Indian states"></div>
+        <h3 class="grid-label">8 UNION TERRITORIES</h3>
+        <div id="uts-grid" class="dashboard-grid" aria-label="Live weather in Indian union territories"></div>
+        <p id="weather-message" class="dashboard-message" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="section-kicker">ABOUT KTIX</span>
+          <h2 class="section-title">We build expensive looking websites.</h2>
+          <p>KTIX Web Studio builds premium, high-converting websites for startups and brands who are tired of cheap, slow, template sites. Every site is custom coded, loads in under 1 second. <strong>No builders. No shortcuts.</strong></p>
+        </div>
+        <div class="stats reveal" aria-label="Studio project statistics">
+          <div class="stat"><span class="stat-number">15+</span><span class="stat-label">PROJECTS SHIPPED</span></div>
+          <div class="stat"><span class="stat-number">100%</span><span class="stat-label">CUSTOM CODE</span></div>
+        </div>
+      </div>
+      <div class="container advantage">
+        <div class="section-head reveal">
+          <div><span class="section-kicker">WHY KTIX</span><h2 class="section-title">The KTIX Advantage</h2></div>
+        </div>
+        <div class="advantage-grid">
+          <article class="advantage-item reveal"><i class="fa-solid fa-bolt" aria-hidden="true"></i><h3>48-Hour Fast Delivery</h3></article>
+          <article class="advantage-item reveal"><i class="fa-solid fa-code" aria-hidden="true"></i><h3>100% Custom Code</h3></article>
+          <article class="advantage-item reveal"><i class="fa-solid fa-wallet" aria-hidden="true"></i><h3>No Monthly Fees</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="section-kicker">YOUR NEXT MOVE</span>
+          <h2 class="contact-title">Let’s build something <span>great.</span></h2>
+          <div class="contact-details">
+            <div class="contact-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i><div><small>Phone</small><a href="tel:+918131861802">+91 8131861802</a></div></div>
+            <div class="contact-detail"><i class="fa-regular fa-envelope" aria-hidden="true"></i><div><small>Email</small><a href="mailto:kabitlego0@gmail.com">kabitlego0@gmail.com</a></div></div>
+            <div class="contact-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><small>Based in</small><span>India</span></div></div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <p class="form-intro">Tell us a little about what you're building.</p>
+          <div class="field"><label for="contact-name">Name</label><input id="contact-name" name="name" autocomplete="name" required maxlength="120" placeholder="Your name" aria-describedby="name-error"><span class="field-error" id="name-error">Please enter your name.</span></div>
+          <div class="field"><label for="contact-reply">Email / Phone</label><input id="contact-reply" name="reply" required maxlength="160" placeholder="Where can we reach you?" aria-describedby="reply-error"><span class="field-error" id="reply-error">Enter a valid email address or phone number.</span></div>
+          <div class="field"><label for="contact-message">Message</label><textarea id="contact-message" name="message" required maxlength="3000" placeholder="A little about your project…" aria-describedby="message-error"></textarea><span class="field-error" id="message-error">Please add a short message about your project.</span></div>
+          <button class="button button-gold" type="submit">SEND REQUEST <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner"><span>© 2024 KTIX Web Studio. All Rights Reserved. | Call: +91 8131861802</span><span class="footer-mark">KTIX WEB STUDIO</span></div>
+  </footer>
+  <a class="whatsapp" href="https://wa.me/918131861802" aria-label="Contact KTIX Web Studio on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+  <script>
+    (() => {
+      "use strict";
+      const states = [
+        {name:"Andhra Pradesh",capital:"Amaravati"},{name:"Arunachal Pradesh",capital:"Itanagar"},{name:"Assam",capital:"Dispur"},{name:"Bihar",capital:"Patna"},
+        {name:"Chhattisgarh",capital:"Raipur"},{name:"Goa",capital:"Panaji"},{name:"Gujarat",capital:"Gandhinagar"},{name:"Haryana",capital:"Chandigarh"},
+        {name:"Himachal Pradesh",capital:"Shimla"},{name:"Jharkhand",capital:"Ranchi"},{name:"Karnataka",capital:"Bengaluru"},{name:"Kerala",capital:"Thiruvananthapuram"},
+        {name:"Madhya Pradesh",capital:"Bhopal"},{name:"Maharashtra",capital:"Mumbai"},{name:"Manipur",capital:"Imphal"},{name:"Meghalaya",capital:"Shillong"},
+        {name:"Mizoram",capital:"Aizawl"},{name:"Nagaland",capital:"Kohima"},{name:"Odisha",capital:"Bhubaneswar"},{name:"Punjab",capital:"Chandigarh"},
+        {name:"Rajasthan",capital:"Jaipur"},{name:"Sikkim",capital:"Gangtok"},{name:"Tamil Nadu",capital:"Chennai"},{name:"Telangana",capital:"Hyderabad"},
+        {name:"Tripura",capital:"Agartala"},{name:"Uttar Pradesh",capital:"Lucknow"},{name:"Uttarakhand",capital:"Dehradun"},{name:"West Bengal",capital:"Kolkata"}
+      ];
+      const territories = [
+        {name:"Andaman and Nicobar Islands",capital:"Port Blair"},{name:"Chandigarh",capital:"Chandigarh"},
+        {name:"Dadra and Nagar Haveli and Daman and Diu",capital:"Daman"},{name:"Delhi",capital:"New Delhi"},
+        {name:"Jammu and Kashmir",capital:"Srinagar"},{name:"Ladakh",capital:"Leh"},
+        {name:"Lakshadweep",capital:"Kavaratti"},{name:"Puducherry",capital:"Puducherry"}
+      ];
+      const statesGrid = document.getElementById("states-grid");
+      const utsGrid = document.getElementById("uts-grid");
+      const status = document.getElementById("weather-status");
+      const statusText = document.getElementById("status-text");
+      const weatherMessage = document.getElementById("weather-message");
+      const refreshButton = document.getElementById("refresh-weather");
+      const cardRefs = new Map();
+
+      function addCards(items, grid, group) {
+        const frag = document.createDocumentFragment();
+        items.forEach((item, index) => {
+          const card = document.createElement("article");
+          card.className = "weather-card";
+          card.dataset.key = group + "-" + index;
+          const name = document.createElement("span");
+          name.className = "weather-name";
+          name.textContent = item.name;
+          const city = document.createElement("span");
+          city.className = "weather-city";
+          city.textContent = item.capital;
+          const temp = document.createElement("span");
+          temp.className = "weather-temp loading";
+          temp.textContent = "Loading";
+          temp.setAttribute("aria-label", "Weather loading");
+          card.append(name, city, temp);
+          frag.append(card);
+          cardRefs.set(group + "-" + index, {card, temp, item});
+        });
+        grid.replaceChildren(frag);
       }
-    }catch(e){card.querySelector('.cond').textContent='Live error';}
-    await new Promise(r=>setTimeout(r,120));
-  }
-  document.getElementById('last-update').textContent='Updated: ' + new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata'}) + ' IST';
-}
-function updateTime(){const now=new Date();const ist=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Kolkata'}));document.getElementById('live-time').textContent=ist.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',second:'2-digit'})+' IST';}
-setInterval(updateTime,1000);updateTime();
-document.getElementById('search').addEventListener('input',function(e){const q=e.target.value.toLowerCase();document.querySelectorAll('.city-card').forEach(c=>{c.style.display=c.textContent.toLowerCase().includes(q)?'flex':'none';});});
-fetchLiveWeather();setInterval(fetchLiveWeather,300000);
-</script></body></html> 
+      addCards(states, statesGrid, "state");
+      addCards(territories, utsGrid, "ut");
+
+      function setStatus(kind, text) {
+        status.dataset.state = kind;
+        statusText.textContent = text;
+      }
+      async function fetchJson(url, signal) {
+        const response = await fetch(url, {signal, headers: {Accept:"application/json"}});
+        if (!response.ok) throw new Error("Weather service returned " + response.status);
+        return response.json();
+      }
+      async function getWeather(entry, signal) {
+        const geoUrl = "https://geocoding-api.open-meteo.com/v1/search?name=" + encodeURIComponent(entry.capital) + "&count=1&language=en&format=json";
+        const geocode = await fetchJson(geoUrl, signal);
+        const place = geocode && Array.isArray(geocode.results) ? geocode.results[0] : null;
+        if (!place || !Number.isFinite(place.latitude) || !Number.isFinite(place.longitude)) throw new Error("Capital location unavailable");
+        const weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=" + encodeURIComponent(place.latitude) + "&longitude=" + encodeURIComponent(place.longitude) + "&current_weather=true";
+        const weather = await fetchJson(weatherUrl, signal);
+        const temperature = weather && weather.current_weather && weather.current_weather.temperature;
+        if (!Number.isFinite(temperature)) throw new Error("Current conditions unavailable");
+        return Math.round(temperature);
+      }
+      async function refreshWeather() {
+        refreshButton.disabled = true;
+        weatherMessage.textContent = "";
+        cardRefs.forEach(({card, temp}) => {
+          card.classList.remove("is-error");
+          temp.className = "weather-temp loading";
+          temp.textContent = "Loading";
+          temp.setAttribute("aria-label", "Weather loading");
+        });
+        setStatus("loading", "Loading live weather…");
+        const controller = new AbortController();
+        const timeout = window.setTimeout(() => controller.abort(), 18000);
+        const all = [...cardRefs.entries()];
+        let cursor = 0;
+        let failed = 0;
+        const worker = async () => {
+          while (cursor < all.length) {
+            const [key, ref] = all[cursor++];
+            try {
+              const degrees = await getWeather(ref.item, controller.signal);
+              ref.temp.className = "weather-temp";
+              ref.temp.textContent = degrees + "°C";
+              ref.temp.setAttribute("aria-label", degrees + " degrees Celsius");
+            } catch (error) {
+              failed++;
+              ref.card.classList.add("is-error");
+              ref.temp.className = "weather-temp";
+              ref.temp.textContent = "Unavailable";
+              ref.temp.setAttribute("aria-label", "Weather unavailable");
+            }
+          }
+        };
+        try {
+          await Promise.all(Array.from({length:5}, worker));
+        } finally {
+          window.clearTimeout(timeout);
+          refreshButton.disabled = false;
+        }
+        const updatedAt = new Intl.DateTimeFormat("en-IN", {hour:"2-digit", minute:"2-digit", timeZone:"Asia/Kolkata"}).format(new Date());
+        if (failed === all.length) {
+          setStatus("error", "Live data unavailable");
+          weatherMessage.textContent = "We couldn't load live weather right now. Please check your connection and try refreshing.";
+        } else if (failed > 0) {
+          setStatus("error", "Partial live data");
+          weatherMessage.textContent = failed + " locations could not be reached. Unavailable cards can be retried with Refresh.";
+        } else {
+          setStatus("live", "Live · updated " + updatedAt + " IST");
+          weatherMessage.textContent = "";
+        }
+      }
+      refreshButton.addEventListener("click", refreshWeather);
+      refreshWeather();
+
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.getElementById("primary-navigation");
+      menuToggle.addEventListener("click", () => {
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!expanded));
+        menuToggle.setAttribute("aria-label", expanded ? "Open navigation menu" : "Close navigation menu");
+        menuToggle.innerHTML = expanded ? '<i class="fa-solid fa-bars" aria-hidden="true"></i>' : '<i class="fa-solid fa-xmark" aria-hidden="true"></i>';
+        nav.classList.toggle("open", !expanded);
+      });
+      nav.addEventListener("click", event => {
+        if (event.target.closest("a")) {
+          nav.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+          menuToggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        }
+      });
+
+      const form = document.getElementById("contact-form");
+      const formStatus = document.getElementById("form-status");
+      const fields = {
+        name: document.getElementById("contact-name"),
+        reply: document.getElementById("contact-reply"),
+        message: document.getElementById("contact-message")
+      };
+      const errors = {
+        name: document.getElementById("name-error"),
+        reply: document.getElementById("reply-error"),
+        message: document.getElementById("message-error")
+      };
+      function validateField(key) {
+        const value = fields[key].value.trim();
+        let valid = value.length > 0;
+        if (key === "reply" && valid) {
+          const emailLike = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+          const phoneLike = /^\+?[\d\s().-]{7,}$/.test(value) && (value.match(/\d/g) || []).length >= 7;
+          valid = emailLike || phoneLike;
+        }
+        if (key === "message") valid = value.length >= 8;
+        fields[key].setAttribute("aria-invalid", String(!valid));
+        errors[key].classList.toggle("visible", !valid);
+        return valid;
+      }
+      Object.keys(fields).forEach(key => {
+        fields[key].addEventListener("blur", () => validateField(key));
+        fields[key].addEventListener("input", () => {
+          if (fields[key].getAttribute("aria-invalid") === "true") validateField(key);
+        });
+      });
+      form.addEventListener("submit", event => {
+        event.preventDefault();
+        const valid = Object.keys(fields).map(validateField).every(Boolean);
+        formStatus.className = "form-status";
+        if (!valid) {
+          formStatus.textContent = "Please review the highlighted fields before continuing.";
+          const firstInvalid = form.querySelector('[aria-invalid="true"]');
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+        const name = fields.name.value.trim();
+        const reply = fields.reply.value.trim();
+        const message = fields.message.value.trim();
+        const subject = "Project enquiry from " + name;
+        const body = "Name: " + name + "\nEmail / Phone: " + reply + "\n\nProject details:\n" + message;
+        const mailto = "mailto:kabitlego0@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        formStatus.textContent = "Opening your email app. Your request is not sent until you send the email.";
+        formStatus.classList.add("success");
+        window.location.href = mailto;
+      });
+
+      const revealObserver = "IntersectionObserver" in window ? new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.12}) : null;
+      document.querySelectorAll(".reveal").forEach(element => {
+        if (revealObserver) revealObserver.observe(element);
+        else element.classList.add("is-visible");
+      });
+    })();
+  </script>
+</body>
+</html>
