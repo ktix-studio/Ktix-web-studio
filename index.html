@@ -603,8 +603,9 @@ fetch("https://formsubmit.co/kabitlego@gmail.com", {
   formStatus.classList.add("success");
   fields.name.value = ""; fields.reply.value = ""; fields.message.value = "";
 }).catch(() => {
-  formStatus.textContent = "Failed to send. WhatsApp us: +91 8131861802";
-});
+      formStatus.textContent = "Failed to send. WhatsApp us: +91 8131861802"
+    });
+  });
         
 
       const revealObserver = "IntersectionObserver" in window ? new IntersectionObserver(entries => {
