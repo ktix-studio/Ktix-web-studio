@@ -588,13 +588,24 @@
         const name = fields.name.value.trim();
         const reply = fields.reply.value.trim();
         const message = fields.message.value.trim();
-        const subject = "Project enquiry from " + name;
-        const body = "Name: " + name + "\nEmail / Phone: " + reply + "\n\nProject details:\n" + message;
-        const mailto = "mailto:kabitlego0@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-        formStatus.textContent = "Opening your email app. Your request is not sent until you send the email.";
-        formStatus.classList.add("success");
-        window.location.href = mailto;
-      });
+        const formData = new FormData();
+formData.append("name", name);
+formData.append("email", reply);
+formData.append("message", message);
+formData.append("_subject", "New KTIX Client - " + name);
+formData.append("_captcha", "false");
+
+fetch("https://formsubmit.co/kabitlego@gmail.com", {
+  method: "POST",
+  body: formData
+}).then(() => {
+  formStatus.textContent = "Request sent! KTIX will reply in 2 hours.";
+  formStatus.classList.add("success");
+  fields.name.value = ""; fields.reply.value = ""; fields.message.value = "";
+}).catch(() => {
+  formStatus.textContent = "Failed to send. WhatsApp us: +91 8131861802";
+});
+        
 
       const revealObserver = "IntersectionObserver" in window ? new IntersectionObserver(entries => {
         entries.forEach(entry => {
