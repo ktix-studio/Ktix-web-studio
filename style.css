@@ -1,119 +1,65 @@
-/* =========================================
-   KTIX WEB STUDIO - EMBERLINE PREMIUM - FIXED
-   ========================================= */
+/* KTIX WEB STUDIO — EMBERLINE LUXURY v2.0 */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap');
 
 :root{
-  --bg:#0c0b0a;
-  --card:#111111;
-  --card-hover:#171717;
-  --text:#f0ece2;
-  --text-main:#f0ece2;
-  --muted:#8a857d;
-  --white:#f0ece2;
-  --accent:#d4b483;
-  --blue:#d4b483;
-  --blue-light:#d4b483;
-  --border:rgba(255,255,255,0.08);
+  --bg:#0c0b0a;--paper:#1a1816;--gold:#d4b483;--gold2:#e8c9a0;
+  --gold-dim:rgba(212,180,131,.18);--gold-glow:rgba(212,180,131,.25);
+  --text:#f5f1eb;--muted:#9a958f;--line:rgba(245,241,235,.08);
+  --line-gold:rgba(212,180,131,.18);--radius:16px;--radius-lg:24px;
 }
-
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:radial-gradient(circle at 50% 0%, #1f1c18 0%, #0c0b0a 70%);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:9999;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-/* CLIMATE PROJECT */
-#climate{position:relative;overflow:hidden;padding:120px 0}
-.climate-project{position:relative;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:18px;padding:38px;overflow:hidden;backdrop-filter:blur(10px)}
-.climate-project-header{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;margin-bottom:35px;flex-wrap:wrap}
-.project-status{display:inline-block;color:#10b981;font-size:11px;font-weight:800;letter-spacing:1.8px;margin-bottom:14px}
-.climate-project-header h3{font-family:'Playfair Display',serif;font-size:clamp(25px,4vw,34px);line-height:1.15;margin-bottom:12px;color:var(--text)}
-.climate-project-header p{color:var(--muted);max-width:650px;font-size:15px}
-.climate-project-badge{flex-shrink:0;border:1px solid var(--border);background:rgba(212,180,131,0.08);color:var(--accent);padding:10px 15px;border-radius:10px;font-size:12px;font-weight:800;letter-spacing:1px}
+h1,h2,h3{font-family:'Instrument Serif',serif;font-weight:400;letter-spacing:-.02em;line-height:.95}
+h1{font-size:clamp(2.8rem,6vw,5rem)} h2{font-size:clamp(2rem,4vw,3.2rem)}
+.gold{color:var(--gold)} .muted{color:var(--muted)}
 
-.climate-controls{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px}
-.climate-controls label{display:block;color:var(--text);font-size:13px;font-weight:700;margin-bottom:10px}
-#stateSelect{width:100%;max-width:420px;padding:13px 15px;background:#080c12;color:var(--white);border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;outline:none;cursor:pointer;transition:0.25s}
-#stateSelect:hover,#stateSelect:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(212,180,131,0.1)}
-#stateSelect option{background:#0c0b0a;color:#fff}
+/* Header blur */
+.header{position:sticky;top:0;z-index:100;backdrop-filter:blur(24px) saturate(140%);background:rgba(12,11,10,.72);border-bottom:1px solid var(--line-gold)}
+.header-inner{max-width:1320px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Instrument Serif';letter-spacing:.12em;font-size:13px;color:var(--text);text-decoration:none}
+.logo span{color:var(--gold)}
+.nav{display:flex;gap:28px}
+.nav a{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:.3s}
+.nav a:hover{color:var(--gold)}
 
-.climate-data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:25px}
-.climate-data-card{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:13px;padding:25px;min-height:160px;display:flex;flex-direction:column;justify-content:center;transition:0.3s}
-.climate-data-card:hover{transform:translateY(-4px);border-color:var(--accent)}
-.data-label{color:var(--muted);font-size:12px;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:10px}
-.climate-data-card strong{color:var(--white);font-size:32px;line-height:1.1;margin-bottom:8px;font-family:'Playfair Display',serif}
-.data-note{color:var(--muted);font-size:12px}
+/* Gold sweep buttons */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;background:var(--gold);color:#0c0b0a;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;text-decoration:none;transition:all .4s;border:1px solid var(--gold)}
+.btn::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.35) 50%,transparent 80%);transform:translateX(-100%);transition:transform .7s}
+.btn:hover::before{transform:translateX(100%)}
+.btn:hover{background:var(--gold2);transform:translateY(-1px);box-shadow:0 10px 30px var(--gold-glow)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line-gold)}
+.btn-ghost:hover{background:var(--paper);border-color:var(--gold);color:var(--gold)}
 
-.climate-tech{display:flex;flex-wrap:wrap;gap:9px;padding-top:5px}
-.climate-tech span{color:var(--muted);background:rgba(212,180,131,0.05);border:1px solid var(--border);padding:7px 11px;border-radius:7px;font-size:11px;font-weight:700}
+/* Hero */
+.hero{max-width:1320px;margin:0 auto;padding:100px 24px 60px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);display:inline-block}
+.hero p{color:var(--muted);max-width:520px;margin:18px 0 32px;font-size:17px;line-height:1.7}
+.hero-card{background:linear-gradient(180deg,rgba(26,24,22,.9),rgba(20,18,16,.9));border:1px solid var(--line-gold);border-radius:var(--radius-lg);padding:28px;position:relative}
+.hero-card::after{content:"";position:absolute;top:-1px;left:24px;right:24px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5}
 
-.live-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:20px 0;flex-wrap:wrap}
-.live-status{font-size:12px;font-weight:700;letter-spacing:1px;color:#10b981}
-.refresh-btn{padding:10px 16px;border:1px solid var(--border);border-radius:50px;background:transparent;color:var(--text);cursor:pointer;font:inherit;transition:0.3s}
-.refresh-btn:hover{border-color:var(--accent);color:var(--accent)}
+/* Climate glow */
+.climate-section{max-width:1320px;margin:0 auto;padding:80px 24px}
+.climate-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:14px;margin-top:28px}
+.climate-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;transition:all .4s;position:relative;overflow:hidden}
+.climate-card:hover{border-color:var(--line-gold);transform:translateY(-2px)}
+.city{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.temp{font-family:'Instrument Serif';font-size:32px;color:var(--gold);margin:6px 0;line-height:1}
+.meta{font-size:11px;color:var(--muted)}
 
-#climateUpdated{color:var(--muted);font-size:12px;margin:18px 0}
+/* Vault */
+.vault-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.vault-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.4s}
+.vault-card:hover{border-color:var(--gold-dim);transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.vault-thumb{aspect-ratio:16/10;object-fit:cover;width:100%;filter:saturate(.9) brightness(.9);transition:.6s}
+.vault-card:hover .vault-thumb{filter:saturate(1) brightness(1);transform:scale(1.02)}
+.vault-body{padding:16px}
+.vault-title{font-family:'Instrument Serif';font-size:20px}
+.vault-price{color:var(--gold);font-weight:600;font-size:13px}
 
-/* CARDS - DARK PREMIUM FIX */
-.service-card,.project-card,.why-card,.step,.price-card{
-  background:rgba(255,255,255,0.02) !important;
-  border:1px solid var(--border) !important;
-  border-radius:8px !important;
-  padding:35px !important;
-  box-shadow:none !important;
-  transition:0.3s !important;
-}
-.service-card:hover,.project-card:hover,.why-card:hover,.step:hover{border-color:var(--accent) !important;background:rgba(255,255,255,0.04) !important;transform:translateY(-3px)}
-.service-card h3,.project-card h3,.why-card strong,.step h3{color:var(--text) !important;font-family:'Playfair Display',serif !important;font-size:22px !important}
-.service-card p,.project-card p,.why-card p,.step p,.section-text{color:var(--muted) !important;font-size:15px !important;line-height:1.7 !important}
-.service-card .service-number,.project-card .project-number,.number{color:var(--accent) !important;font-family:'Playfair Display',serif;font-style:italic;font-weight:600}
-
-/* HEADER LOGO */
-header .logo{display:flex;align-items:baseline;gap:8px;color:var(--text) !important;font-size:27px;font-weight:600;letter-spacing:1px;font-family:'Playfair Display',serif}
-header .logo strong{color:var(--text) !important;font-weight:600}
-header .logo small{color:var(--accent) !important;font-size:10px;font-weight:800;letter-spacing:2px}
-
-/* FOOTER CONTACT */
-.footer-contact a{color:var(--accent) !important;font-size:15px !important;font-weight:500 !important}
-.footer-contact a:hover{color:var(--text) !important}
-
-/* MOBILE */
-@media(max-width:850px){
-  nav.mobile-open,nav.active{display:flex !important;flex-direction:column;position:absolute;top:72px;right:4%;left:4%;background:#111;border:1px solid var(--border);border-radius:12px;padding:18px;gap:15px;z-index:999}
-  .climate-data-grid{grid-template-columns:1fr 1fr}
-  .climate-data-card:last-child{grid-column:1 / -1}
-}
-@media(max-width:600px){
-  .climate-project{padding:22px;border-radius:14px}
-  .climate-project-header{flex-direction:column;gap:18px}
-  .climate-data-grid{grid-template-columns:1fr}
-  .climate-data-card:last-child{grid-column:auto}
-  p,.service-card p{font-size:16px !important;line-height:1.7 !important}
-}
-/* --- MOBILE FIX - FINAL --- */
-@media(max-width:768px){
-  header{
-    display:flex!important;
-    justify-content:space-between!important;
-    align-items:center!important;
-    gap:8px!important;
-    padding:14px 14px!important;
-    overflow:hidden!important;
-  }
-  /* HIDE middle links FORCE */
-  header a:nth-of-type(1), header a:nth-of-type(2),
-  nav a:nth-child(1), nav a:nth-child(2){
-    display:none!important;
-  }
-  /* Also hide any text Services Climate */
-  header > div:nth-child(2), nav > div{
-    display:none!important;
-  }
-  /* Make GET STARTED small */
-  header .btn, header a:last-child, .cta, [href*="started"]{
-    padding:10px 16px!important;
-    font-size:14px!important;
-    max-width:130px!important;
-    line-height:1.1!important;
-  }
-}  
-@media(max-width:768px){ header :is(a,span,div):not(:first-child):not(:last-child){display:none!important} }
+.section{max-width:1320px;margin:0 auto;padding:90px 24px;border-top:1px solid var(--line)}
+.footer{border-top:1px solid var(--line-gold);padding:60px 24px;max-width:1320px;margin:0 auto}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:60px}.nav{display:none}.climate-grid{grid-template-columns:repeat(2,1fr)}}
