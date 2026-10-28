@@ -1,6 +1,6 @@
 // ========================================
-// KTIX WEB STUDIO - MAIN SCRIPT v2.0 + AI LABS
-// Climate + Menu + AI Integration (Groq LLaMA)
+// KTIX LIVE INDIA CLIMATE DASHBOARD - FIXED
+// Real data: Open-Meteo APIs
 // ========================================
 
 const stateLocations = {
@@ -34,9 +34,11 @@ const stateLocations = {
   "WestBengal": [22.5726, 88.3639]
 };
 
-// MENU TOGGLE
+// GET ELEMENTS
+const stateSelect = document.getElementById("stateSelect");
 const menu = document.querySelector(".menu") || document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav") || document.getElementById("mainNav");
+
 if (menu && nav) {
   menu.addEventListener("click", () => {
     nav.classList.toggle("active");
@@ -44,40 +46,57 @@ if (menu && nav) {
   });
 }
 
-// CLIMATE DASHBOARD
-const stateSelect = document.getElementById("stateSelect");
 const temperatureValue = document.getElementById("temperatureValue");
 const co2Value = document.getElementById("co2Value");
 const renewableValue = document.getElementById("renewableValue");
 
 async function updateClimateData() {
-  if (!stateSelect || !temperatureValue) return;
+  if (!stateSelect ||!temperatureValue) return;
+
   const state = stateSelect.value;
   const location = stateLocations[state];
-  if (!location) return;
+  if (!location) {
+    console.log("Location not found for:", state);
+    return;
+  }
   const [latitude, longitude] = location;
 
   temperatureValue.textContent = "Loading...";
-  if(co2Value) co2Value.textContent = "Loading...";
-  if(renewableValue) renewableValue.textContent = "Loading...";
+  co2Value.textContent = "Loading...";
+  renewableValue.textContent = "Loading...";
 
   try {
     const weatherURL = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,shortwave_radiation&timezone=auto`;
     const airURL = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${latitude}&longitude=${longitude}&current=carbon_dioxide&timezone=auto`;
+
     const [weatherResponse, airResponse] = await Promise.all([fetch(weatherURL), fetch(airURL)]);
-    if (!weatherResponse.ok || !airResponse.ok) throw new Error("API failed");
+
+    if (!weatherResponse.ok ||!airResponse.ok) throw new Error("API request failed");
+
     const weather = await weatherResponse.json();
     const air = await airResponse.json();
+
     temperatureValue.textContent = `${weather.current.temperature_2m}°C`;
-    if(co2Value) co2Value.textContent = `${air.current.carbon_dioxide} ppm`;
-    if(renewableValue) renewableValue.textContent = `${Math.round(weather.current.shortwave_radiation)} W/m²`;
+    co2Value.textContent = `${air.current.carbon_dioxide} ppm`;
+    renewableValue.textContent = `${Math.round(weather.current.shortwave_radiation)} W/m²`;
+
+    const dataNotes = document.querySelectorAll(".data-note");
+    if (dataNotes.length >= 3) {
+      dataNotes[0].textContent = "Live weather data";
+      dataNotes[1].textContent = "Live atmospheric CO₂";
+      dataNotes[2].textContent = "Current solar radiation";
+    }
+
     const updated = document.getElementById("climateUpdated");
-    if (updated) updated.textContent = `Last updated: ${new Date().toLocaleString("en-IN")}`;
+    if (updated) {
+      const now = new Date();
+      updated.textContent = `Last updated: ${now.toLocaleString("en-IN")}`;
+    }
   } catch (error) {
     console.error(error);
     temperatureValue.textContent = "Unavailable";
-    if(co2Value) co2Value.textContent = "Unavailable";
-    if(renewableValue) renewableValue.textContent = "Unavailable";
+    co2Value.textContent = "Unavailable";
+    renewableValue.textContent = "Unavailable";
   }
 }
 
@@ -95,68 +114,3 @@ if (refreshButton) {
     setTimeout(() => refreshButton.textContent = "↻ Refresh Data", 1500);
   });
 }
-
-// ========================================
-// KTIX AI STUDIO - GROQ INTEGRATION (NEW)
-// Safe: key saved in localStorage only, never pushed to GitHub
-// ========================================
-const groqKeyInput = document.getElementById("groqKey");
-if (groqKeyInput) {
-  groqKeyInput.value = localStorage.getItem('ktix_groq_key') || '';
-  groqKeyInput.addEventListener('input', e => {
-    localStorage.setItem('ktix_groq_key', e.target.value.trim());
-  });
-}
-
-async function generateAI(){
-  const keyEl = document.getElementById("groqKey");
-  const ideaEl = document.getElementById("bizIdea");
-  const resultEl = document.getElementById("aiResult");
-  const statusEl = document.getElementById("ai-status");
-  
-  const key = (keyEl?.value.trim() || localStorage.getItem('ktix_groq_key') || "");
-  const prompt = ideaEl?.value.trim() || "";
-
-  if(!key || !key.startsWith('gsk_')){
-    if(statusEl) statusEl.textContent = "⚠️ Paste valid Groq key (gsk_...). Get FREE at console.groq.com";
-    return;
-  }
-  if(!prompt){
-    if(statusEl) statusEl.textContent = "Write your business idea first.";
-    return;
-  }
-
-  if(statusEl) statusEl.textContent = "Generating with Groq LLaMA 3.1...";
-  if(resultEl) resultEl.innerHTML = "⏳ AI thinking... crafting luxury copy...";
-
-  try{
-    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` },
-      body: JSON.stringify({
-        model: "llama-3.1-8b-instant",
-        messages: [
-          { role: "system", content: "You are KTIX Studio's elite copywriter for luxury brands. Given business idea, return: 1) Hero Title (max 7 words, expensive sounding), 2) Subtitle (max 18 words), 3) Two hex colors that match luxury vibe, 4) One CTA button text. Format with clean line breaks and emoji." },
-          { role: "user", content: prompt }
-        ],
-        temperature: 0.7,
-        max_tokens: 400
-      })
-    });
-    const data = await res.json();
-    if(data.error) throw new Error(data.error.message);
-    const output = data.choices[0].message.content;
-    if(resultEl) resultEl.innerText = output;
-    if(statusEl){ statusEl.textContent = "✓ Generated! Key is safe, never pushed to GitHub."; statusEl.style.color = "#22c55e"; }
-    
-    // Optional: GSAP animation for result
-    if(window.gsap && resultEl){ gsap.from(resultEl, {y:10, opacity:0, duration:.4, ease:"power2.out"}) }
-  } catch(err){
-    console.error(err);
-    if(resultEl) resultEl.innerText = "Error: " + err.message + "\n\nTip: Check if key is correct, or try again.";
-    if(statusEl) statusEl.textContent = "Failed. Check key or internet.";
-  }
-}
-
-// Make function global for onclick
-window.generateAI = generateAI;
