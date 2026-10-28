@@ -192,31 +192,64 @@
       </div>
     </section>
       <!-- AI STUDIO START - PASTE HERE -->
-  <section class="section" id="ai-studio" style="border-block:1px solid rgba(255,255,255,.06); background: linear-gradient(180deg, rgba(251,191,36,.04), transparent);">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <span class="section-kicker">KTIX LABS </span>
-          <h2 class="section-title">KTIX WEBSITE  <span style="color:var(--gold)">Idea</span> STUDIO</h2>
-        </div>
-        <p class="section-lead"></p>
-      </div>
-      <div class="ai-grid">
-        <div class="contact-form">
-          <p class="form-status" id="ai-status">Powered by KTIX AI </p>
-          <div class="field"><label>Describe Your Business Idea</label><textarea id="bizIdea" placeholder="e.g. I sell organic tea from Mairang for premium US buyers"></textarea></div>
-          <button class="button button-gold" onclick="generateAI()" type="button" style="width:100%;justify-content:center">GENERATE WITH KTIX KNOWLEDGE →</button>
-          <p class="form-status" id="ai-status">KTIX WEB STUDIO</p>
-        </div>
-        <div class="preview-card" style="min-height:280px;">
-          <div class="preview-top"><div class="preview-label">KTIX AI OUTPUT</div><div class="live-chip"><span class="live-dot"></span></div></div>
-          <div id="aiResult" style="color:var(--muted); font-size:14px; line-height:1.8; white-space:pre-wrap;">Your result will appear here...
-
-            
-        </div>
-      </div>
+  <!-- KTIX LUXURY AI STUDIO - $5000 LOOK -->
+<section id="ai-studio" style="background:#050507;padding:80px 20px;position:relative;overflow:hidden">
+  <!-- Gold glow background -->
+  <div style="position:absolute;top:-100px;left:20%;width:600px;height:600px;background:radial-gradient(circle, rgba(229,192,123,0.08) 0%, transparent 70%);filter:blur(40px)"></div>
+  
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2">
+    <!-- Header - luxury -->
+    <div style="margin-bottom:48px">
+      <p style="color:#E5C07B;letter-spacing:0.3em;font-size:11px;font-weight:600;margin-bottom:12px">KTIX LABS • EST 2026</p>
+      <h2 style="font-size:48px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.02em">KTIX WEBSITE <span style="color:#E5C07B;font-style:italic;font-weight:400">Idea</span> STUDIO</h2>
+      <p style="color:rgba(255,255,255,0.5);margin-top:12px;font-size:15px;max-width:500px">Describe your business. Our AI crafts hero, tagline and palette in 2 seconds. Built for premium US brands.</p>
     </div>
-  </section>
+
+    <!-- Two boxes - luxury grid -->
+    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start">
+      
+      <!-- LEFT - INPUT - Luxury glass -->
+      <div style="background:linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);border:1px solid rgba(255,255,255,0.08);border-radius:24px;padding:28px;backdrop-filter:blur(20px);box-shadow:0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+          <span style="color:rgba(255,255,255,0.9);font-size:11px;letter-spacing:0.2em;font-weight:600">01 / INPUT</span>
+          <span style="background:rgba(229,192,123,0.12);border:1px solid rgba(229,192,123,0.2);color:#E5C07B;font-size:10px;padding:4px 10px;border-radius:100px;letter-spacing:0.1em">POWERED BY KTIX AI</span>
+        </div>
+        
+        <label style="color:#fff;font-size:14px;font-weight:600;display:block;margin-bottom:10px">Describe Your Business Idea</label>
+        <textarea id="ai-prompt" placeholder="e.g. I sell organic tea from Mairang for premium US buyers who love ritual and calm..." style="width:100%;height:110px;background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:16px;color:#fff;font-size:14px;resize:none;outline:none;transition:all 0.3s"></textarea>
+        
+        <button id="ai-generate-btn" onclick="generateAI()" style="width:100%;margin-top:16px;background:#E5C07B;color:#0a0a0a;border:none;border-radius:100px;padding:16px;font-weight:700;font-size:12px;letter-spacing:0.2em;cursor:pointer;transition:all 0.3s;box-shadow:0 10px 30px rgba(229,192,123,0.2)">GENERATE WITH KTIX KNOWLEDGE</button>
+        
+        <p style="color:rgba(255,255,255,0.35);font-size:11px;margin-top:12px;letter-spacing:0.05em">KTIX WEB STUDIO • No key needed • Private</p>
+      </div>
+
+      <!-- RIGHT - OUTPUT - Luxury result -->
+      <div style="background:#0E0E11;border:1px solid rgba(255,255,255,0.06);border-radius:24px;padding:28px;min-height:340px;position:relative;overflow:hidden">
+        <!-- subtle corner glow -->
+        <div style="position:absolute;bottom:-60px;right:-60px;width:200px;height:200px;border:1px solid rgba(229,192,123,0.08);border-radius:50%"></div>
+        
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;position:relative">
+          <span style="color:rgba(255,255,255,0.9);font-size:11px;letter-spacing:0.2em;font-weight:600">02 / OUTPUT</span>
+          <span style="background:#1A1A1E;border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);font-size:9px;padding:4px 10px;border-radius:100px;letter-spacing:0.1em">GPT-OSS 20B • LIVE</span>
+        </div>
+        
+        <div id="ai-output" style="color:rgba(255,255,255,0.7);font-size:13px;line-height:1.7;position:relative">
+          <p style="color:rgba(255,255,255,0.3);font-style:italic">Your result will appear here...<br><br>We will craft hero title, tagline and premium color palette for your brand.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+#ai-prompt:focus{border-color:rgba(229,192,123,0.4)!important;box-shadow:0 0 0 3px rgba(229,192,123,0.1)}
+#ai-generate-btn:hover{background:#f0d0a0!important;transform:translateY(-1px);box-shadow:0 15px 40px rgba(229,192,123,0.3)!important}
+@media(max-width:900px){
+  #ai-studio div[style*="grid-template-columns"]{grid-template-columns:1fr!important}
+  #ai-studio h2{font-size:32px!important}
+}
+</style>
   <!-- AI STUDIO END -->
     <section class="section services" id="services"><div class="container"><div class="section-head reveal"><div><span class="section-kicker">WHAT WE DO</span><h2 class="section-title">What We Build</h2></div><p class="section-lead">A considered digital presence, engineered around what your business needs to do next.</p></div><div class="service-grid"><article class="service-card reveal"><div class="service-index">01 / DESIGN</div><h3>Premium UI/UX.</h3><p>Apple-inspired, glassmorphism.</p></article><article class="service-card reveal"><div class="service-index">02 / DEVELOPMENT</div><h3>High-performance.</h3><p>High-performance, lightning-fast custom code.</p></article><article class="service-card reveal"><div class="service-index">03 / STRATEGY</div><h3>Built to convert.</h3><p>Conversion-focused to turn visitors into clients.</p></article></div></div></section>
     <section class="section climate" id="climate"><div class="container"><div class="section-head dashboard-head reveal"><div><span class="section-kicker">A LIVE BUILD / OPEN DATA</span><h2 class="section-title">Live India Climate Dashboard</h2><div class="dashboard-meta">Real Live <span>•</span> Open-Meteo API <span>•</span> All India</div></div><div class="dashboard-control"><div id="weather-status" class="status-badge" data-state="loading"><span class="live-dot"></span><span id="status-text">Loading live weather…</span></div><button class="refresh" id="refresh-weather" type="button"><i class="fa-solid fa-rotate"></i><span>Refresh</span></button></div></div><h3 class="grid-label">28 STATES</h3><div id="states-grid" class="dashboard-grid"></div><h3 class="grid-label">8 UNION TERRITORIES</h3><div id="uts-grid" class="dashboard-grid"></div><p id="weather-message" class="dashboard-message"></p></div></section>
