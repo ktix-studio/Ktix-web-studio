@@ -305,7 +305,7 @@ async function generateAI(){
       method: "POST",
       headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` },
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile
+        model: "llama-3.3-70b-versatile",
         messages: [
           { role: "system", content: "You are KTIX luxury copywriter. Given business idea, return hero title, subtitle, 2 hex colors." },
           { role: "user", content: prompt }
